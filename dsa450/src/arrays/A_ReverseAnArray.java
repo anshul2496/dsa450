@@ -15,8 +15,7 @@ public class A_ReverseAnArray {
 	 */
 	public static void main(String[] args) {
 		// solution1_iterative();
-
-		solution2_pointers();
+		solution2_pointers(); // Final. Time Complexity : O(n)
 	}
 
 	private static void solution2_pointers() {
