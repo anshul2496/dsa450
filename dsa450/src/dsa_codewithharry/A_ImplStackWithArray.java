@@ -3,7 +3,7 @@ package dsa_codewithharry;
 public class A_ImplStackWithArray {
 
 	public static void main(String[] args) {
-		Stack stack = new Stack();
+		StackWithArray stack = new StackWithArray();
 		stack.push(2);
 		stack.push(5);
 		stack.push(9);
@@ -20,7 +20,7 @@ public class A_ImplStackWithArray {
 	}
 }
 
-class Stack {
+class StackWithArray {
 	int top = -1;
 	int MAX_SIZE = 1000;
 	int[] a = new int[MAX_SIZE];
