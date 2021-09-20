@@ -4,17 +4,18 @@ import java.util.Arrays;
 
 public class B_FindMaxMinInArray {
 
-	static class Pair {
-		int max;
-		int min;
-	}
-
 	/*
 	 * Maximum and minimum of an array using minimum number of comparisons
 	 * 
 	 * https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
 	 * 
 	 */
+	
+	static class Pair {
+		int max;
+		int min;
+	}
+	
 	public static void main(String[] args) {
 		//solution1_sort();
 		//solution2_linearSearch(); // O(n)

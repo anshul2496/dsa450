@@ -26,6 +26,7 @@ public class E_MoveAllNegativeToOneSide {
 				temp = a[low];
 				a[low] = a[high];
 				a[high] = temp;
+				low++;
 				high--;
 
 			}

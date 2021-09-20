@@ -1,4 +1,4 @@
-package arrays;
+ package arrays;
 
 public class Q_FindAllPairsOnIntArray {
 

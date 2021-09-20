@@ -44,7 +44,7 @@ public class J_MinJumpsToReachArrayEnd {
 
 			// If no further steps left
 			if (step == 0) {
-				// we must have used a jump
+				// we must have used a jump 
 				jump++;
 
 				// Check if the current index or lesser index
