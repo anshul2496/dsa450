@@ -3,7 +3,6 @@ package dsa_codewithharry;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class C_ParanthesisMatching {
 	public static void main(String[] args) {
@@ -31,5 +30,6 @@ public class C_ParanthesisMatching {
 		} else {
 			System.out.println("Balanced Expr.");
 		}
+		ob.close();
 	}
 }
