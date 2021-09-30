@@ -28,19 +28,19 @@ public class R_InsertInBST {
 
 	private void insert(Node root, int key) {
 		Node prev = null;
-		while(root != null) {
+		while (root != null) {
 			prev = root;
-			if(key == root.data) {
+			if (key == root.data) {
 				System.out.println("\nCannot insert duplicate");
 				return;
-			} else if(key < root.data) {
+			} else if (key < root.data) {
 				root = root.left;
 			} else {
 				root = root.right;
 			}
 		}
 		Node newNode = new Node(key);
-		if(key < prev.data) {
+		if (key < prev.data) {
 			prev.left = newNode;
 		} else {
 			prev.right = newNode;

@@ -23,7 +23,7 @@ public class L_QuickSort {
 		j = high;
 		pivot = a[low];
 		do {
-			while (a[i] <= pivot) {
+			while (i <= j && a[i] <= pivot) {
 				i++;
 			}
 			while (a[j] > pivot) {
