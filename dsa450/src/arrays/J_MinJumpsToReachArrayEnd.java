@@ -16,8 +16,22 @@ public class J_MinJumpsToReachArrayEnd {
 	 */
 	public static void main(String[] args) {
 		solution1();
+		//jump();
 	}
 
+	public static void jump() {
+		int[] A = { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
+		int jumps = 0, curEnd = 0, curFarthest = 0;
+		for (int i = 0; i < A.length - 1; i++) {
+			curFarthest = Math.max(curFarthest, i + A[i]);
+			if (i == curEnd) {
+				jumps++;
+				curEnd = curFarthest;
+			}
+		}
+		System.out.println(jumps);
+	}
+	
 	private static void solution1() {
 		int[] arr = new int[] { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
 
@@ -54,7 +68,7 @@ public class J_MinJumpsToReachArrayEnd {
 
 				// re-initialize the steps to the amount
 				// of steps to reach maxReach from position i.
-				step = maxReach - i;
+				step = arr[i];
 			}
 		}
 		System.out.println("Jumps needed = " + jump);
