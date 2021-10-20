@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class B_FindMaxMinInArray {
+public class A2_FindMaxMinInArray {
 
 	/*
 	 * Maximum and minimum of an array using minimum number of comparisons

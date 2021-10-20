@@ -1,6 +1,6 @@
 package arrays;
 
-public class P_BuyAndSellStock {
+public class B7_BuyAndSellStock {
 
 	/*
 	 * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/

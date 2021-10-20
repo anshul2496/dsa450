@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class O_NextPermutation {
+public class B6_NextPermutation {
 	/*
 	 * https://leetcode.com/problems/next-permutation/ Implement next permutation,
 	 * which rearranges numbers into the lexicographically next greater permutation

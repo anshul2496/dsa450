@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class I_MinimiseMaxDiffBetweenHeights {
+public class A9_MinimiseMaxDiffBetweenHeights {
 
 	/*
 	 * Given an array arr[] denoting heights of N towers and a positive integer K,

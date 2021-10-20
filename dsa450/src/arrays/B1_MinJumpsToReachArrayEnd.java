@@ -1,6 +1,6 @@
 package arrays;
 
-public class J_MinJumpsToReachArrayEnd {
+public class B1_MinJumpsToReachArrayEnd {
 	/*
 	 * https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1 
 	 * Given an array of N integers arr[] where each element represents

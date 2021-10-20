@@ -1,6 +1,6 @@
 package arrays;
 
-public class H_LargestSumContiguousSubarray {
+public class A8_LargestSumContiguousSubarray {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1

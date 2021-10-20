@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class A_ReverseAnArray {
+public class A1_ReverseAnArray {
 
 	/*
 	 * Given an array (or string), the task is to reverse the array/string. Examples

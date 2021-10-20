@@ -1,6 +1,6 @@
 package arrays;
 
-public class V_MaxProductSubarray {
+public class C4_MaxProductSubarray {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1

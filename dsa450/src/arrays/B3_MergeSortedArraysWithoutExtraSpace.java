@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class L_MergeSortedArraysWithoutExtraSpace {
+public class B3_MergeSortedArraysWithoutExtraSpace {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays5135/1

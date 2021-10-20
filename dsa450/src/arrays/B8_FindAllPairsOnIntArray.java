@@ -1,6 +1,6 @@
  package arrays;
 
-public class Q_FindAllPairsOnIntArray {
+public class B8_FindAllPairsOnIntArray {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1

@@ -1,6 +1,6 @@
 package arrays;
 
-public class M_KadanesAlgo {
+public class B4_KadanesAlgo {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1

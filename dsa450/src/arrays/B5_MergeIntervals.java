@@ -3,7 +3,7 @@ package arrays;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class N_MergeIntervals {
+public class B5_MergeIntervals {
 
 	/*
 	 * https://leetcode.com/problems/merge-intervals/ 

@@ -3,7 +3,7 @@ package arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class T_SubarrayWith0Sum {
+public class C2_SubarrayWith0Sum {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/subarray-with-0-sum-1587115621/1

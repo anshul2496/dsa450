@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class S_RearrangeArrayInAltPosAndNeg {
+public class C1_RearrangeArrayInAltPosAndNeg {
 
 	/*
 	 * https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space/

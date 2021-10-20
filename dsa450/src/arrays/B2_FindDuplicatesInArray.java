@@ -3,7 +3,7 @@ package arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class K_FindDuplicatesInArray {
+public class B2_FindDuplicatesInArray {
 
 	/*
 	 * https://leetcode.com/problems/find-the-duplicate-number/ Given an array of

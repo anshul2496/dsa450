@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class R_CommonElementIn3Arrays {
+public class B9_CommonElementIn3Arrays {
 	/*
 	 * https://practice.geeksforgeeks.org/problems/common-elements1132/1
 	 * 

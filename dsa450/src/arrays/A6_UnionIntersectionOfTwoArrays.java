@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class F_UnionIntersectionOfTwoArrays {
+public class A6_UnionIntersectionOfTwoArrays {
 	/*
 	 * https://practice.geeksforgeeks.org/problems/union-of-two-arrays3538/1
 	 * 

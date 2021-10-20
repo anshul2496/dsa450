@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class G_CyclicallyRotateAnArray {
+public class A7_CyclicallyRotateAnArray {
 
 	/*
 	 * Given an array, rotate the array by one position in clock-wise direction.

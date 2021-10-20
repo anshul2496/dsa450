@@ -2,7 +2,7 @@ package arrays;
 
 import java.math.BigInteger;
 
-public class U_FactorialOfALargeNum {
+public class C3_FactorialOfALargeNum {
 	/*
 	 * https://practice.geeksforgeeks.org/problems/factorials-of-large-numbers2508/1
 	 * 

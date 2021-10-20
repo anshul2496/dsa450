@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class E_MoveAllNegativeToOneSide {
+public class A5_MoveAllNegativeToOneSide {
 
 	/*
 	 * https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/

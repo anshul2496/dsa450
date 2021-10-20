@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class C_KthMaxMinElementInArray {
+public class A3_KthMaxMinElementInArray {
 
 	/*
 	 * https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1
