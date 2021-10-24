@@ -24,15 +24,15 @@ public class B7_BuyAndSellStock {
 	private static void solution2() {
 		int[] a = { 7, 1, 5, 3, 6, 4 };
 		int minPrice = Integer.MAX_VALUE;
-		int max = 0;
+		int maxProfit = 0;
 		for (int i = 0; i < a.length; i++) {
 			if (a[i] < minPrice) {
 				minPrice = a[i];
-			} else if (a[i] - minPrice > max) {
-				max = a[i] - minPrice;
+			} else if (a[i] - minPrice > maxProfit) {
+				maxProfit = a[i] - minPrice;
 			}
 		}
-		System.out.println(max);
+		System.out.println(maxProfit);
 	}
 
 	private static void solution1() {

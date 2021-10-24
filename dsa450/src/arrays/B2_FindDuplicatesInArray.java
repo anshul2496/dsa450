@@ -19,7 +19,7 @@ public class B2_FindDuplicatesInArray {
 	}
 
 	private static void solution2_hareAndTortoise() {
-		int[] a = { 1, 2, 3, 4, 2, 3};
+		int[] a = { 1, 2, 3, 4, 2};
 		int tortoise = a[0];
 		int hare = a[0];
 		// Find the intersection point of two runners
