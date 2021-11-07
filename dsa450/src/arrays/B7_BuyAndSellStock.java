@@ -28,8 +28,8 @@ public class B7_BuyAndSellStock {
 		for (int i = 0; i < a.length; i++) {
 			if (a[i] < minPrice) {
 				minPrice = a[i];
-			} else if (a[i] - minPrice > maxProfit) {
-				maxProfit = a[i] - minPrice;
+			} else {
+				maxProfit = Math.max(maxProfit, a[i] - minPrice);
 			}
 		}
 		System.out.println(maxProfit);

@@ -40,7 +40,7 @@ public class C5_CountInversion {
 				b[k++] = a[i++];
 			else {
 				b[k++] = a[j++];
-				count = count + (mid + i) - (low + i);
+				count = count + mid - low;
 			}
 		}
 		while (i <= mid) {

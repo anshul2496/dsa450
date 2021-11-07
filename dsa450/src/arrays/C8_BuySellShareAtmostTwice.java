@@ -20,17 +20,16 @@ public class C8_BuySellShareAtmostTwice {
 	}
 
 	private static void solution1() {
-		int price[] = { 2, 30, 15, 10, 8, 25, 80 };
-		int buy1, profit1, buy2, profit2;
-		buy1 = buy2 = Integer.MAX_VALUE;
-		profit1 = profit2 = 0;
-		for (int i = 0; i < price.length; i++) {
-			if (price[i] < buy1)
-				buy1 = price[i];
-			profit1 = Math.max(profit1, price[i] - buy1);
-			if (price[i] - profit1 < buy2)
-				buy2 = price[i] - profit1;
-			profit2 = Math.max(profit2, price[i] - buy2);
+		int a[] = {10, 22, 5, 75, 65, 80};
+		int minPrice1 = Integer.MAX_VALUE;
+		int minPrice2 = Integer.MAX_VALUE;
+		int profit1 = Integer.MIN_VALUE;
+		int profit2 = Integer.MIN_VALUE;
+		for (int i = 0; i < a.length; i++) {
+			minPrice1 = Math.min(minPrice1, a[i]);
+			profit1 = Math.max(profit1, a[i] - minPrice1);
+			minPrice2 = Math.min(minPrice2, a[i] - profit1);
+			profit2 = Math.max(profit2, a[i] - minPrice2);
 		}
 		System.out.println(profit2);
 	}

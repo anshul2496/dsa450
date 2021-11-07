@@ -20,7 +20,7 @@ public class D2_TrappingRainWater {
 
 	private static void solution1() {
 		// Leetcode two pointer explaination
-		int[] a = { 3, 0, 0, 4, 0, 2 };
+		int[] a = { 3, 0, 0, 2, 0, 4 };
 		int left = 0, right = a.length - 1;
 		int leftMax = 0, rightMax = 0;
 		int ans = 0;
