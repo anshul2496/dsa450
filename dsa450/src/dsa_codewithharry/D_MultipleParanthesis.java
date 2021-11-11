@@ -8,6 +8,7 @@ public class D_MultipleParanthesis {
 
 	public static void main(String[] args) {
 		// Stack<Character> stack = new Stack<>(); // Stack is synchronized and hence slower
+		//String str = "(7-11+{23-8}-[33+1])";
 		Deque<Character> stack = new ArrayDeque<>();
 		System.out.println("Enter expression =");
 		Scanner ob = new Scanner(System.in);

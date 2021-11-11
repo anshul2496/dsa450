@@ -18,6 +18,7 @@ public class E_InfixToPostfix {
 	}
 
 	public static void main(String[] args) {
+		//String str = "((p-q)-(r/a))";
 		System.out.println("Enter infix expression=");
 		Scanner ob = new Scanner(System.in);
 		String infix = ob.next();
