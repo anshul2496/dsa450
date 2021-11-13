@@ -3,6 +3,7 @@ package matrix;
 /*
  * https://practice.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1
  * https://www.youtube.com/watch?v=SVFXEqn3Ceo
+ * You tube link for explanation(if you forgot)
  * 	Given a matrix of size r*c. Traverse the matrix in spiral form.
 	Example 1:
 	Input:
