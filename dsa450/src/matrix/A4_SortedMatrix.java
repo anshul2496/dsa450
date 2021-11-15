@@ -20,7 +20,7 @@ import java.util.Arrays;
 	Explanation:
 	Sorting the matrix gives this result.
  */
-public class A5_SortedMatrix {
+public class A4_SortedMatrix {
 	public static void main(String[] args) {
 		int[][] a = { { 10, 20, 30, 40 }, { 15, 25, 35, 45 }, { 27, 29, 37, 48 }, { 32, 33, 39, 50 } };
 		int rows = a.length;

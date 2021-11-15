@@ -14,7 +14,7 @@ package matrix;
 	Output: 2
 	Explanation: Row 2 contains 4 1's (0-based indexing).
  */
-public class A4_RowWithMax1s {
+public class A3_RowWithMax1s {
 	public static void main(String[] args) {
 		solution1();
 		solution2();

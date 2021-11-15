@@ -23,7 +23,7 @@ package matrix;
 	1 1
 	and area is 2 *2 = 4.
  */
-public class A6_MaximumSizeSquareSubArray {
+public class A5_MaximumSizeSquareSubArray {
 	public static void main(String[] args) {
 		int[][] a = { { 0, 1, 1, 0 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 0, 0 } };
 		int rows = a.length;

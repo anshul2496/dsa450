@@ -26,7 +26,7 @@ import java.util.Stack;
 	1 1 1 1
 	and area is 4*2 = 8.
  */
-public class A7_MaximumSizeRectangleSubArray {
+public class A6_MaximumSizeRectangleSubArray {
 	public static void main(String[] args) {
 		int[][] a = { { 0, 1, 1, 0 }, { 1, 1, 1, 1 }, { 1, 1, 1, 1 }, { 1, 1, 0, 0 } };
 		int rows = a.length;
