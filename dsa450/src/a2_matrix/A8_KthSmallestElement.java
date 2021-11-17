@@ -1,4 +1,4 @@
-package matrix;
+package a2_matrix;
 
 /*
  * https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1

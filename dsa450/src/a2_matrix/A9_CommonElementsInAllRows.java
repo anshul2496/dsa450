@@ -1,4 +1,4 @@
-package matrix;
+package a2_matrix;
 
 import java.util.HashMap;
 import java.util.Map;

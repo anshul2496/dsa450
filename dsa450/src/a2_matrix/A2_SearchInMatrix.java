@@ -1,4 +1,4 @@
-package matrix;
+package a2_matrix;
 
 /*
  * https://leetcode.com/problems/search-a-2d-matrix/
