@@ -17,7 +17,7 @@ package a2_matrix;
 	{1,2,3,3,5,6,6,9,9}. Hence, 5 is median. 
 	Complexity - log(range)*(number of rows)*log(column)
  */
-public class Leave_MedianInRowSorted {
+public class B1_MedianInRowSorted {
 	public static void main(String[] args) {
 		int[][] a = { { 1, 3, 5 }, { 2, 6, 9 }, { 3, 6, 9 } };
 		int max = Integer.MIN_VALUE;

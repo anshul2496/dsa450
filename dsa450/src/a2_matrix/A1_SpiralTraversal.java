@@ -13,7 +13,7 @@ package a2_matrix;
 	            {9, 10, 11, 12},
 	            {13, 14, 15,16}}
 	Output: 
-	1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+	1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10 
  */
 public class A1_SpiralTraversal {
 	public static void main(String[] args) {
