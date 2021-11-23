@@ -37,8 +37,8 @@ public class B1_MedianInRowSorted {
 			for (int i = 0; i < rows; i++) {
 				int low = 0;
 				int high = cols - 1;
-				while (low < high) {
-					int mid = (low + (high - low)) / 2;
+				while (low <= high) {
+					int mid = low + (high - low) / 2;
 					if (midVal >= a[i][mid])
 						low = mid + 1;
 					else
