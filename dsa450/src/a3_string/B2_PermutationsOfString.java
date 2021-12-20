@@ -2,6 +2,7 @@ package a3_string;
 
 /*
  * https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
+ * https://www.youtube.com/watch?v=sPAT_DbvDj0
  * Given a string S. The task is to print all permutations of a given string in lexicographically sorted order.
 	Example 1:
 	Input: ABC

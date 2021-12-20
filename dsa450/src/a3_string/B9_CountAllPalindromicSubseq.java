@@ -15,6 +15,7 @@ package a3_string;
  */
 public class B9_CountAllPalindromicSubseq {
 	public static void main(String[] args) {
+		// Solved using gap technique
 		String str = "abcd";
 		int[][] dp = new int[str.length()][str.length()];
 		for (int g = 0; g < str.length(); g++) {
