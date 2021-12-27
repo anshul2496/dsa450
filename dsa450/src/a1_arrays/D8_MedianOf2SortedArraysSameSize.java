@@ -35,7 +35,7 @@ public class D8_MedianOf2SortedArraysSameSize {
 			c[k++] = b[j++];
 		}
 		while (k < c.length && i < a.length) {
-			c[k++] = b[j++];
+			c[k++] = a[i++];
 		}
 		System.out.println(Arrays.toString(c));
 		int median = 0;

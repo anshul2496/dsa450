@@ -1,6 +1,8 @@
 package a1_arrays;
 
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -17,8 +19,38 @@ public class A3_KthMaxMinElementInArray {
 	 * array is 7.
 	 */
 	public static void main(String[] args) {
-		solution1_treeSet();
-		// Check url for more solutions. Go for heap solution.
+		// solution1_treeSet();
+		solution2();
+	}
+
+	private static void solution2() {
+		int[] a = { 7, 10, 4, 3, 20, 15 };
+		int k = 3;
+		// Kth Largest - Min Heap - By default in Priority Queue
+		PriorityQueue<Integer> queue = new PriorityQueue<>();
+		for (int i = 0; i < k; i++) {
+			queue.add(a[i]);
+		}
+		for (int i = k; i < a.length; i++) {
+			if (queue.peek() < a[i]) {
+				queue.poll();
+				queue.add(a[i]);
+			}
+		}
+		System.out.println("Kth largest = " + queue.peek());
+
+		// Kth Min - Max Heap - Collections.reverseOrder in Priority queue
+		PriorityQueue<Integer> queue2 = new PriorityQueue<>(Collections.reverseOrder());
+		for (int i = 0; i < k; i++) {
+			queue2.add(a[i]);
+		}
+		for (int i = k; i < a.length; i++) {
+			if (queue2.peek() > a[i]) {
+				queue2.poll();
+				queue2.add(a[i]);
+			}
+		}
+		System.out.println("Kth smallest = " + queue2.peek());
 	}
 
 	private static void solution1_treeSet() {

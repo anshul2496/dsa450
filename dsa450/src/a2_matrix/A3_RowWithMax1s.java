@@ -17,10 +17,9 @@ package a2_matrix;
 public class A3_RowWithMax1s {
 	public static void main(String[] args) {
 		solution1();
-		solution2();
 	}
 
-	private static void solution2() {
+	private static void solution1() {
 		/*
 		 * As the rows are sorted we can apply binary search on each row to get the
 		 * count of first 1. Rest of the 1's will be after that
@@ -55,10 +54,5 @@ public class A3_RowWithMax1s {
 		}
 		int ans = a[0].length - fi;
 		return ans;
-	}
-
-	private static void solution1() {
-		// Brute force O(n*m) -> Traverse each row and calculate the count of 1. Print
-		// max
 	}
 }

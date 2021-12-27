@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class A9_MinimiseMaxDiffBetweenHeights {
 
 	/*
+	 * https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1
 	 * Given an array arr[] denoting heights of N towers and a positive integer K,
 	 * you have to modify the height of each tower either by increasing or
 	 * decreasing them by K only once. After modifying, height should be a
@@ -19,22 +20,20 @@ public class A9_MinimiseMaxDiffBetweenHeights {
 	}
 
 	private static void solution1() {
-		int[] a = { 1, 5, 8, 10 };
+		int[] arr = { 1, 5, 8, 10 };
 		int k = 2;
-		int n = a.length;
-		Arrays.sort(a);
-		int ans = a[n - 1] - a[0];
-		int small = a[0] + k;
-		int big = a[n - 1] - k;
-		int min;
-		int max;
-		for (int j = 1; j < n; j++) {
-			if (a[j] >= k) {
-				min = Math.min(a[j] - k, small);
-				max = Math.max(a[j - 1] + k, big);
-				ans = Math.min(ans, max - min);
-			}
-		}
+		int n = arr.length;
+		Arrays.sort(arr);
+        int ans = arr[n-1]-arr[0];
+        int min = arr[0]+k;
+        int max = arr[n-1]-k;
+        for(int i = 1;i<n;i++){
+            if(arr[i]>=k){
+                min = Math.min(arr[0]+k, arr[i]-k);
+                max = Math.max(arr[n-1]-k, arr[i-1]+k);
+                ans = Math.min(ans, max-min);
+            }
+        }
 		System.out.println(ans);
 	}
 
