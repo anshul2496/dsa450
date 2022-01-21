@@ -1,6 +1,7 @@
 package a2_matrix;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 /*
  * https://practice.geeksforgeeks.org/problems/sorted-matrix2333/1
@@ -25,18 +26,21 @@ public class A4_SortedMatrix {
 		int[][] a = { { 10, 20, 30, 40 }, { 15, 25, 35, 45 }, { 27, 29, 37, 48 }, { 32, 33, 39, 50 } };
 		int rows = a.length;
 		int cols = a[0].length;
-		int[] temp = new int[rows * cols];
+		//int[] temp = new int[rows * cols];
+		PriorityQueue<Integer> q = new PriorityQueue<>();
 		int k = 0;
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				temp[k++] = a[i][j];
+				//temp[k++] = a[i][j];
+				q.add(a[i][j]);
 			}
 		}
-		Arrays.sort(temp);
+		//Arrays.sort(temp);
+		//System.out.println(q);
 		k = 0;
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				a[i][j] = temp[k++];
+				a[i][j] = q.poll();
 			}
 		}
 		for (int i = 0; i < rows; i++) {

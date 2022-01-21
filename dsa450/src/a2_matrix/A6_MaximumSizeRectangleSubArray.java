@@ -53,40 +53,42 @@ public class A6_MaximumSizeRectangleSubArray {
 
 	private static int largestHistogramArea(int[] heights) {
 		// Next smallest index on the right
-		int[] rb = new int[heights.length];
+		int[] rightBoundary = new int[heights.length];
 		Stack<Integer> stack = new Stack<>(); // Store indices
 		stack.push(heights.length - 1);
-		rb[heights.length - 1] = heights.length;
+		rightBoundary[heights.length - 1] = heights.length; // default spot for smallest element on the right
+		// Go from right to left
 		for (int i = heights.length - 2; i >= 0; i--) {
 			while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) { // Jab tak bada hai tb tak pop kro
 				stack.pop();
 			}
 			if (stack.isEmpty())
-				rb[i] = heights.length;
+				rightBoundary[i] = heights.length;
 			else
-				rb[i] = stack.peek();
+				rightBoundary[i] = stack.peek();
 			stack.push(i);
 		}
 
 		// Next smallest index on the left
-		int[] lb = new int[heights.length];
+		int[] leftBoundary = new int[heights.length];
 		stack = new Stack<>(); // Store indices
 		stack.push(0);
-		lb[0] = -1;
+		leftBoundary[0] = -1; // default spot for smallest element on the left
+		// Go from left to right
 		for (int i = 1; i < heights.length; i++) {
 			while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
 				stack.pop();
 			}
 			if (stack.isEmpty())
-				lb[i] = -1;
+				leftBoundary[i] = -1;
 			else
-				lb[i] = stack.peek();
+				leftBoundary[i] = stack.peek();
 			stack.push(i);
 		}
 
 		int maxArea = 0;
 		for (int i = 0; i < heights.length; i++) {
-			int width = rb[i] - lb[i] - 1;
+			int width = rightBoundary[i] - leftBoundary[i] - 1;
 			int area = heights[i] * width;
 			maxArea = Math.max(maxArea, area);
 		}
