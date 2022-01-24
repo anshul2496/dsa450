@@ -3,7 +3,8 @@ package a3_string;
 /*
  * https://practice.geeksforgeeks.org/problems/count-the-reversals0401/1
  * https://www.youtube.com/watch?v=dTBpH9YT2HQ
- * Given a string S consisting of only opening and closing curly brackets '{' and '}', find out the minimum number of reversals required to convert the string into a balanced expression.
+ * Given a string S consisting of only opening and closing curly brackets '{' and '}', find out the minimum number of reversals 
+ * required to convert the string into a balanced expression.
 	A reversal means changing '{' to '}' or vice-versa.
 	Example 1:
 	Input:
@@ -33,7 +34,7 @@ public class B8_MinNoOfBracketReversals {
 				if (open == 0)
 					close++;
 				else
-					close--;
+					open--;
 			}
 		}
 		rev = (int) (Math.ceil(open / 2.0) + Math.ceil(close / 2.0));

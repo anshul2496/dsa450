@@ -1,6 +1,8 @@
 package a3_string;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /*
@@ -37,20 +39,24 @@ public class B7_WordBreak {
 		set.add("man");
 		set.add("go");
 		set.add("mango");
-		String str = "ilike";
-		wordBreak(set, str, "");
+		String str = "ilik";
+		Map<String, Integer> map = new HashMap<>();
+		map.put("Can", 0);
+		wordBreak(set, str, "", map);
+		System.out.println(map.values().stream().findFirst().get());
 	}
 
-	private static void wordBreak(Set<String> set, String str, String ans) {
+	private static void wordBreak(Set<String> set, String str, String ans, Map<String, Integer> map) {
 		if (str.length() == 0) {
 			System.out.println(ans);
+			map.put("Can", 1);
 			return;
 		}
 		for (int i = 0; i < str.length(); i++) {
 			String left = str.substring(0, i + 1);
 			if (set.contains(left)) {
 				String right = str.substring(i + 1);
-				wordBreak(set, right, ans + left + " ");
+				wordBreak(set, right, ans + left + " ", map);
 			}
 		}
 	}
