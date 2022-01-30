@@ -18,6 +18,7 @@ import java.util.Arrays;
 	Explanation: One possible arrangement is:
 	{1, 2, 3, 3, 4}. If you return a valid
 	arrangement, output will be 1.
+	Solution is similar to sort array without any algo
  */
 public class D5_ThreeWayPartitioning {
 	public static void main(String[] args) {

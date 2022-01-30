@@ -17,7 +17,7 @@ public class B3_MergeSortedArraysWithoutExtraSpace {
 	 * given arrays to form arr1[] = {0, 1, 2, 3} arr2[] = {5, 6, 7, 8, 9}
 	 */
 	public static void main(String[] args) {
-		solution1(); // O(n*m)
+		//solution1(); // O(n*m)
 		solution2(); // O(n+m)log(n+m)
 	}
 
