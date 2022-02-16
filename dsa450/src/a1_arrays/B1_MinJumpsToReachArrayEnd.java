@@ -20,21 +20,18 @@ public class B1_MinJumpsToReachArrayEnd {
 		int[] arr = new int[] { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
 		if (arr[0] == 0)
 			System.out.println("Jump not possible");
-		int maxReach = arr[0];
-		int step = arr[0];
-		int jump = 1;
-		for (int i = 1; i < arr.length; i++) {
-			if (i == arr.length - 1)
-				break;
+		int maxReach = 0, step = 0, jump = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
 			maxReach = Math.max(maxReach, i + arr[i]);
-			step--;
-			if (step == 0) {
+			if (i == step) {
+				step = maxReach;
 				jump++;
-				if (i >= maxReach)
-					break;
-				step = maxReach - i;
 			}
 		}
-		System.out.println("Jumps needed = " + jump);
+		if (step >= arr.length - 1) {
+			System.out.println("Jumps needed = " + jump);
+		} else {
+			System.out.println("Jump not possible");
+		}
 	}
 }

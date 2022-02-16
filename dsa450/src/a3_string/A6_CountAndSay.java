@@ -6,7 +6,8 @@ package a3_string;
  * The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
 	countAndSay(1) = "1"
 	countAndSay(n) is the way you would "say" the digit string from countAndSay(n-1), which is then converted into a different digit string.
-	At the beginning, I got confusions about what is the nth sequence. Well, my solution is accepted now, so I'm going to give some examples of nth sequence here. The following are sequence from n=1 to n=10:
+	At the beginning, I got confusions about what is the nth sequence. Well, my solution is accepted now, so I'm going to give some examples of nth sequence here. 
+	The following are sequence from n=1 to n=10:
 	 1.     1
 	 2.     11
 	 3.     21

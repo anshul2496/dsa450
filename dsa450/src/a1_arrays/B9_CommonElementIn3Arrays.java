@@ -32,10 +32,6 @@ public class B9_CommonElementIn3Arrays {
 			else if (a[i] > b[j])
 				j++;
 			else {
-				if (i > 0 && a[i] == a[i - 1]) {
-					i++;
-					continue;
-				}
 				while (k < c.length && c[k] < b[j]) {
 					k++;
 				}
