@@ -19,7 +19,7 @@ package a3_string;
 	Explanation: "a", "b" and "c" are the 
 	longest palindromes with same length.The result is the one with the least starting index.
  */
-public class A7_LongestPalindrome {
+public class A7_LongestPalindromeSubstring {
 	static int resultStart = 0;
 	static int resultLength = 0;
 	

@@ -1,4 +1,4 @@
-package a4_list;
+package a5_interviews;
 
 /*
  * https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
@@ -9,7 +9,7 @@ package a4_list;
 	Output: 5
 	Explanation: (101) in base 2 = (5) in base 10
  */
-public class A4_BinaryToDecimal {
+public class A2_BinaryToDecimal {
 	public static void main(String[] args) {
 		A4_Node head = new A4_Node(1);
 		head.next = new A4_Node(0);

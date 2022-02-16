@@ -1,4 +1,4 @@
-package a1_arrays;
+package a5_interviews;
 
 /*
  * https://www.techiedelight.com/maximum-profit-earned-buying-and-selling-shares/
@@ -8,7 +8,7 @@ package a1_arrays;
 	Buy on day 3 and sell on day 5
 	Buy on day 7 and sell on day 8
  */
-public class D9_BuyAndSellStockMuliTimes {
+public class A1_BuyAndSellStockMuliTimes {
 	public static void main(String[] args) {
 		int[] price = { 1, 5, 2, 3, 7, 6, 4, 5 };
 		// keep track of the maximum profit gained
