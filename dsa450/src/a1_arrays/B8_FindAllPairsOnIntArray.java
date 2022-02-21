@@ -1,5 +1,6 @@
 package a1_arrays;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class B8_FindAllPairsOnIntArray {
@@ -12,11 +13,31 @@ public class B8_FindAllPairsOnIntArray {
 	 * Explanation: arr[0] + arr[1] = 1 + 5 = 6 and arr[1] + arr[3] = 5 + 1 = 6.
 	 */
 	public static void main(String[] args) {
-		// solution1();
-		solution2();
+		//solution1(); // Time and space - O(n)
+		solution2(); // Time is O(nlogn) and space isO(1)
 	}
 
 	private static void solution2() {
+		int[] arr = { 1, 5, 7, 1 };
+		int target = 6;
+		Arrays.sort(arr);
+		int low = 0;
+		int high = arr.length - 1;
+		while (low <= high) {
+			int sum = arr[low] + arr[high];
+			if (sum < target) {
+				low++;
+			} else if (sum > target) {
+				high--;
+			} else {
+				System.out.print(arr[low] + " " + arr[high]);
+				low++;
+				high--;
+			}
+		}
+	}
+
+	private static void solution1() {
 		int[] arr = { 1, 5, 7, 1 };
 		int sum = 6;
 		int count = 0;
@@ -30,25 +51,6 @@ public class B8_FindAllPairsOnIntArray {
 				mp.put(arr[i], mp.get(arr[i]) + 1);
 			} else {
 				mp.put(arr[i], 1);
-			}
-		}
-		System.out.println(count);
-	}
-
-	private static void solution1() {
-		int[] a = { 1, 5, 7, 1 };
-		int k = 6;
-		int i = 0;
-		int count = 0;
-		int j = a.length - 1;
-		while (i < a.length - 1) {
-			if (a[i] + a[j] == k) {
-				count++;
-			}
-			j--;
-			if (j == i) {
-				i++;
-				j = a.length - 1;
 			}
 		}
 		System.out.println(count);
