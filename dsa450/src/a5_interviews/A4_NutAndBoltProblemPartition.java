@@ -17,32 +17,6 @@ import java.util.HashMap;
 public class A4_NutAndBoltProblemPartition {
 	public static void main(String[] args) {
 		solution1();
-		
-		solution2();
-	}
-
-	private static void solution2() {
-		char nuts[] = { '@', '#', '$', '%', '^', '&' };
-		char bolts[] = { '$', '%', '&', '^', '@', '#' };
-		int n=bolts.length;
-		HashMap<Character, Integer> hash = new HashMap<>();
-	    // creating a hashmap for nuts
-	    for (int i = 0; i < n; i++)
-	      hash.put(nuts[i], i);
-	    
-	    // searching for nuts for each bolt in hash map
-	    for (int i = 0; i < n; i++)
-	      if (hash.containsKey(bolts[i]))
-	        nuts[i] = bolts[i];
-	 
-	    // print the result
-	    System.out.println("matched nuts and bolts are-");
-	    for (int i = 0; i < n; i++)
-	      System.out.print(nuts[i] + " ");
-	    System.out.println();
-	    for (int i = 0; i < n; i++)
-	      System.out.print(bolts[i] + " ");
-		
 	}
 
 	private static void solution1() {

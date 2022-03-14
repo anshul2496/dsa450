@@ -21,11 +21,12 @@ package a3_string;
  */
 public class A7_LongestPalindromeSubstring {
 	public static void main(String[] args) {
-		String s = "banana";
+		String s = "ayaxzfbjbkrxiri";
 		boolean[][] dp = new boolean[s.length()][s.length()];
 		int count = 0;
 		int palinBeginsAt = 0;
 		for (int g = 0; g < s.length(); g++) {
+			boolean doUpdate = true; // For same value of 'g' do not update 'palinBeginsAt' once it is already updated. This will return the substring which occurs first
 			for (int i = 0, j = g; j < dp.length; i++, j++) {
 				if (g == 0) {
 					dp[i][j] = true;
@@ -40,11 +41,14 @@ public class A7_LongestPalindromeSubstring {
 				}
 				if (dp[i][j]) {
 					count = g + 1;
-					palinBeginsAt = i;
+					if (doUpdate) {
+						palinBeginsAt = i;
+						doUpdate = false;
+					}
 				}
 			}
 		}
-		System.out.println(s.substring(palinBeginsAt, count + 1));
+		System.out.println(s.substring(palinBeginsAt, palinBeginsAt + count));
 	}
 
 }
