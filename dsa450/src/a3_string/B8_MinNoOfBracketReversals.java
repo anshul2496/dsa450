@@ -10,9 +10,7 @@ package a3_string;
 	Input:
 	S = "}{{}}{{{"
 	Output: 3
-	Explanation: One way to balance is:
-	"{{{}}{}}". There is no balanced sequence
-	that can be formed in lesser reversals.
+	Explanation: One way to balance is:"{{{}}{}}". There is no balanced sequence that can be formed in lesser reversals.
  */
 public class B8_MinNoOfBracketReversals {
 	public static void main(String[] args) {
