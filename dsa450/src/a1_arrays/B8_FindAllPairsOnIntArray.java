@@ -13,8 +13,8 @@ public class B8_FindAllPairsOnIntArray {
 	 * Explanation: arr[0] + arr[1] = 1 + 5 = 6 and arr[1] + arr[3] = 5 + 1 = 6.
 	 */
 	public static void main(String[] args) {
-		//solution1(); // Time and space - O(n)
-		solution2(); // Time is O(nlogn) and space isO(1)
+		solution1(); // Time and space - O(n)
+		//solution2(); // Time is O(nlogn) and space isO(1)
 	}
 
 	private static void solution2() {
@@ -47,11 +47,7 @@ public class B8_FindAllPairsOnIntArray {
 			if (mp.containsKey(rem)) {
 				count = count + mp.get(rem);
 			}
-			if (mp.containsKey(arr[i])) {
-				mp.put(arr[i], mp.get(arr[i]) + 1);
-			} else {
-				mp.put(arr[i], 1);
-			}
+			mp.put(arr[i], mp.getOrDefault(arr[i], 0) + 1);
 		}
 		System.out.println(count);
 	}
