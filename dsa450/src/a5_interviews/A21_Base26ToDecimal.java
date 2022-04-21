@@ -1,12 +1,16 @@
 package a5_interviews;
 
+/*
+ * https://leetcode.com/problems/excel-sheet-column-number/
+ */
 public class A21_Base26ToDecimal {
 	public static void main(String[] args) {
-		String s = "AAA";
-		int n = s.charAt(0)-64;
-		for (int i = 1; i < s.length(); i++) {
-			n = (n * 26) + (s.charAt(i) - 64);
+		String columnTitle = "AAA";
+		int columnNumber = 0;
+		for (int i = 0; i < columnTitle.length(); i++) {
+			int currentColumn = columnTitle.charAt(i) - 'A' + 1;
+			columnNumber = (columnNumber * 26) + currentColumn;
 		}
-		System.out.println(n);
+		System.out.println(columnNumber);
 	}
 }

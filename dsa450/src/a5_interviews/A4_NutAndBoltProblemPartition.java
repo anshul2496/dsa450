@@ -1,7 +1,5 @@
 package a5_interviews;
 
-import java.util.HashMap;
-
 /*
  * https://www.geeksforgeeks.org/nuts-bolts-problem-lock-key-problem-set-2-hashmap/
  * Given a set of n nuts of different sizes and n bolts of different sizes. There is a one-one mapping between nuts and bolts. Match nuts and bolts efficiently. 
@@ -22,7 +20,7 @@ public class A4_NutAndBoltProblemPartition {
 	private static void solution1() {
 		char nuts[] = { '@', '#', '$', '%', '^', '&' };
 		char bolts[] = { '$', '%', '&', '^', '@', '#' };
-		matchPairs(nuts, bolts, 0, 5);
+		matchPairs(nuts, bolts, 0, nuts.length - 1);
 		System.out.println("Matched nuts and bolts are : ");
 		printArray(nuts);
 		printArray(bolts);
