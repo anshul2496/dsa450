@@ -1,8 +1,11 @@
 package a5_interviews;
 
+import java.util.ArrayList;
+
 /*
  * https://www.geeksforgeeks.org/burn-the-binary-tree-starting-from-the-target-node/
- * https://www.youtube.com/watch?v=dtBj2A_7JOk
+ * https://www.youtube.com/watch?v=dtBj2A_7JOk - Not this method
+ * The below solved method is derived from prev problem
  *  		12
            /  \
           13  10
@@ -27,37 +30,45 @@ public class B2_BurningTree {
 		right.left = new B1_Node(22);
 		right.right = new B1_Node(23);
 
-		burningTree(root, 10);
+		B1_Node fireNode = new B1_Node(10);
+		burningTree(root, fireNode);
 		System.out.println(maxTime);
 	}
 
-	private static int burningTree(B1_Node root, int fireNode) {
-		if (root == null)
-			return -1;
-
-		if (root.data == fireNode) {
-			burnTree(root, null, 0);
-			return 1;
+	private static void burningTree(B1_Node root, B1_Node fireNode) {
+		ArrayList<B1_Node> path = new ArrayList<>();
+		getRootToNodePath(root, fireNode, path);
+		for (int i = 0; i < path.size(); i++) {
+			burnSubTree(path.get(i), i, i == 0 ? null : path.get(i - 1));
 		}
-		int leftTime = burningTree(root.left, fireNode);
-		if (leftTime != -1) {
-			burnTree(root, root.left, leftTime);
-			return leftTime + 1;
-		}
-		int rightTime = burningTree(root.right, fireNode);
-		if (rightTime != -1) {
-			burnTree(root, root.right, rightTime);
-			return rightTime + 1;
-		}
-		return -1;
 	}
 
-	private static void burnTree(B1_Node root, B1_Node blockNode, int time) {
-		if (root == null || root == blockNode) {
+	private static void burnSubTree(B1_Node node, int time, B1_Node blocked) {
+		if (node == null || blocked == null || node.data == blocked.data) {
 			return;
 		}
 		maxTime = Math.max(time, maxTime);
-		burnTree(root.left, blockNode, time + 1);
-		burnTree(root.right, blockNode, time + 1);
+		burnSubTree(node.left, time + 1, blocked);
+		burnSubTree(node.right, time + 1, blocked);
+	}
+
+	private static boolean getRootToNodePath(B1_Node root, B1_Node fireNode, ArrayList<B1_Node> path) {
+		if (root == null)
+			return false;
+		if (root.data == fireNode.data) {
+			path.add(root);
+			return true;
+		}
+		boolean left = getRootToNodePath(root.left, fireNode, path);
+		if (left) {
+			path.add(root);
+			return true;
+		}
+		boolean right = getRootToNodePath(root.right, fireNode, path);
+		if (right) {
+			path.add(root);
+			return true;
+		}
+		return false;
 	}
 }

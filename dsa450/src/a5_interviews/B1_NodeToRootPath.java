@@ -16,7 +16,7 @@ import java.util.Collections;
 
 	Output : 1->2->5
  */
-public class B3_NodeToRootPath {
+public class B1_NodeToRootPath {
 	private static ArrayList<Integer> list = new ArrayList<>();
 
 	public static void main(String[] args) {

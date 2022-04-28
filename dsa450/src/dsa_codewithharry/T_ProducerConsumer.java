@@ -1,9 +1,9 @@
-package misc;
+package dsa_codewithharry;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class ProducerConsumer {
+public class T_ProducerConsumer {
 	public static void main(String[] args) {
 		BlockingQueue<Integer> queue = new LinkedBlockingQueue<>();
 

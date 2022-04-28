@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 /*
  * https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/
+ * https://www.youtube.com/watch?v=B89In5BctFA // This one
  * https://www.youtube.com/watch?v=s22QClql9LU
  * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node.
  *      20
@@ -15,10 +16,10 @@ import java.util.ArrayList;
 	root = pointer to node with data 20. 
 	k = 2. 
 	Output : 10 14 22
-	If target is 14 and k is 3, then output 
-	should be “4 20”
+	If target is 14 and k is 3, then output should be “4 20”
  */
-public class B1_AllNodesAtDistK {
+public class B12_AllNodesAtDistK {
+
 	public static void main(String[] args) {
 		B1_Node root = new B1_Node(20);
 		root.left = new B1_Node(8);
@@ -32,44 +33,43 @@ public class B1_AllNodesAtDistK {
 	}
 
 	private static void printkdistanceNode(B1_Node root, int target, int k) {
-		ArrayList<Integer> ans = new ArrayList<>();
-		distanceK(root, target, k, ans);
-		System.out.println(ans);
+		ArrayList<B1_Node> path = new ArrayList<>();
+		getRootToNodePath(root, target, path);
+		for (int i = 0; i < path.size(); i++) {
+			printKLevelsDown(path.get(i), k - i, i == 0 ? null : path.get(i - 1));
+		}
 	}
 
-	private static int distanceK(B1_Node root, int target, int k, ArrayList<Integer> ans) {
-		if (root == null)
-			return -1;
-
-		if (root.data == target) {
-			kdown(root, k - 0, null, ans);
-			return 1;
-		}
-
-		int ld = distanceK(root.left, target, k, ans);
-		if (ld != -1) {
-			kdown(root, k - ld, root.left, ans);
-			return ld + 1;
-		}
-
-		int rd = distanceK(root.right, target, k, ans);
-		if (rd != -1) {
-			kdown(root, k - rd, root.right, ans);
-			return rd + 1;
-		}
-		return -1;
-	}
-
-	private static void kdown(B1_Node root, int k, B1_Node blockNode, ArrayList<Integer> ans) {
-		if (root == null || k < 0 || root == blockNode) {
+	private static void printKLevelsDown(B1_Node node, int k, B1_Node blocked) {
+		if (node == null || k < 0 || node == blocked) {
 			return;
 		}
 		if (k == 0) {
-			ans.add(root.data);
-			return;
+			System.out.print(node.data + " ");
 		}
-		kdown(root.left, k - 1, blockNode, ans);
-		kdown(root.right, k - 1, blockNode, ans);
+		printKLevelsDown(node.left, k - 1, blocked);
+		printKLevelsDown(node.right, k - 1, blocked);
+	}
+
+	private static boolean getRootToNodePath(B1_Node root, int target, ArrayList<B1_Node> path) {
+		if (root == null) {
+			return false;
+		}
+		if (root.data == target) {
+			path.add(root);
+			return true;
+		}
+		boolean left = getRootToNodePath(root.left, target, path);
+		if (left) {
+			path.add(root);
+			return true;
+		}
+		boolean right = getRootToNodePath(root.right, target, path);
+		if (right) {
+			path.add(root);
+			return true;
+		}
+		return false;
 	}
 }
 
