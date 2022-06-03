@@ -15,7 +15,7 @@ public class A4_SortArrayWithoutAnyAlgo {
 	 */
 	public static void main(String[] args) {
 		//solution1_mybrute(); // O(n2)
-		solution2_comparisonSeggregation(); // O(n). Check GFG link also for count approach
+		solution2_comparisonSeggregation(); // Time : O(n). Check GFG link also for count approach
 	}
 
 	private static void solution2_comparisonSeggregation() {

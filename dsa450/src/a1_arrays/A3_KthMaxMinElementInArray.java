@@ -20,7 +20,7 @@ public class A3_KthMaxMinElementInArray {
 	 */
 	public static void main(String[] args) {
 		// solution1_treeSet();
-		solution2();
+		solution2(); // Time : O(nlogn)
 	}
 
 	private static void solution2() {

@@ -17,7 +17,7 @@ public class A9_MinimiseMaxDiffBetweenHeights {
 	 * smallest is 8-3 = 5.
 	 */
 	public static void main(String[] args) {
-		solution1();
+		solution1(); // Time; O(nlogn)
 	}
 
 	private static void solution1() {

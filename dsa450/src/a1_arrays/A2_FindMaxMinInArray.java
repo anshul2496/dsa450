@@ -6,9 +6,7 @@ public class A2_FindMaxMinInArray {
 
 	/*
 	 * Maximum and minimum of an array using minimum number of comparisons
-	 * 
 	 * https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
-	 * 
 	 */
 	
 	static class Pair {
@@ -25,7 +23,7 @@ public class A2_FindMaxMinInArray {
 		 * maximums and minimums of the two parts to get the maximum and the minimum of
 		 * the whole array. Time Complexity is still O(n)
 		 */
-		solution3_tournamentMethod();
+		solution3_tournamentMethod(); // Time: O(log n)
 	}
 
 	private static void solution3_tournamentMethod() {

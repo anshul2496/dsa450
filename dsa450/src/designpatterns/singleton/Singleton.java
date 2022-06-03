@@ -14,7 +14,7 @@ synchronizing the whole method was generally advised against for performance rea
 If you prefer to avoid using synchronized altogether, you can use an inner static class to hold the reference instead. Inner static classes are guaranteed to load lazily.
  */
 public class Singleton {
-	private static Singleton soleInstance;
+	private static volatile Singleton soleInstance;
 
 	private Singleton() {
 		// To protect ourselves from reflection
@@ -46,7 +46,7 @@ public class Singleton {
 
 	// Compliant 2 - Holder pattern(using static inner class)
 	private static class SingletonHolder {
-		public static Singleton singleton = new Singleton();
+		private static Singleton singleton = new Singleton();
 	}
 
 	public static Singleton getInstance3() {
