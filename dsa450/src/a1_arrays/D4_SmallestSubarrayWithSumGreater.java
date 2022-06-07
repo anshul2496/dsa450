@@ -2,6 +2,7 @@ package a1_arrays;
 
 /*
  * 	https://practice.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1
+ * https://www.youtube.com/watch?v=GLpB03voaCs
  * 	Given an array of integers (A[])  and a number x, find the smallest subarray with sum greater than the given value.
 	Note: The answer always exists. It is guaranteed that x doesn't exceed the summation of a[i] (from 1 to N).
 	Example 1:
@@ -23,7 +24,7 @@ package a1_arrays;
  */
 public class D4_SmallestSubarrayWithSumGreater {
 	public static void main(String[] args) {
-		//solution1();
+		// solution1();
 		solution2();
 	}
 
@@ -31,17 +32,28 @@ public class D4_SmallestSubarrayWithSumGreater {
 		int[] a = { 1, 4, 45, 6, 0, 19 };
 		int x = 51;
 		int n = a.length;
-	    int ans = Integer.MAX_VALUE;
-	    int left = 0;
-	    int sum = 0;
-	    for (int i = 0; i < n; i++) {
-	        sum += a[i];
-	        while (sum > x) {
-	            ans = Math.min(ans, i + 1 - left);
-	            sum -= a[left++];
-	        }
-	    }
-	    System.out.println(ans);
+		int ans = Integer.MAX_VALUE;
+		int start = 0;
+		int end = 1;
+		int sum = a[start];
+		if (sum > x)
+			System.out.println(1);
+		if (end < n)
+			sum += a[end];
+
+		while (start < n && end < n) {
+			if (sum > x) {
+				ans = Math.min(ans, end - start + 1);
+				sum -= a[start];
+				start++;
+			} else {
+				end++;
+				if (end < n) {
+					sum += a[end];
+				}
+			}
+		}
+		System.out.println(ans);
 	}
 
 	private static void solution1() {

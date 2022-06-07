@@ -26,28 +26,28 @@ public class A1_SpiralTraversal {
 		int count = 0;
 		while (count < totalElem) {
 			// top wall
-			for (int i = minrow, j = mincol; j <= maxcol && count <= totalElem; j++) {
+			for (int i = minrow, j = mincol; j <= maxcol && count < totalElem; j++) {
 				System.out.print(a[i][j] + " ");
 				count++;
 			}
 			minrow++;
 
 			// right wall
-			for (int i = minrow, j = maxcol; i <= maxrow && count <= totalElem; i++) {
+			for (int i = minrow, j = maxcol; i <= maxrow && count < totalElem; i++) {
 				System.out.print(a[i][j] + " ");
 				count++;
 			}
 			maxcol--;
 
 			// bottom wall
-			for (int i = maxrow, j = maxcol; j >= mincol && count <= totalElem; j--) {
+			for (int i = maxrow, j = maxcol; j >= mincol && count < totalElem; j--) {
 				System.out.print(a[i][j] + " ");
 				count++;
 			}
 			maxrow--;
 
 			// left wall
-			for (int i = maxrow, j = mincol; i >= minrow && count <= totalElem; i--) {
+			for (int i = maxrow, j = mincol; i >= minrow && count < totalElem; i--) {
 				System.out.print(a[i][j] + " ");
 				count++;
 			}

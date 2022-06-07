@@ -14,7 +14,7 @@ public class B8_FindAllPairsOnIntArray {
 	 */
 	public static void main(String[] args) {
 		solution1(); // Time and space - O(n)
-		//solution2(); // Time is O(nlogn) and space isO(1)
+		//solution2(); // Time is O(nlogn) and space isO(1) -> For unique pairs
 	}
 
 	private static void solution2() {

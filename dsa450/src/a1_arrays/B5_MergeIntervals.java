@@ -16,7 +16,7 @@ public class B5_MergeIntervals {
 	 * merge them into [1,6].
 	 */
 	public static void main(String[] args) {
-		solution1();
+		solution1(); // Time : O(nlogn) ; Space : O(nm)
 	}
  
 	private static void solution1() {

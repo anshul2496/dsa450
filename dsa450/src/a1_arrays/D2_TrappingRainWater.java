@@ -21,9 +21,9 @@ public class D2_TrappingRainWater {
 
 	private static void solution1() {
 		// Leetcode two pointer explaination
-		int[] a = { 3, 0, 0, 2, 0, 4 };
+		int[] a = { 4, 0, 0, 2, 0, 3 };
 		int left = 0, right = a.length - 1;
-		int leftMax = 0, rightMax = 0;
+		int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE;
 		int ans = 0;
 		while (left < right) {
 			leftMax = Math.max(leftMax, a[left]);

@@ -36,7 +36,9 @@ public class B9_CommonElementIn3Arrays {
 					k++;
 				}
 				if (k < c.length && c[k] == b[j]) {
-					list.add(c[k]);
+					if(!list.contains(c[k])){
+                        list.add(c[k]);   
+                    }
 				}
 				i++;
 				j++;

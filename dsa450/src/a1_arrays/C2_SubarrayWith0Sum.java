@@ -1,5 +1,6 @@
 package a1_arrays;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +16,23 @@ public class C2_SubarrayWith0Sum {
 	 * subarray with sum 0.
 	 */
 	public static void main(String[] args) {
-		solution1();
+		//solution1(); // Time : O(n) Space O(n)
+		solution2(); // Count of zero sum subarray -> https://www.youtube.com/watch?v=C9-n_H7dsvU
+	}
+
+	private static void solution2() {
+		int[] a = { 5, 4, 2, -3, 1, 6 };
+		HashMap<Integer, Integer> map = new HashMap<>();
+		int sum = 0;
+		int count = 0;
+		for (int i = 0; i < a.length; i++) {
+			sum += a[i];
+			if (a[i] == 0 || sum == 0 || map.containsKey(sum)) {
+				count += map.get(sum);
+			}
+			map.put(sum, map.getOrDefault(sum, 0) + 1);
+		}
+		System.out.println(count);
 	}
 
 	private static void solution1() {
