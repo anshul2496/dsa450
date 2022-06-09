@@ -1,7 +1,6 @@
 package a2_matrix;
 
 /*
- * HARD - Leave
  * https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
  * https://www.youtube.com/watch?v=tFdBRcHLSGQ
  * Given a row wise sorted matrix of size RxC where R and C are always odd, find the median of the matrix.

@@ -2,6 +2,8 @@ package a1_arrays;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class B8_FindAllPairsOnIntArray {
 
@@ -14,7 +16,8 @@ public class B8_FindAllPairsOnIntArray {
 	 */
 	public static void main(String[] args) {
 		solution1(); // Time and space - O(n)
-		//solution2(); // Time is O(nlogn) and space isO(1) -> For unique pairs
+		// solution2(); // Time is O(nlogn) and space isO(1) -> For unique pairs
+		solution3(); // Cannot be done by using set. Failing test case - {1,5,5,5,5,7} and k=10. Correct op =6 and op from set=3
 	}
 
 	private static void solution2() {
@@ -48,6 +51,21 @@ public class B8_FindAllPairsOnIntArray {
 				count = count + mp.get(rem);
 			}
 			mp.put(arr[i], mp.getOrDefault(arr[i], 0) + 1);
+		}
+		System.out.println(count);
+	}
+
+	private static void solution3() {
+		int[] arr = { 1, 5, 7, 1 };
+		int sum = 6;
+		int count = 0;
+		Set<Integer> set = new HashSet<>();
+		for (int i = 0; i < arr.length; i++) {
+			int rem = sum - arr[i];
+			if (set.contains(rem)) {
+				count++;
+			}
+			set.add(arr[i]);
 		}
 		System.out.println(count);
 	}

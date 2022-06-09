@@ -1,7 +1,7 @@
 package a2_matrix;
 
 /*
- * https://practice.geeksforgeeks.org/problems/max-rectangle/1
+ * https://leetcode.com/problems/maximal-square/
  * https://www.youtube.com/watch?v=UagRoA3C5VQ
  * Given a binary matrix M of size n X m. Find the maximum area of a square formed only of 1s in the given matrix.
 	Example 1:
