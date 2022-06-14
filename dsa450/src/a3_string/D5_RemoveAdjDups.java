@@ -8,7 +8,7 @@ package a3_string;
 	Output:  aba
 	Explanation: 'a' at 2nd position is appearing 2nd time consecutively. 'a' at fifth position is appearing 2nd time consecutively.
  */
-public class D5_RecursivelyRemoveAdjDups {
+public class D5_RemoveAdjDups {
 	public static void main(String[] args) {
 		String s = "aabaa";
 		String res = "";

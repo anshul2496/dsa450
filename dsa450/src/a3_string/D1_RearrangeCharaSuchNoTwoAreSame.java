@@ -1,5 +1,6 @@
 package a3_string;
 
+import java.util.HashMap;
 import java.util.PriorityQueue;
 
 /*
@@ -11,18 +12,15 @@ import java.util.PriorityQueue;
 public class D1_RearrangeCharaSuchNoTwoAreSame {
 	public static void main(String[] args) {
 		String s = "geeksforgeeks";
-		int[] a = new int[26];
+		HashMap<Character, Integer> map = new HashMap<>();
 		for (int i = 0; i < s.length(); i++) {
-			a[s.charAt(i) - 'a']++;
+			char ch = s.charAt(i);
+			map.put(ch, map.getOrDefault(ch, 0) + 1);
 		}
-
-		// Max Priority Queue
 		PriorityQueue<Pair> pq = new PriorityQueue<>((x, y) -> (y.f - x.f));
-		for (int i = 0; i < 26; i++) {
-			if (a[i] > 0) {
-				Pair p = new Pair((char) ('a' + i), a[i]);
-				pq.add(p);
-			}
+		for (Character c : map.keySet()) {
+			Pair p = new Pair(c, map.get(c));
+			pq.add(p);
 		}
 		StringBuilder ans = new StringBuilder();
 		Pair block = pq.poll();

@@ -1,9 +1,7 @@
 package a3_string;
 
-import java.util.Arrays;
-
 /*
- * https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
+ * https://practice.geeksforgeeks.org/problems/find-the-string-in-grid0111/1/
  * Given a 2D grid of characters and a word, find all occurrences of the given word in the grid. 
  * A word can be matched in all 8 directions at any point. Word is said to be found in a direction 
  * if all characters match in this direction (not in zig-zag form).

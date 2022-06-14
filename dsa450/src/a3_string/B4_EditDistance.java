@@ -31,6 +31,7 @@ public class B4_EditDistance {
 					if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
 						dp[i][j] = dp[i - 1][j - 1];
 					} else {
+						// This block same as max size square sub array
 						int f1 = 1 + dp[i - 1][j - 1]; // replace
 						int f2 = 1 + dp[i][j - 1]; // insert
 						int f3 = 1 + dp[i - 1][j]; // delete

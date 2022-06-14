@@ -1,7 +1,9 @@
 package a3_string;
 
 /*
+ * https://leetcode.com/problems/palindromic-substrings/
  * https://www.youtube.com/watch?v=XmSOWnL6T_I
+ * Formula - No formula, just travel on gap
  */
 public class A61_CountPalindromicSubstring {
 	public static void main(String[] args) {

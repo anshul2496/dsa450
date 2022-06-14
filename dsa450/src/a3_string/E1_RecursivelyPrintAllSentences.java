@@ -1,7 +1,7 @@
 package a3_string;
 
 /*
- * https://www.geeksforgeeks.org/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/
+ * https://practice.geeksforgeeks.org/problems/recursively-print-all-sentences-that-can-be-formed-from-list-of-word-lists/1
  */
 public class E1_RecursivelyPrintAllSentences {
 	public static void main(String[] args) {
