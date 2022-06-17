@@ -10,7 +10,7 @@ package a5_interviews;
 
                k = 1
 
-	Output : 1->2->5
+	Output : 2,3
  */
 public class B11_PrintKLevelsDown {
 	public static void main(String[] args) {

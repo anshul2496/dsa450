@@ -1,7 +1,7 @@
 package a5_interviews;
 
 /*
- * https://www.techiedelight.com/maximum-profit-earned-buying-and-selling-shares/
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * https://www.youtube.com/watch?v=HWJ9kIPpzXs&t=12s
  * Stock Prices: {1, 5, 2, 3, 7, 6, 4, 5}
 	Total profit earned is 10

@@ -1,9 +1,8 @@
 package a5_interviews;
 
 /*
- * https://www.geeksforgeeks.org/count-ways-reach-nth-stair/
- * https://www.youtube.com/watch?v=A6mOASLl2Dg&t=738s
- * https://www.techiedelight.com/find-total-ways-reach-nth-stair-with-atmost-m-steps/
+ * https://leetcode.com/problems/climbing-stairs/
+ * https://www.youtube.com/watch?v=A6mOASLl2Dg
  * There are n stairs, a person standing at the bottom wants to reach the top. The person can climb either 1 stair or 2 stairs at a time. 
  * Count the number of ways, the person can reach the top.
  */

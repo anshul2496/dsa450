@@ -3,7 +3,7 @@ package a5_interviews;
 import java.util.ArrayList;
 
 /*
- * https://www.geeksforgeeks.org/print-nodes-distance-k-given-node-binary-tree/
+ * https://practice.geeksforgeeks.org/problems/nodes-at-given-distance-in-binary-tree/1/
  * https://www.youtube.com/watch?v=B89In5BctFA // This one
  * https://www.youtube.com/watch?v=s22QClql9LU
  * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node.

@@ -2,6 +2,7 @@ package a5_interviews;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /*
  * https://www.geeksforgeeks.org/print-path-root-given-node-binary-tree/
@@ -17,8 +18,6 @@ import java.util.Collections;
 	Output : 1->2->5
  */
 public class B1_NodeToRootPath {
-	private static ArrayList<Integer> list = new ArrayList<>();
-
 	public static void main(String[] args) {
 		B1_Node root = new B1_Node(1);
 		root.left = new B1_Node(2);
@@ -28,12 +27,13 @@ public class B1_NodeToRootPath {
 		root.right.left = new B1_Node(6);
 		root.right.right = new B1_Node(7);
 		int x = 5;
-		find(root, x);
+		List<Integer> list = new ArrayList<>();
+		find(root, x, list);
 		Collections.reverse(list);
 		System.out.println(list);
 	}
 
-	private static boolean find(B1_Node root, int data) {
+	private static boolean find(B1_Node root, int data, List<Integer> list) {
 		if (root == null)
 			return false;
 
@@ -42,13 +42,13 @@ public class B1_NodeToRootPath {
 			return true;
 		}
 
-		boolean left = find(root.left, data);
+		boolean left = find(root.left, data, list);
 		if (left) {
 			list.add(root.data);
 			return true;
 		}
 
-		boolean right = find(root.right, data);
+		boolean right = find(root.right, data, list);
 		if (right) {
 			list.add(root.data);
 			return true;

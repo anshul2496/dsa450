@@ -1,8 +1,8 @@
 package a5_interviews;
 
 /*
- * https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/
- * https://www.youtube.com/watch?v=r7U0N2EE_l8 
+ * https://leetcode.com/problems/find-peak-element/
+ * https://www.youtube.com/watch?v=r7U0N2EE_l8
  * Given an array of integers. Find a peak element in it. An array element is a peak if it is NOT smaller than its neighbors. 
  * For corner elements, we need to consider only one neighbor. 
 	Example:
@@ -28,4 +28,29 @@ public class A9_FindThePeakInArray {
 		}
 		return low;
 	}
+	
+	// Linear Algorithm
+//	public int findPeakElement(int[] a) {
+//        if(a.length==1) return 0;
+//        int peak=0;
+//       for(int i=0;i<a.length;i++){
+//           if(i==0){
+//               if(a[i]>a[i+1]){
+//                   peak=i;
+//                   break;
+//               }
+//           }else if(i==a.length-1){
+//               if(a[i]>a[i-1]){
+//                   peak=i;
+//                   break;
+//               }
+//           }else{
+//               if(a[i]>a[i+1] && a[i]>a[i-1]){
+//                   peak=i;
+//                   break;
+//               }
+//           }
+//       }
+//       return peak;
+//    }
 }

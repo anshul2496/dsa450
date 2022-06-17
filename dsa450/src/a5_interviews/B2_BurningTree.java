@@ -3,7 +3,7 @@ package a5_interviews;
 import java.util.ArrayList;
 
 /*
- * https://www.geeksforgeeks.org/burn-the-binary-tree-starting-from-the-target-node/
+ * https://practice.geeksforgeeks.org/problems/burning-tree/1 - All test cases not passing
  * https://www.youtube.com/watch?v=dtBj2A_7JOk - Not this method
  * The below solved method is derived from prev problem
  *  		12
