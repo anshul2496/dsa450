@@ -16,8 +16,9 @@ public class C2_SubarrayWith0Sum {
 	 * subarray with sum 0.
 	 */
 	public static void main(String[] args) {
-		//solution1(); // Time : O(n) Space O(n)
+		// solution1(); // Time : O(n) Space O(n)
 		solution2(); // Count of zero sum subarray -> https://www.youtube.com/watch?v=C9-n_H7dsvU
+		// https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
 	}
 
 	private static void solution2() {
@@ -25,12 +26,15 @@ public class C2_SubarrayWith0Sum {
 		HashMap<Integer, Integer> map = new HashMap<>();
 		int sum = 0;
 		int count = 0;
+		map.put(0, 1);
 		for (int i = 0; i < a.length; i++) {
 			sum += a[i];
-			if (a[i] == 0 || sum == 0 || map.containsKey(sum)) {
+			if (map.containsKey(sum)) {
 				count += map.get(sum);
+				map.put(sum, map.get(sum) + 1);
+			} else {
+				map.put(sum, 1);
 			}
-			map.put(sum, map.getOrDefault(sum, 0) + 1);
 		}
 		System.out.println(count);
 	}
