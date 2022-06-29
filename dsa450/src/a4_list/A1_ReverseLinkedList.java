@@ -1,7 +1,8 @@
 package a4_list;
 
 /*
- * https://www.geeksforgeeks.org/reverse-a-linked-list/
+ * https://practice.geeksforgeeks.org/problems/reverse-a-linked-list/1/
+ * https://www.youtube.com/watch?v=71NqKy7287g
  * Input: Head of following linked list 
 	1->2->3->4->NULL 
 	Output: Linked list should be changed to, 

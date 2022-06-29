@@ -10,6 +10,7 @@ public class A3_ReverseInKGroups {
 		head.next = new A1Node(2);
 		head.next.next = new A1Node(3);
 		head.next.next.next = new A1Node(4);
+		head.next.next.next.next = new A1Node(5);
 		System.out.println("Original list -");
 		print(head);
 		System.out.println("\nReversed List -");
@@ -45,7 +46,13 @@ public class A3_ReverseInKGroups {
 			tt = null;
 			len = len - k;
 		}
-		ot.next = curr;
+		while (curr != null) {
+			A1Node next = curr.next;
+			curr.next = null;
+			addFirst(curr);
+			curr = next;
+		}
+		ot.next = th;
 		return oh;
 	}
 
