@@ -1,5 +1,9 @@
 package dsa_codewithharry;
 
+/*
+ * Partitioning and array -  https://www.youtube.com/watch?v=if40LxQ8_Xo
+ * Quick Sort - https://www.youtube.com/watch?v=kdO5Q0nmPjU
+ */
 public class L_QuickSort {
 
 	public static void main(String[] args) {
@@ -18,27 +22,25 @@ public class L_QuickSort {
 	}
 
 	private static int partition(int[] a, int low, int high) {
-		int i, j, temp, pivot;
-		i = low + 1;
-		j = high;
-		pivot = a[low];
-		do {
-			while (i <= j && a[i] <= pivot) {
+		int i = low;
+		int j = low;
+		int pivot = a[high];
+		while (i <= high) {
+			if (a[i] > pivot)
 				i++;
+			else {
+				swap(a, i, j);
+				i++;
+				j++;
 			}
-			while (a[j] > pivot) {
-				j--;
-			}
-			if (i < j) {
-				temp = a[i];
-				a[i] = a[j];
-				a[j] = temp;
-			}
-		} while (i < j);
-		temp = a[low];
-		a[low] = a[j];
+		}
+		return j - 1;
+	}
+
+	private static void swap(int[] a, int i, int j) {
+		int temp = a[i];
+		a[i] = a[j];
 		a[j] = temp;
-		return j;
 	}
 
 	private static void print(int[] a) {
