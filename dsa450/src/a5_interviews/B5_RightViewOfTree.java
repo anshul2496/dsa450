@@ -33,7 +33,7 @@ public class B5_RightViewOfTree {
 
 	private static ArrayList<Integer> rightView(B1_Node root) {
 		if (root == null)
-			return null;
+			return new ArrayList<>();
 		ArrayList<Integer> list = new ArrayList<>();
 		LinkedList<B1_Node> queue = new LinkedList<>();
 		queue.addLast(root);

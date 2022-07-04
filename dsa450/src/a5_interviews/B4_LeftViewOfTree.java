@@ -34,7 +34,7 @@ public class B4_LeftViewOfTree {
 
 	private static ArrayList<Integer> leftView(B1_Node root) {
 		if (root == null)
-			return null;
+			return new ArrayList<>();
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		LinkedList<B1_Node> queue = new LinkedList<>();
 		queue.addLast(root);
