@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/find-pair-given-difference1559/1
+ * https://www.youtube.com/watch?v=XGrXiVi7Ces
  */
 public class A6_FindPairGivenDiff {
 	public static void main(String[] args) {
@@ -16,15 +17,15 @@ public class A6_FindPairGivenDiff {
 
 	private static boolean checkPairPresent(int[] a, int diff) {
 		Arrays.sort(a);
-		int low = 0;
-		int high = a.length - 1;
-		while (low <= high) {
-			if (a[high] - a[low] == diff)
+		int i = 0;
+		int j = 1;
+		while (i < a.length && j < a.length) {
+			if (a[j] - a[i] == diff)
 				return true;
-			else if (a[high] - a[low] > diff)
-				high--;
+			else if (a[j] - a[i] < diff)
+				j++;
 			else
-				low++;
+				i++;
 		}
 		return false;
 	}

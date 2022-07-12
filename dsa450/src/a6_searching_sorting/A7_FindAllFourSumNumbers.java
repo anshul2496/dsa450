@@ -7,6 +7,7 @@ import java.util.Set;
 
 /*
  * https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers1732/1
+ * https://www.youtube.com/watch?v=hGz0b8L7plI
  */
 public class A7_FindAllFourSumNumbers {
 	public static void main(String[] args) {

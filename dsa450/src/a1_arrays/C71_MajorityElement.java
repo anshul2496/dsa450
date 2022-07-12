@@ -3,13 +3,7 @@ package a1_arrays;
 /*
  * https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1
  * https://www.youtube.com/watch?v=-s-qtf9flqg
- * Given an array A of N elements. Find the majority element in the array. A majority element in an array A of size N is an element that appears more than N/2 times in the array.
-	Example 1:
-	Input:
-	N = 3 
-	A[] = {1,2,3} 
-	Output:
-	-1
+ * Can also be done by frequency map but will take O(n) space
  */
 public class C71_MajorityElement {
 	public static void main(String[] args) {

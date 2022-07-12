@@ -17,13 +17,13 @@ public class A2_SearchInRotatedSorted {
 				index = mid;
 				break;
 			} else if (a[low] <= a[mid]) {
-				if (target >= a[low] && target <= a[mid]) {
+				if (target >= a[low] && target < a[mid]) {
 					high = mid - 1;
 				} else {
 					low = mid + 1;
 				}
 			} else if (a[mid] <= a[high]) {
-				if (target >= a[mid] && target <= a[high]) {
+				if (target > a[mid] && target <= a[high]) {
 					low = mid + 1;
 				} else {
 					high = mid - 1;

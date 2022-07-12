@@ -29,7 +29,7 @@ public class A1_FirstLastOccurences {
 			int mid = (low + high) / 2;
 			if (a[mid] == x) {
 				end = mid;
-				// continue searching on mid
+				// continue searching on right
 				low = mid + 1;
 			} else if (x > a[mid])
 				low = mid + 1;
