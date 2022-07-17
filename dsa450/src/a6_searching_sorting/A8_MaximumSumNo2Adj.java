@@ -2,20 +2,20 @@ package a6_searching_sorting;
 
 /*
  * https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1
+ * https://www.youtube.com/watch?v=VT4bZV24QNo
  */
 public class A8_MaximumSumNo2Adj {
 	public static void main(String[] args) {
 		int[] a = { 5, 5, 10, 100, 10, 5 };
-		int sum = 0;
-		int i = 0;
-		int j = 1;
-		int sum1 = 0;
-		while (i < a.length && j < a.length) {
-			sum += a[i];
-			sum1 += a[j];
-			i += 2;
-			j += 2;
+		int inc = a[0];
+		int exc = 0;
+		for (int i = 1; i < a.length; i++) {
+			int ninc = exc + a[i];
+			int nexc = Math.max(exc, inc);
+			inc = ninc;
+			exc = nexc;
 		}
-		System.out.println(Math.max(sum, sum1));
+		int ans = Math.max(inc, exc);
+		System.out.println(ans);
 	}
 }

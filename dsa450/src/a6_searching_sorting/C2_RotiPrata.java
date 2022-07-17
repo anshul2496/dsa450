@@ -9,17 +9,17 @@ public class C2_RotiPrata {
 		int p = 10;
 		int[] a = { 1, 2, 3, 4 };
 		int n = 4;
-		int ans = getMinimumOfMaximum(p, a, n);
+		int ans = getMinimumMinutes(p, a, n);
 		System.out.println(ans);
 	}
 
-	private static int getMinimumOfMaximum(int p, int[] a, int n) {
+	private static int getMinimumMinutes(int p, int[] a, int n) {
 		int max = 0;
 		for (int i = 0; i < n; i++) {
 			max = Math.max(max, a[i]);
 		}
 		int low = max;
-		int high = max * p;
+		int high = (int) 1e8;
 		int ans = 0;
 		while (low <= high) {
 			int mid = (low + high) / 2;

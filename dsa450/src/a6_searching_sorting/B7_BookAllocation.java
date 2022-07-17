@@ -3,6 +3,7 @@ package a6_searching_sorting;
 /*
  * https://practice.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
  * youtube.com/watch?v=okP-e2VpI_g
+ * Here we have to find the Minimum of Largest
  */
 public class B7_BookAllocation {
 	public static void main(String[] args) {

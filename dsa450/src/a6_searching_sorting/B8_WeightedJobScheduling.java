@@ -5,10 +5,11 @@ import java.util.Comparator;
 
 /*
  * https://www.geeksforgeeks.org/weighted-job-scheduling-log-n-time/
+ * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
  * Problem - https://www.youtube.com/watch?v=CgLpOeRA6Co
  * Solution - https://www.youtube.com/watch?v=Iw8XtK1HCCw
  */
-public class B8_JobSchedulingAlgo {
+public class B8_WeightedJobScheduling {
 	public static void main(String[] args) {
 		Job jobs[] = { new Job(1, 2, 50), new Job(3, 5, 20), new Job(6, 19, 100), new Job(2, 100, 200) };
 		System.out.println("Optimal profit is " + schedule(jobs));
@@ -43,13 +44,18 @@ class Job {
 		this.finish = finish;
 		this.profit = profit;
 	}
+
+	@Override
+	public String toString() {
+		return "Job [start=" + start + ", finish=" + finish + ", profit=" + profit + "]";
+	}
 }
 
 class JobComparator implements Comparator<Job> {
 
 	@Override
 	public int compare(Job j1, Job j2) {
-		return j1.finish < j2.finish ? -1 : j1.finish == j2.finish ? 0 : 1;
+		return j1.finish - j2.finish;
 	}
 
 }

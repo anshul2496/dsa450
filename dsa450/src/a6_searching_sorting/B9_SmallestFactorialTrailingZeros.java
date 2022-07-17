@@ -3,6 +3,7 @@ package a6_searching_sorting;
 /*
  * https://practice.geeksforgeeks.org/problems/smallest-factorial-number5929/1
  * https://www.youtube.com/watch?v=0y6Hy5zLSkk
+ * Formula based not logic - Leave
  */
 public class B9_SmallestFactorialTrailingZeros {
 	public static void main(String[] args) {

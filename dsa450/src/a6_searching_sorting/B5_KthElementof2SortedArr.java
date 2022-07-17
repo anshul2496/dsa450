@@ -1,9 +1,11 @@
 package a6_searching_sorting;
 
+import java.util.Arrays;
+
 /*
  * https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
  * https://www.youtube.com/watch?v=nv7F4PiLUzo
- * *****This is same as median of two sorted arrays.*****
+ * *****This is same as median of two sorted arrays.***** -> https://www.youtube.com/watch?v=afwPSXmRsGs&t=1s
  * Input:
 	arr1[] = {2, 3, 6, 7, 9}
 	arr2[] = {1, 4, 8, 10}
@@ -15,20 +17,23 @@ package a6_searching_sorting;
  */
 public class B5_KthElementof2SortedArr {
 	public static void main(String[] args) {
-		int[] a = { 2, 3, 6, 7, 9 };
-		int[] b = { 1, 4, 8, 10 };
-		int k = 5;
+		int[] a = { 1, 10, 10, 25, 40, 54, 79 };
+		int[] b = { 15, 24, 27, 32, 33, 39, 48, 68, 82, 88, 90 };
+		int k = 15;
+		// int kthElement = kthElement(a, b, a.length, b.length, k);
 		int kthElement = getKthElement(a, b, k);
 		System.out.println(kthElement);
 	}
 
+	// Optimum solution - O(log(min(m,n))) and O(1)
 	private static int getKthElement(int[] a, int[] b, int k) {
 		if (a.length > b.length)
 			return getKthElement(b, a, k);
 		int n1 = a.length;
 		int n2 = b.length;
-		int low = 0;
-		int high = n1;
+		// Only low and high are different from median question
+		int low = Math.max(0, k - n2);
+		int high = Math.min(k, n1);
 		while (low <= high) {
 			int cut1 = (low + high) / 2;
 			int cut2 = k - cut1;
@@ -45,5 +50,31 @@ public class B5_KthElementof2SortedArr {
 			}
 		}
 		return 0;
+	}
+
+	// My solution - Inspired from merge 2 sorted arrays without extra space.
+	public static int kthElement(int a1[], int a2[], int n, int m, int x) {
+		int i = 0;
+		int j = 0;
+		int k = n - 1;
+		while (i <= k && j < m) {
+			if (a1[i] < a2[j])
+				i++;
+			else {
+				int temp = a2[j];
+				a2[j] = a1[k];
+				a1[k] = temp;
+				k--;
+				j++;
+			}
+		}
+		Arrays.sort(a1);
+		Arrays.sort(a2);
+		if (x <= a1.length)
+			return a1[k - 1];
+		else {
+			x = x - a1.length;
+			return a2[k - 1];
+		}
 	}
 }

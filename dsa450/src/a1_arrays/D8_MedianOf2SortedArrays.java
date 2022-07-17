@@ -1,7 +1,5 @@
 package a1_arrays;
 
-import java.util.Arrays;
-
 /*
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
  * https://www.youtube.com/watch?v=afwPSXmRsGs&t=1s
@@ -18,14 +16,13 @@ public class D8_MedianOf2SortedArrays {
 	public static void main(String[] args) {
 		int[] a = { 1, 12, 15, 26, 38 };
 		int[] b = { 2, 13, 17, 30, 45 };
-		// solution1(a, b); // O(m+n)
-		double median = solution2(a, b); // O(log(m+n))
+		double median = solution(a, b); // O(log(m+n))
 		System.out.println(median);
 	}
 
-	private static double solution2(int[] a, int[] b) {
+	private static double solution(int[] a, int[] b) {
 		if (a.length > b.length) {
-			return solution2(b, a);
+			return solution(b, a);
 		}
 		int n1 = a.length;
 		int n2 = b.length;
@@ -59,33 +56,5 @@ public class D8_MedianOf2SortedArrays {
 			}
 		}
 		return 0.0;
-	}
-
-	private static void solution1(int[] a, int[] b) {
-		int[] c = new int[a.length + b.length];
-		int j = 0, i = 0;
-		int k = 0;
-		for (i = 0; i < a.length && j < b.length;) {
-			if (a[i] < b[j]) {
-				c[k++] = a[i++];
-			} else {
-				c[k++] = b[j++];
-			}
-		}
-		while (k < c.length && j < b.length) {
-			c[k++] = b[j++];
-		}
-		while (k < c.length && i < a.length) {
-			c[k++] = a[i++];
-		}
-		System.out.println(Arrays.toString(c));
-		int median = 0;
-		int mid = c.length / 2;
-		if ((c.length - 1) % 2 == 0) {
-			median = c[mid];
-		} else {
-			median = (c[mid - 1] + c[mid]) / 2;
-		}
-		System.out.println(median);
 	}
 }
