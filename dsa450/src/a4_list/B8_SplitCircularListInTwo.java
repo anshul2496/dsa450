@@ -2,6 +2,7 @@ package a4_list;
 
 /*
  * https://practice.geeksforgeeks.org/problems/split-a-circular-linked-list-into-two-halves/1
+ * Cannot be done on gfg practice. Parameters not correct. Do in Rev
  * https://www.youtube.com/watch?v=VdGIR91xlaM
  */
 public class B8_SplitCircularListInTwo {

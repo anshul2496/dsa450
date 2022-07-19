@@ -1,8 +1,9 @@
-package a4_list;
+ package a4_list;
 
 /*
  * https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1
  * https://www.youtube.com/watch?v=HUFibUCDt0U
+ * Watch video if you want to see how O(nlogn) comes.
  */
 public class B5_MergeSortLinkedLists {
 	public static void main(String[] args) {

@@ -17,8 +17,19 @@ public class A1_ReverseLinkedList {
 		System.out.println("Original list -");
 		print(head);
 		System.out.println("\nReversed List -");
-		A1Node node = reverse(head);
+		A1Node node = recursiveReverse(head);
 		print(node);
+	}
+
+	// https://www.youtube.com/watch?v=ugQ2DVJJroc
+	private static A1Node recursiveReverse(A1Node head) {
+		if (head == null || head.next == null)
+			return head;
+		A1Node newHead = recursiveReverse(head.next);
+		A1Node next = head.next;
+		next.next = head;
+		head.next = null;
+		return newHead;
 	}
 
 	private static A1Node reverse(A1Node head) {

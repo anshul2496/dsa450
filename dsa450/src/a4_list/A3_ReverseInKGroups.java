@@ -26,11 +26,14 @@ public class A3_ReverseInKGroups {
 		}
 		int len = getLength(head);
 		A1Node oh = null, ot = null;
+		th = null;
+		tt = null;
 		A1Node curr = head;
+		A1Node next = null;
 		while (len >= k) {
 			int temp = k;
 			while (temp-- > 0) {
-				A1Node next = curr.next;
+				next = curr.next;
 				curr.next = null;
 				addFirst(curr);
 				curr = next;
@@ -47,7 +50,7 @@ public class A3_ReverseInKGroups {
 			len = len - k;
 		}
 		while (curr != null) {
-			A1Node next = curr.next;
+			next = curr.next;
 			curr.next = null;
 			addFirst(curr);
 			curr = next;

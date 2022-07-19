@@ -1,7 +1,7 @@
 package a4_list;
 
 /*
- * https://www.geeksforgeeks.org/move-last-element-to-front-of-a-given-linked-list/
+ * https://practice.geeksforgeeks.org/problems/move-last-element-to-front-of-a-linked-list/0?category%5B%5D=Linked%20List
  */
 public class A8_MoveLastElementToFront {
 	public static void main(String[] args) {

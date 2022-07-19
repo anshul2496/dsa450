@@ -14,23 +14,27 @@ public class A7_RemoveDupsInUnsortedList {
 		head.next.next.next = new A1Node(4);
 		head.next.next.next.next = new A1Node(5);
 		print(head);
+		print(removeDuplicates(head));
+	}
 
+	public static A1Node removeDuplicates(A1Node head) {
+		if (head == null || head.next == null)
+			return head;
 		HashMap<Integer, Boolean> map = new HashMap<>();
-		A1Node curr = head;
 		A1Node dummy = new A1Node(-(int) 1e8);
-		A1Node temp = dummy;
+		A1Node itr = dummy;
+		A1Node curr = head;
 		while (curr != null) {
-			if (!map.isEmpty() && map.containsKey(curr.data)) {
+			while (curr != null && map.containsKey(curr.data))
 				curr = curr.next;
-			} else {
+			if (curr != null)
 				map.put(curr.data, true);
-			}
-			temp.next = curr;
-			temp = temp.next;
+			itr.next = curr;
+			itr = itr.next;
 			if (curr != null)
 				curr = curr.next;
 		}
-		print(dummy.next);
+		return dummy.next;
 	}
 
 	private static void print(A1Node head) {

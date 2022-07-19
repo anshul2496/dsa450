@@ -4,6 +4,7 @@ package a4_list;
  * https://practice.geeksforgeeks.org/problems/partition-a-linked-list-around-a-given-value/1/
  * https://www.youtube.com/watch?v=R9ak6JgWMAw - Segregate nodes over last index
  * https://www.youtube.com/watch?v=sJhUy4ixASE -Segregate Nodes over pivot
+ * Geeks for geeks problem is little different(better problem) from pepcoding - Did it!!
  */
 public class B6_PartitionLinkedListAroundPivot {
 	public static void main(String[] args) {
