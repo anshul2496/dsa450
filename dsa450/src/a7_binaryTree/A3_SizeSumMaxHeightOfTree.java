@@ -51,6 +51,7 @@ public class A3_SizeSumMaxHeightOfTree {
 		return ts;
 	}
 
+	// Size is total nodes in the tree
 	private static int getSize(TreeNode root) {
 		if (root == null)
 			return 0;

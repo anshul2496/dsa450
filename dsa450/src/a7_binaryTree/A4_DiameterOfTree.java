@@ -47,14 +47,14 @@ public class A4_DiameterOfTree {
 		// Maximum distance between two nodes on left hand side
 		int rd = diameter1(root.right);
 		// Maximum distance between left's deepest and right's deepest
-		int f = height(root.left) + height(root.right) + 2;
+		int f = height(root.left) + height(root.right) + 1; // in terms of no of nodes
 		int dia = Math.max(f, Math.max(ld, rd));
 		return dia;
 	}
 
 	private static int height(TreeNode root) {
 		if (root == null)
-			return -1;
+			return 0; // in terms of nodes
 		int lh = height(root.left);
 		int rh = height(root.right);
 		int th = Math.max(lh, rh) + 1;

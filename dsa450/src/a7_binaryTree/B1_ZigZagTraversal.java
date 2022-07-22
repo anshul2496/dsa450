@@ -41,14 +41,14 @@ public class B1_ZigZagTraversal {
 			ans.add(rn.data);
 			if (level % 2 == 1) {
 				if (rn.left != null)
-					cs.add(rn.left);
+					cs.push(rn.left);
 				if (rn.right != null)
-					cs.add(rn.right);
+					cs.push(rn.right);
 			} else {
 				if (rn.right != null)
-					cs.add(rn.right);
+					cs.push(rn.right);
 				if (rn.left != null)
-					cs.add(rn.left);
+					cs.push(rn.left);
 			}
 			if (ms.isEmpty()) {
 				ms = cs;

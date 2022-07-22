@@ -28,8 +28,7 @@ public class A1_LevelOrderTraversal {
 	private static ArrayList<Integer> getLevelOrder(TreeNode root) {
 		// Remove, Print, Add (rpa)
 		ArrayList<Integer> ans = new ArrayList<>();
-
-		Queue<TreeNode> q = new ArrayDeque<>();
+		Queue<TreeNode> q = new ArrayDeque<>(); // Can also be done via LinkedList
 		q.add(root);
 		while (!q.isEmpty()) {
 			for (int i = 0; i < q.size(); i++) {

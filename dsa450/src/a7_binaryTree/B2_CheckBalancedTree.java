@@ -2,7 +2,7 @@ package a7_binaryTree;
 
 /*
  * https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1
- * https://www.youtube.com/watch?v=lUDgp2D6sf8
+ * https://www.youtube.com/watch?v=Yt50Jfbd8Po
  *    1
      /    
    10   
@@ -11,26 +11,31 @@ package a7_binaryTree;
 Output = false
  */
 public class B2_CheckBalancedTree {
-	static boolean isBalanced = true;
-
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(1);
 		root.left = new TreeNode(10);
 		root.left.left = new TreeNode(5);
 
-		checkBalancedTree(root);
-		System.out.println(isBalanced);
+		System.out.println(checkBalancedTree(root));
 	}
 
-	private static int checkBalancedTree(TreeNode root) {
+	static boolean checkBalancedTree(TreeNode root) {
+		int diffh = getDiff(root);
+		return diffh != -1;
+	}
+
+	public static int getDiff(TreeNode root) {
 		if (root == null)
 			return 0;
-		int lh = checkBalancedTree(root.left);
-		int rh = checkBalancedTree(root.right);
-		int gap = Math.abs(lh - rh);
-		if (gap > 1)
-			isBalanced = false;
-		int th = Math.max(lh, rh) + 1;
+		int lh = getDiff(root.left);
+		if (lh == -1)
+			return -1;
+		int rh = getDiff(root.right);
+		if (rh == -1)
+			return -1;
+		if (Math.abs(lh - rh) > 1)
+			return -1;
+		int th = Math.max(rh, lh) + 1;
 		return th;
 	}
 }

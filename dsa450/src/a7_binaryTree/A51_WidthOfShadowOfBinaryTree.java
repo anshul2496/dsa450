@@ -2,6 +2,11 @@ package a7_binaryTree;
 
 /*
  * https://www.youtube.com/watch?v=rRBD5mS-N80
+ *        10
+       /     \
+     20        30
+   /   \       
+  40    60   
  */
 public class A51_WidthOfShadowOfBinaryTree {
 	public static void main(String[] args) {

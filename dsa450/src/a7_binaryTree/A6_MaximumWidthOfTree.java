@@ -4,6 +4,9 @@ import java.util.LinkedList;
 
 /*
  * https://practice.geeksforgeeks.org/problems/maximum-width-of-tree/1/
+ * Gfg question is different from Pepcoding one. In pepcoding null children are counted in width
+ * In gfg null children are not counted.
+ * Below code is of pepcoding. Check gfg link for the question and ans
  * https://www.youtube.com/watch?v=R9qiY7OK9JQ
  */
 public class A6_MaximumWidthOfTree {
