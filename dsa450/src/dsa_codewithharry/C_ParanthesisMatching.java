@@ -7,11 +7,8 @@ import java.util.Scanner;
 public class C_ParanthesisMatching {
 	public static void main(String[] args) {
 		//Stack<Character> stack = new Stack<>(); // Stack is synchronized and hence slower
-		//String str = "3*2-(8+1)";
 		Deque<Character> stack = new ArrayDeque<>();
-		System.out.println("Enter expression =");
-		Scanner ob = new Scanner(System.in);
-		String str = ob.next();
+		String str = "3*2-(8+1)";
 		int flag = 0;
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
@@ -31,6 +28,5 @@ public class C_ParanthesisMatching {
 		} else {
 			System.out.println("Balanced Expr.");
 		}
-		ob.close();
 	}
 }

@@ -15,16 +15,17 @@ public class A2_BinaryToDecimal {
 		A4_Node head = new A4_Node(1);
 		head.next = new A4_Node(0);
 		head.next.next = new A4_Node(1);
-		System.out.println(getBinary(head));
+		System.out.println(getDecimal(head));
 	}
 
-	private static int getBinary(A4_Node head) {
-		int num = head.data;
-		while (head.next != null) {
-			num = (num * 2) + head.next.data;
-			head = head.next;
+	private static int getDecimal(A4_Node head) {
+		int ans = 0;
+		A4_Node curr = head;
+		while (curr != null) {
+			ans = (ans * 2) + curr.data;
+			curr = curr.next;
 		}
-		return num;
+		return ans;
 	}
 }
 

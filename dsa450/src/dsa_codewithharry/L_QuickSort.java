@@ -1,7 +1,7 @@
 package dsa_codewithharry;
 
 /*
- * Partitioning and array -  https://www.youtube.com/watch?v=if40LxQ8_Xo
+ * Partitioning an array -  https://www.youtube.com/watch?v=if40LxQ8_Xo
  * Quick Sort - https://www.youtube.com/watch?v=kdO5Q0nmPjU
  */
 public class L_QuickSort {

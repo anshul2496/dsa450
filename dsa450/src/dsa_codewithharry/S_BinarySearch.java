@@ -10,7 +10,7 @@ public class S_BinarySearch {
 	private static boolean binarySearch(int[] a, int key) {
 		int low = 0;
 		int high = a.length - 1;
-		while (low < high) {
+		while (low <= high) {
 			int mid = (low + high) / 2;
 			if (key == a[mid])
 				return true;

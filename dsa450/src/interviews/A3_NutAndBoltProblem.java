@@ -1,5 +1,6 @@
 package interviews;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 /*
@@ -16,38 +17,37 @@ import java.util.HashMap;
 	        $ % & ^ @ # 
 	        $ % & ^ @ #  
  */
+// Do not solve the below problem by hash map method
 public class A3_NutAndBoltProblem {
 	public static void main(String[] args) {
 		char nuts[] = { '@', '#', '$', '%', '^', '&' };
-	    char bolts[] = { '$', '%', '&', '^', '@', '#' };
-	    int n = nuts.length;
-	    HashMap<Character, Integer> hash = new HashMap<>();
-	    // creating a hashmap for nuts
-	    for (int i = 0; i < n; i++)
-	      hash.put(nuts[i], i);
-	 
-	    // searching for nuts for each bolt in hash map
-	    for (int i = 0; i < n; i++)
-	      if (hash.containsKey(bolts[i]))
-	        nuts[i] = bolts[i];
-	 
-	    // print the result
-	    System.out.println("matched nuts and bolts are-");
-	    for (int i = 0; i < n; i++)
-	      System.out.print(nuts[i] + " ");
-	    System.out.println();
-	    for (int i = 0; i < n; i++)
-	      System.out.print(bolts[i] + " ");
+		char bolts[] = { '$', '%', '&', '^', '@', '#' };
+		int n = nuts.length;
+
+		HashMap<Integer, Character> map = new HashMap<>();
+		Arrays.sort(nuts); //bec. the order has to be sorted as per question.
+		for (int i = 0; i < nuts.length; i++)
+			map.put(i, nuts[i]);
+		for (int i = 0; i < bolts.length; i++)
+			bolts[i] = map.get(i);
+
+		// print the result
+		System.out.println("matched nuts and bolts are-");
+		for (int i = 0; i < n; i++)
+			System.out.print(nuts[i] + " ");
+		System.out.println();
+		for (int i = 0; i < n; i++)
+			System.out.print(bolts[i] + " ");
 	}
-	
-	//my solution
+
+	// my solution
 	void matchPairs(char nuts[], char bolts[], int n) {
-        HashMap<Integer,Character> map = new HashMap<>();
-        for(int i=0;i<n;i++){
-            map.put(i,nuts[i]);
-        }
-        for(int i=0;i<n;i++){
-            bolts[i]=map.get(i);
-        }
-    }
+		HashMap<Integer, Character> map = new HashMap<>();
+		for (int i = 0; i < n; i++) {
+			map.put(i, nuts[i]);
+		}
+		for (int i = 0; i < n; i++) {
+			bolts[i] = map.get(i);
+		}
+	}
 }

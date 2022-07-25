@@ -51,27 +51,28 @@ public class A4_NutAndBoltProblemPartition {
 	// Similar to standard partition method. Here we pass the pivot element
 	// too instead of choosing it inside the method.
 	private static int partition(char[] arr, int low, int high, char pivot) {
+		int j = low;
 		int i = low;
-		char temp1, temp2;
-		for (int j = low; j < high; j++) {
-			if (arr[j] < pivot) {
-				temp1 = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp1;
-				i++;
-			} else if (arr[j] == pivot) {
-				temp1 = arr[j];
-				arr[j] = arr[high];
-				arr[high] = temp1;
-				j--;
+		while (i < high) {
+			if (arr[i] < pivot) {
+				char temp = arr[j];
+				arr[j] = arr[i];
+				arr[i] = temp;
+				j++;
+			} else if (arr[i] == pivot) {
+				char temp = arr[i];
+				arr[i] = arr[high];
+				arr[high] = temp;
+				i--;
 			}
+			i++;
 		}
-		temp2 = arr[i];
-		arr[i] = arr[high];
-		arr[high] = temp2;
+		char temp = arr[j];
+		arr[j] = arr[high];
+		arr[high] = temp;
 
 		// Return the partition index of an array based on the pivot
 		// element of other array.
-		return i;
+		return j;
 	}
 }

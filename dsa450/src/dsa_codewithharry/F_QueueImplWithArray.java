@@ -68,8 +68,7 @@ class QueueWithArray {
 			System.out.println("Queue empty");
 			return Integer.MIN_VALUE;
 		}
-		front += 1;
-		System.out.println("**Dequeued " + arr[front]);
+		System.out.println("**Dequeued " + arr[++front]);
 		return arr[front];
 	}
 

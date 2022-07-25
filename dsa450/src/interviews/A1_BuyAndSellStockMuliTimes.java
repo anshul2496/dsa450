@@ -2,7 +2,7 @@ package interviews;
 
 /*
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
- * https://www.youtube.com/watch?v=HWJ9kIPpzXs&t=12s
+ * https://www.youtube.com/watch?v=HWJ9kIPpzXs
  * Stock Prices: {1, 5, 2, 3, 7, 6, 4, 5}
 	Total profit earned is 10
 	Buy on day 1 and sell on day 2
@@ -11,7 +11,7 @@ package interviews;
  */
 public class A1_BuyAndSellStockMuliTimes {
 	public static void main(String[] args) {
-		int[] price = { 1, 5, 2, 3, 7, 6, 4, 5 };
+		int[] price = { 7, 1, 5, 3, 6, 4 };
 		int profit = 0;
 		int buyDate = 0;
 		int sellDate = 0;

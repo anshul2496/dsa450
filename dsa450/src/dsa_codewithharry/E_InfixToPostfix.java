@@ -11,20 +11,16 @@ public class E_InfixToPostfix {
 	static {
 		map.put('(', -1);
 		map.put(')', -1);
-		map.put('*', 2);
-		map.put('/', 2);
 		map.put('+', 1);
 		map.put('-', 1);
+		map.put('*', 2);
+		map.put('/', 2);
 	}
 
 	public static void main(String[] args) {
-		String str = "((p-q)-(r/a))";
-		//System.out.println("Enter infix expression=");
-		//Scanner ob = new Scanner(System.in);
-		//String infix = ob.next();
+		String str = "(p-q)-(r/a)";
 		String postfix = convertInfixToPostfix(str);
 		System.out.println("Postfix expression = " + postfix);
-		//ob.close();
 	}
 
 	private static String convertInfixToPostfix(String infix) {

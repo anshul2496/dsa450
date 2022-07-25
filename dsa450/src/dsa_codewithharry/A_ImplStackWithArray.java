@@ -22,7 +22,7 @@ public class A_ImplStackWithArray {
 
 class StackWithArray {
 	int top = -1;
-	int MAX_SIZE = 1000;
+	int MAX_SIZE = 3;
 	int[] a = new int[MAX_SIZE];
 
 	boolean isEmpty() {
@@ -30,7 +30,7 @@ class StackWithArray {
 	}
 
 	boolean isFull() {
-		return top >= MAX_SIZE;
+		return top == MAX_SIZE - 1;
 	}
 
 	boolean push(int element) {

@@ -19,9 +19,7 @@ public class A7_Fibonacci {
 			return n;
 		if (qb[n] != 0)
 			return qb[n];
-		int fibm1 = getFib(n - 1);
-		int fibm2 = getFib(n - 2);
-		int fibm = fibm1 + fibm2;
+		int fibm = getFibWithMemoization(n - 1, qb) + getFibWithMemoization(n - 2, qb);
 		qb[n] = fibm;
 		return fibm;
 	}
@@ -29,9 +27,6 @@ public class A7_Fibonacci {
 	private static int getFib(int n) {
 		if (n == 0 || n == 1)
 			return n;
-		int fibm1 = getFib(n - 1);
-		int fibm2 = getFib(n - 2);
-		int fibm = fibm1 + fibm2;
-		return fibm;
+		return getFib(n - 1) + getFib(n - 2);
 	}
 }

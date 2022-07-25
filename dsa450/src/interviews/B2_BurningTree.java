@@ -3,7 +3,7 @@ package interviews;
 import java.util.ArrayList;
 
 /*
- * https://practice.geeksforgeeks.org/problems/burning-tree/1 - All test cases not passing
+ * https://practice.geeksforgeeks.org/problems/burning-tree/1
  * https://www.youtube.com/watch?v=dtBj2A_7JOk - Not this method
  * The below solved method is derived from prev problem
  *  		12
