@@ -2,7 +2,6 @@ package dsa_codewithharry;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Scanner;
 
 public class C_ParanthesisMatching {
 	public static void main(String[] args) {

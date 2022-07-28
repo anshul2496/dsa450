@@ -12,16 +12,13 @@ class Node {
 
 public class P_isBST {
 
-	Node root;
-	Node prev;
 	public static void main(String[] args) {
-		P_isBST ob = new P_isBST();
 		// Creating Nodes
-		ob.root = new Node(7);
-		ob.root.left = new Node(2);
-		ob.root.right = new Node(9);
-		ob.root.left.left = new Node(0);
-		ob.root.left.right = new Node(4);
+		Node root = new Node(7);
+		root.left = new Node(2);
+		root.right = new Node(9);
+		root.left.left = new Node(0);
+		root.left.right = new Node(4);
 
 		// Input tree -
 		//       7
@@ -29,27 +26,21 @@ public class P_isBST {
 		//     2    9
 		//    / \
 		//   0   4
-		
-		System.out.println("isBST = " + ob.isBST());
+
+		System.out.println("isBST = " + isBST(root));
 	}
 
-	private boolean isBST() {
-		prev = null;
-		return isBST(root);
-	}
+	static Node prev = null;
 
-	private boolean isBST(Node node) {
-		if(node != null) {
-			if(!isBST(node.left)) {
+	private static boolean isBST(Node root) {
+		if (root != null) {
+			if (!isBST(root.left))
 				return false;
-			}
-			if (prev != null && prev.data >= node.data) {
+			if (prev != null && prev.data > root.data)
 				return false;
-			}
-			prev = node;
-			return isBST(node.right);
+			prev = root;
+			return isBST(root.right);
 		}
 		return true;
 	}
-
 }
