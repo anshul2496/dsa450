@@ -1,29 +1,70 @@
 package a1_arrays;
 
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.PriorityQueue;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
 
+/*
+ * https://leetcode.com/problems/kth-largest-element-in-an-array/
+ * https://www.youtube.com/watch?v=fnbImb8lo88
+ * Given an array arr[] and a number K where K is smaller than size of array,
+ * the task is to find the Kth smallest element in the given array. It is given
+ * that all array elements are distinct. Example 1: Input: N = 6 arr[] = 7 10 4
+ * 3 20 15 K = 3 Output : 7 Explanation : 3rd smallest element in the given
+ * array is 7.
+ */
 public class A3_KthMaxMinElementInArray {
 
-	/*
-	 * https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1
-	 * 
-	 * Given an array arr[] and a number K where K is smaller than size of array,
-	 * the task is to find the Kth smallest element in the given array. It is given
-	 * that all array elements are distinct. Example 1: Input: N = 6 arr[] = 7 10 4
-	 * 3 20 15 K = 3 Output : 7 Explanation : 3rd smallest element in the given
-	 * array is 7.
-	 */
 	public static void main(String[] args) {
-		// solution1_treeSet();
-		solution2(); // Time : O(nlogn)
+		// Time : O(nlogk) bec. loop running n times for pq of size k; Space:O(k) as
+		// size of PQ is never greater than k
+		solution1();
+
+		// Time:O(n) Space:O(1) - Quick select Algo
+		// https://www.youtube.com/watch?v=fnbImb8lo88
+		solution2();
 	}
 
 	private static void solution2() {
+		// Kth smallest element
+		int[] a = { 7, 10, 4, 3, 20, 15 };
+		int k = 3;
+		int kthSmallest = quickSelect(a, 0, a.length - 1, k - 1);
+		System.out.println("Kth Smallest via Quick Select=" + kthSmallest);
+		
+		// For kth largest using quick select, we need to sort the array in descending order
+		// For that in the partition function, just change to "if(a[i] < pivot) i++;"
+		// https://leetcode.com/problems/kth-largest-element-in-an-array/
+	}
+
+	private static int quickSelect(int[] a, int low, int high, int k) {
+		int pivot = a[high];
+		int pi = partition(a, pivot, low, high);
+		if (k > pi)
+			return quickSelect(a, pi + 1, high, k);
+		else if (k < pi)
+			return quickSelect(a, low, pi - 1, k);
+		else
+			return a[pi];
+	}
+
+	private static int partition(int[] a, int pivot, int low, int high) {
+		int i = low;
+		int j = low;
+		while (i <= high) {
+			if (a[i] < pivot)
+				i++;
+			else {
+				int temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+				i++;
+				j++;
+			}
+		}
+		return j - 1;
+	}
+
+	private static void solution1() {
 		int[] a = { 7, 10, 4, 3, 20, 15 };
 		int k = 3;
 		// Kth Largest - Min Heap - By default in Priority Queue
@@ -33,7 +74,7 @@ public class A3_KthMaxMinElementInArray {
 		}
 		for (int i = k; i < a.length; i++) {
 			if (queue.peek() < a[i]) {
-				queue.poll();
+				queue.remove();
 				queue.add(a[i]);
 			}
 		}
@@ -46,38 +87,10 @@ public class A3_KthMaxMinElementInArray {
 		}
 		for (int i = k; i < a.length; i++) {
 			if (queue2.peek() > a[i]) {
-				queue2.poll();
+				queue2.remove();
 				queue2.add(a[i]);
 			}
 		}
 		System.out.println("Kth smallest = " + queue2.peek());
-	}
-
-	private static void solution1_treeSet() {
-		Scanner ob = new Scanner(System.in);
-		System.out.println("N=");
-		int n = ob.nextInt();
-		int i = 1;
-		Set<Integer> treeSet = new TreeSet<>();
-		while (i <= n) {
-			System.out.println("Enter a number=");
-			treeSet.add(ob.nextInt());
-			i++;
-		}
-		System.out.println("Enter k=");
-		int k = ob.nextInt();
-		i = 0;
-		if (n >= (k - 1)) {
-			Iterator<Integer> it = treeSet.iterator();
-			while (it.hasNext()) {
-				if (i == (k - 1)) {
-					System.out.println(k + " smallest number=" + it.next());
-					break;
-				}
-				i++;
-				it.next();
-			}
-		}
-		ob.close();
 	}
 }

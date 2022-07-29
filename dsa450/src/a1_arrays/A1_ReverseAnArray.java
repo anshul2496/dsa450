@@ -2,15 +2,14 @@ package a1_arrays;
 
 import java.util.Arrays;
 
+/*
+ * https://leetcode.com/problems/reverse-string/
+ * Given an array (or string), the task is to reverse the array/string. Examples
+ * Input : arr[] = {1, 2, 3} Output : arr[] = {3, 2, 1}
+ */
 public class A1_ReverseAnArray {
 
-	/*
-	 * Given an array (or string), the task is to reverse the array/string. Examples
-	 * Input : arr[] = {1, 2, 3} Output : arr[] = {3, 2, 1}
-	 * "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/"
-	 */
 	public static void main(String[] args) {
-		// solution1_iterative();
 		solution2_pointers(); // Time Complexity : O(n) ; Space Complexity : O(1)
 	}
 
@@ -28,15 +27,4 @@ public class A1_ReverseAnArray {
 		}
 		Arrays.stream(arr).forEach(System.out::println);
 	}
-
-	private static void solution1_iterative() {
-		String[] arr = { "1", "2", "3" };
-		String[] arr2 = new String[arr.length];
-		int j = 0;
-		for (int i = arr.length - 1; i >= 0; i--) {
-			arr2[j++] = arr[i];
-		}
-		Arrays.stream(arr).forEach(System.out::println);
-	}
-
 }

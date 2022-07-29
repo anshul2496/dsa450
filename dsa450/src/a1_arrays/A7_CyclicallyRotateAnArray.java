@@ -2,16 +2,15 @@ package a1_arrays;
 
 import java.util.Arrays;
 
+/*
+ * https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
+ * Given an array, rotate the array by one position in clock-wise direction.
+ * Example 1:
+ * Input: N = 5 
+ * A[] = {1, 2, 3, 4, 5} 
+ * Output: 5 1 2 3 4
+ */
 public class A7_CyclicallyRotateAnArray {
-
-	/*
-	 * https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
-	 * Given an array, rotate the array by one position in clock-wise direction.
-	 * Example 1:
-	 * Input: N = 5 
-	 * A[] = {1, 2, 3, 4, 5} 
-	 * Output: 5 1 2 3 4
-	 */
 	public static void main(String[] args) {
 		solution1(); //O(n)
 	}

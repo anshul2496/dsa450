@@ -2,13 +2,12 @@ package a1_arrays;
 
 import java.util.Arrays;
 
+/*
+ * Maximum and minimum of an array using minimum number of comparisons
+ * https://practice.geeksforgeeks.org/problems/max-min/1
+ */
 public class A2_FindMaxMinInArray {
 
-	/*
-	 * Maximum and minimum of an array using minimum number of comparisons
-	 * https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
-	 */
-	
 	static class Pair {
 		int max;
 		int min;
