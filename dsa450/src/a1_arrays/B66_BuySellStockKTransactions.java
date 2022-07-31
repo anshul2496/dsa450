@@ -4,7 +4,7 @@ package a1_arrays;
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
  * https://www.youtube.com/watch?v=3YILP-PdEJA
  */
-public class B75_BuySellStockKTransactions {
+public class B66_BuySellStockKTransactions {
 	public static void main(String[] args) {
 		// solution1(); // O(n^3)
 		solution2(); // O(n^2)

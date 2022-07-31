@@ -10,7 +10,7 @@ import java.util.Arrays;
  * must be in place and use only constant extra memory. Example 1: Input: nums =
  * [1,2,3] Output: [1,3,2] Example 2: Input: nums = [3,2,1] Output: [1,2,3]
  */
-public class B6_NextPermutation {
+public class B5_NextPermutation {
 	public static void main(String[] args) {
 		solution1();
 	}

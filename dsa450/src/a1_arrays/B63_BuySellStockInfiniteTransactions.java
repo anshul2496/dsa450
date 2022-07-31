@@ -4,7 +4,7 @@ package a1_arrays;
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
  * https://www.youtube.com/watch?v=HWJ9kIPpzXs
  */
-public class B72_BuySellStockInfiniteTransactions {
+public class B63_BuySellStockInfiniteTransactions {
 	public static void main(String[] args) {
 		int[] a = { 7, 1, 5, 3, 6, 4 };
 		int bd = 0;

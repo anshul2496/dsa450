@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps,
  * merge them into [1,6].
  */
-public class B5_MergeIntervals {
+public class B4_MergeIntervals {
 	public static void main(String[] args) {
 		solution1(); // Time : O(nlogn) ; Space : O(nm)
 	}

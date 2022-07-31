@@ -13,7 +13,7 @@ package a1_arrays;
 	Buy at 10, sell at 22, 
 	Buy at 5 and sell at 80
  */
-public class B71_BuySellShareAtmostTwice {
+public class B62_BuySellShareAtmostTwice {
 
 	public static void main(String[] args) {
 		solution1();

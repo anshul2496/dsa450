@@ -11,7 +11,7 @@ package a1_arrays;
  * 6), profit = 6-1 = 5. Note that buying on day 2 and selling on day 1 is not
  * allowed because you must buy before you sell.
  */
-public class B7_BuyAndSellStock {
+public class B61_BuyAndSellStock {
 	public static void main(String[] args) {
 		// solution1(); //O(n^2)
 		solution2(); // O(n)
