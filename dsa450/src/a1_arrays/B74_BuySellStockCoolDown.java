@@ -6,7 +6,7 @@ package a1_arrays;
  * Infinite Transactions allowed with Cool Down. There has to be one day gap after sell
  * First buy then sell allowed 
  */
-public class E1_BuySellStockCoolDown {
+public class B74_BuySellStockCoolDown {
 	public static void main(String[] args) {
 		int[] price = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
 		int oldBuyPrice = -price[0];

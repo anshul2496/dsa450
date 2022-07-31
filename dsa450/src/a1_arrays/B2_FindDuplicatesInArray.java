@@ -3,16 +3,15 @@ package a1_arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * https://leetcode.com/problems/find-the-duplicate-number/ 
+ * Given an array of integers nums containing n + 1 integers where each integer is in the range
+ * [1, n] inclusive. There is only one repeated number in nums, return this
+ * repeated number. You must solve the problem without modifying the array nums
+ * and uses only constant extra space. Example 1: Input: nums = [1,3,4,2,2]
+ * Output: 2
+ */
 public class B2_FindDuplicatesInArray {
-
-	/*
-	 * https://leetcode.com/problems/find-the-duplicate-number/ Given an array of
-	 * integers nums containing n + 1 integers where each integer is in the range
-	 * [1, n] inclusive. There is only one repeated number in nums, return this
-	 * repeated number. You must solve the problem without modifying the array nums
-	 * and uses only constant extra space. Example 1: Input: nums = [1,3,4,2,2]
-	 * Output: 2
-	 */
 	public static void main(String[] args) {
 		// solution1_set();
 		solution2_hareAndTortoise();

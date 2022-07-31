@@ -7,7 +7,7 @@ package a1_arrays;
  * Transaction fee will be charged when you sell
  * First buy then sell allowed
  */
-public class D9_BuyAndSellStocksWithTransFee {
+public class B73_BuyAndSellStocksWithTransFee {
 	public static void main(String[] args) {
 		int[] price = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
 		int fee = 3;

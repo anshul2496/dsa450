@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1
- * https://www.youtube.com/watch?v=29uyA4F9t5I&t=863s 
+ * https://www.youtube.com/watch?v=29uyA4F9t5I
  * Given an array arr[] denoting heights of N towers and a positive integer K, you
  * have to modify the height of each tower either by increasing or decreasing
  * them by K only once. After modifying, height should be a non-negative

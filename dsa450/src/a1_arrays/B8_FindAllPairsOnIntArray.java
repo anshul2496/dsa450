@@ -5,15 +5,14 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1
+ * https://www.youtube.com/watch?v=0VHC1KVHH0U 
+ * Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is
+ * equal to K. Example 1: Input: N = 4, K = 6 arr[] = {1, 5, 7, 1} Output: 2
+ * Explanation: arr[0] + arr[1] = 1 + 5 = 6 and arr[1] + arr[3] = 5 + 1 = 6.
+ */
 public class B8_FindAllPairsOnIntArray {
-
-	/*
-	 * https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1
-	 * https://www.youtube.com/watch?v=0VHC1KVHH0U Given an array of N integers, and
-	 * an integer K, find the number of pairs of elements in the array whose sum is
-	 * equal to K. Example 1: Input: N = 4, K = 6 arr[] = {1, 5, 7, 1} Output: 2
-	 * Explanation: arr[0] + arr[1] = 1 + 5 = 6 and arr[1] + arr[3] = 5 + 1 = 6.
-	 */
 	public static void main(String[] args) {
 		//solution1(); // https://www.youtube.com/watch?v=0VHC1KVHH0U Time and space - O(n)
 		// solution2(); // https://www.youtube.com/watch?v=4t9jv9AkVdE&t=192s - Target sum pair when the input elements are unique

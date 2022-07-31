@@ -3,18 +3,15 @@ package a1_arrays;
 import java.util.Arrays;
 import java.util.LinkedList;
 
+/*
+ * https://leetcode.com/problems/merge-intervals/ 
+ * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and
+ * return an array of the non-overlapping intervals that cover all the intervals in the input.
+ * Input: intervals = [[1,3],[2,6],[8,10],[15,18]] Output:
+ * [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps,
+ * merge them into [1,6].
+ */
 public class B5_MergeIntervals {
-
-	/*
-	 * https://leetcode.com/problems/merge-intervals/ 
-	 * Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and
-	 * return an array of the non-overlapping intervals that cover all the intervals
-	 * in the input.
-	 * Example 1:
-	 * Input: intervals = [[1,3],[2,6],[8,10],[15,18]] Output:
-	 * [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlaps,
-	 * merge them into [1,6].
-	 */
 	public static void main(String[] args) {
 		solution1(); // Time : O(nlogn) ; Space : O(nm)
 	}
@@ -30,6 +27,7 @@ public class B5_MergeIntervals {
 				merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
 			}
 		}
+		//return list.toArray(new int[list.size()][]);
 		merged.stream().forEach(x -> System.out.println(Arrays.toString(x)));
 	}
 }
