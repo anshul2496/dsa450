@@ -6,5 +6,5 @@ package a4_searching_sorting;
  * Can also be done by frequency map but will take O(n) space
  */
 public class A41_MajorityElement {
-	// Same as arrays C71_MajorityElement
+	// Same as arrays C71_MajorityElementNby2
 }

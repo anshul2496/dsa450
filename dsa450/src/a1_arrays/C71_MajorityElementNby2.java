@@ -5,10 +5,11 @@ package a1_arrays;
  * https://www.youtube.com/watch?v=-s-qtf9flqg
  * Can also be done by frequency map but will take O(n) space
  */
-public class C71_MajorityElement {
+public class C71_MajorityElementNby2 {
 	public static void main(String[] args) {
 		int[] a = { 3, 1, 3, 3, 2 };
-		int val = getPotentialMajorityElement(a);
+		// Boyer-Moore Voting Algorithm
+		int val = getPotentialMajorityElement(a, a.length);
 		boolean isMaj = isValMajorityElement(a, val);
 		if (isMaj) {
 			System.out.println(val);
@@ -27,20 +28,20 @@ public class C71_MajorityElement {
 		return count > (a.length / 2);
 	}
 
-	private static int getPotentialMajorityElement(int[] a) {
-		int val = a[0];
-		int count = 1;
-		for (int i = 1; i < a.length; i++) {
-			if (val == a[i]) {
-				count++;
+	public static int getPotentialMajorityElement(int[] a, int n) {
+		int candidate = a[0];
+		int votes = 1;
+		for (int i = 1; i < n; i++) {
+			if (votes == 0) {
+				candidate = a[i];
+				votes = 1;
 			} else {
-				count--;
-			}
-			if (count == 0) {
-				val = a[i];
-				count = 1;
+				if (candidate == a[i])
+					votes++;
+				else
+					votes--;
 			}
 		}
-		return val;
+		return candidate;
 	}
 }

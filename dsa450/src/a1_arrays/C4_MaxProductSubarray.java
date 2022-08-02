@@ -1,15 +1,15 @@
 package a1_arrays;
 
+/*
+ * https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1
+ * https://www.youtube.com/watch?v=jzQ-f2uU0UU
+ * The ans will lie in the left subarray or right subarray. 
+ * E.g.- {8,-2,4,-9,8,6,-3}
+ * The ans will be product of {8,-2,4,-9,8,6} which is left subarray
+ * E.g.- {-3,-2,4,-9,8,6,8}
+ * The ans will be product of {-2,4,-9,8,6,8} which is right subarray
+ */
 public class C4_MaxProductSubarray {
-
-	/*
-	 * https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1
-	 * https://www.youtube.com/watch?v=jzQ-f2uU0UU Given an array Arr that contains
-	 * N integers (may be positive, negative or zero). Find the product of the
-	 * maximum product subarray. Example 1: Input: N = 5 Arr[] = {6, -3, -10, 0, 2}
-	 * Output: 180 Explanation: Subarray with maximum product is 6, -3, -10 which
-	 * gives product as 180.
-	 */
 	public static void main(String[] args) {
 		solution1();
 	}

@@ -6,8 +6,9 @@ import java.util.ArrayList;
  * https://leetcode.com/problems/majority-element-ii/
  * https://www.youtube.com/watch?v=1QybAZMCYhA
  * Given an integer array of size n, find all elements that appear more than n/3 times.
-	Input: nums = [3,2,3]
-	Output: [3]
+   Input: nums = [3,2,3]
+   Output: [3]
+   Can also be done by frequency map but will take O(n) space
  */
 public class C72_MajorityElementNby3 {
 	public static void main(String[] args) {
