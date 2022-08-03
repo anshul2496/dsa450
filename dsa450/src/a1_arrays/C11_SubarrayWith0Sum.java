@@ -9,7 +9,7 @@ import java.util.HashMap;
  * Example 1: Input: 5 4 2 -3 1 6 Output: Yes Explanation: 2, -3, 1 is the
  * subarray with sum 0.
  */
-public class C21_SubarrayWith0Sum {
+public class C11_SubarrayWith0Sum {
 	public static void main(String[] args) {
 		int[] a = { 5, 4, 2, -3, 1, 6 };
 		boolean ans = findsum(a, a.length); // Time : O(n) Space O(n)

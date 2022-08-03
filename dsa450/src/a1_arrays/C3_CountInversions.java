@@ -4,7 +4,7 @@ package a1_arrays;
  * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/searching-and-sorting/count_inversions/ojquestion
  * https://www.youtube.com/watch?v=uojx--MK_n0
  */
-public class C5_CountInversions {
+public class C3_CountInversions {
 	public static void main(String[] args) {
 		int[] a = { 2, 4, 1, 3, 5 };
 		mergeSort(a, 0, a.length - 1);

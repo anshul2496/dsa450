@@ -10,7 +10,7 @@ import java.util.ArrayList;
    Output: [3]
    Can also be done by frequency map but will take O(n) space
  */
-public class C72_MajorityElementNby3 {
+public class C52_MajorityElementNby3 {
 	public static void main(String[] args) {
 		int[] a = { 3, 2, 3 };
 		ArrayList<Integer> list = getMajorityElements(a);

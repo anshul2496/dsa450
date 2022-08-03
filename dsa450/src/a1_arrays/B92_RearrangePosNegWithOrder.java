@@ -6,7 +6,7 @@ import java.util.Arrays;
  * https://practice.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1
  * https://www.youtube.com/watch?v=V_QB59AaeCk
  */
-public class C12_RearrangePosNegWithOrder {
+public class B92_RearrangePosNegWithOrder {
 	public static void main(String[] args) {
 		int[] a = { 9, 4, -2, -1, 5, 0, -5, -3, 2 };
 		rearrange(a, a.length);

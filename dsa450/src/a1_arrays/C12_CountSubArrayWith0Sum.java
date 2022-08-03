@@ -6,7 +6,7 @@ import java.util.HashMap;
  * https://practice.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
  * https://www.youtube.com/watch?v=C9-n_H7dsvU
  */
-public class C22_CountSubArrayWith0Sum {
+public class C12_CountSubArrayWith0Sum {
 	public static void main(String[] args) {
 		int[] a = { 0, 0, 5, 5, 0, 0 };
 		HashMap<Integer, Integer> map = new HashMap<>();

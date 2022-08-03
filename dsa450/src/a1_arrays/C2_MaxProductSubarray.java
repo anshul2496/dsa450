@@ -9,7 +9,7 @@ package a1_arrays;
  * E.g.- {-3,-2,4,-9,8,6,8}
  * The ans will be product of {-2,4,-9,8,6,8} which is right subarray
  */
-public class C4_MaxProductSubarray {
+public class C2_MaxProductSubarray {
 	public static void main(String[] args) {
 		solution1();
 	}

@@ -5,7 +5,7 @@ package a1_arrays;
  * https://www.youtube.com/watch?v=-s-qtf9flqg
  * Can also be done by frequency map but will take O(n) space
  */
-public class C71_MajorityElementNby2 {
+public class C51_MajorityElementNby2 {
 	public static void main(String[] args) {
 		int[] a = { 3, 1, 3, 3, 2 };
 		// Boyer-Moore Voting Algorithm

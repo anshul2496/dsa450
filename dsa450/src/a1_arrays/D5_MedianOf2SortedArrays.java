@@ -3,16 +3,16 @@ package a1_arrays;
 /*
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
  * https://www.youtube.com/watch?v=afwPSXmRsGs&t=1s
- * There are 2 sorted arrays A and B of size n each. Write an algorithm to find the median of the array obtained after merging the above 2 arrays(i.e. array of length 2n). 
+ * There are 2 sorted arrays A and B of size n each. Write an algorithm to find the median of the array obtained 
+ * after merging the above 2 arrays(i.e. array of length 2n). 
  * The complexity should be O(log(n)). 
  * Input : a1[] = {1,12,15,26,38}
  * a2[] = {2,13,17,30,45}
  * Output = 16
  * Explanation: After merging two arrays we get {1,2,12,13,15,17,26,30,38,45}
- * Middle two elements are 15 and 17
- * Average of middle elements is (15+17)/2 which is equal to 16
+ * Middle two elements are 15 and 17.  Average of middle elements is (15+17)/2 which is equal to 16
  */
-public class D8_MedianOf2SortedArrays {
+public class D5_MedianOf2SortedArrays {
 	public static void main(String[] args) {
 		int[] a = { 1, 12, 15, 26, 38 };
 		int[] b = { 2, 13, 17, 30, 45 };

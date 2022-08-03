@@ -9,18 +9,15 @@ import java.util.Arrays;
 	2) All elements in range a to b come next.
 	3) All elements greater than b appear in the end.
 	The individual elements of three sets can appear in any order. You are required to return the modified array.
-	Example 1:
 	Input: 
 	n = 5
 	A[] = {1, 2, 3, 3, 4}
 	[a, b] = [1, 2]
 	Output: 1
-	Explanation: One possible arrangement is:
-	{1, 2, 3, 3, 4}. If you return a valid
-	arrangement, output will be 1.
-	Solution is similar to sort array without any algo
+	Explanation: One possible arrangement is: {1, 2, 3, 3, 4}. If you return a valid
+	arrangement, output will be 1.Solution is similar to sort array without any algo
  */
-public class D5_ThreeWayPartitioning {
+public class D2_ThreeWayPartitioning {
 	public static void main(String[] args) {
 		int[] a = { 1, 2, 3, 3, 4 };
 		int[] range = { 1, 2 };

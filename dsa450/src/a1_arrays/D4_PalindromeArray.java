@@ -18,7 +18,7 @@ package a1_arrays;
 	A[4] = 555  //which is a palindrome number.
 	As all numbers are palindrome so This will return 1.
  */
-public class D7_PalindromeArray {
+public class D4_PalindromeArray {
 	public static void main(String[] args) {
 		solution1();
 	}

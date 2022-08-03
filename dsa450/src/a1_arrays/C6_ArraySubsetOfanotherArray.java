@@ -16,7 +16,7 @@ import java.util.Set;
 	Explanation:
 	a2[] is a subset of a1[]
  */
-public class C8_ArraySubsetOfanotherArray {
+public class C6_ArraySubsetOfanotherArray {
 	public static void main(String[] args) {
 		solution1();
 	}

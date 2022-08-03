@@ -11,7 +11,7 @@ import java.util.Map;
  * Note that size of array is 8 (or n = 8), so we need to find all elements that appear more than 2 (or 8/4) times. 
  * There are two elements that appear more than two times, 2 and 3.
  */
-public class C73_ElementsAppearNByKTimes {
+public class C53_ElementsAppearNByKTimes {
 	public static void main(String[] args) {
 		int[] a = { 3, 1, 2, 2, 1, 2, 3, 3 };
 		int k = 4;

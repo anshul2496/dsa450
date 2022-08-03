@@ -5,7 +5,6 @@ package a1_arrays;
  * 	https://leetcode.com/problems/trapping-rain-water/solution/
  * 	Given an array arr[] of N non-negative integers representing the height of blocks. If width of each block is 1, 
  *  compute how much water can be trapped between the blocks during the rainy season. 
-	Example 1:
 	Input:
 	N = 6
 	arr[] = {3,0,0,2,0,4}
@@ -14,13 +13,13 @@ package a1_arrays;
 	Explanation: 
 	Total trapped water = 3+3+1+3 = 10
  */
-public class D2_TrappingRainWater {
+public class C8_TrappingRainWater {
 	public static void main(String[] args) {
 		solution1(); // O(n), O(1)
 	}
 
 	private static void solution1() {
-		// Leetcode two pointer explaination
+		// Leetcode two pointer explanation
 		int[] a = { 4, 0, 0, 2, 0, 3 };
 		int left = 0, right = a.length - 1;
 		int leftMax = Integer.MIN_VALUE, rightMax = Integer.MIN_VALUE;

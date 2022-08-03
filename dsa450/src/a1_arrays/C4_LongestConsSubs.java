@@ -14,7 +14,7 @@ import java.util.HashSet;
 	Explanation:
 	The consecutive numbers here are 1, 2, 3, 4, 5, 6. These 6 numbers form the longest consecutive subsquence.
  */
-public class C6_LongestConsSubs {
+public class C4_LongestConsSubs {
 	public static void main(String[] args) {
 		int[] arr = { 2, 6, 1, 9, 4, 5, 3 };
 		HashSet<Integer> set = new HashSet<>();
