@@ -2,6 +2,7 @@ package a2_matrix;
 
 /*
  * https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
+ * https://www.codingninjas.com/codestudio/problems/median-of-a-row-wise-sorted-matrix_1115473
  * https://www.youtube.com/watch?v=tFdBRcHLSGQ
  * Given a row wise sorted matrix of size RxC where R and C are always odd, find the median of the matrix.
 	Example 1:
@@ -43,6 +44,9 @@ public class B1_MedianInRowSorted {
 					else
 						high = mid - 1;
 				}
+				// With the help of binary search in each row we are finding that how many elements are smaller than midval
+				// The total no of smaller elements we are adding in ans each time and then checking if ans contains the exact number of elements
+				// which needed to be less than n/2. By doing, so we make sure that min comes to the median
 				ans = ans + low;
 			}
 			if (ans <= n / 2)

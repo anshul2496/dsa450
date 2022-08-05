@@ -42,17 +42,15 @@ public class A3_RowWithMax1s {
 	private static int binarySearch(int[][] a, int i) {
 		int low = 0;
 		int high = a[0].length - 1;
-		int fi = a[0].length;
 		while (low <= high) {
 			int mid = (low + high) / 2;
 			if (a[i][mid] == 1) {
-				fi = mid;
 				high = mid - 1;
 			} else {
 				low = mid + 1;
 			}
 		}
-		int ans = a[0].length - fi;
+		int ans = a[0].length - low;
 		return ans;
 	}
 }

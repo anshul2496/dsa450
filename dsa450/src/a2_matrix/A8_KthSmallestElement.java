@@ -33,14 +33,14 @@ public class A8_KthSmallestElement {
 				int low = 0, high = cols - 1, mid;
 				while (low <= high) {
 					mid = low + (high - low) / 2;
-					if (a[i][mid] <= midVal)
+					if (a[i][mid] <= midVal) // "<=" will always be in low
 						low = mid + 1;
 					else
 						high = mid - 1;
 				}
 				ans = ans + low;
 			}
-			if (ans < k)
+			if (ans < k) // Difference from median question, no "=" sign
 				startVal = midVal + 1;
 			else
 				endVal = midVal - 1;

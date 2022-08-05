@@ -1,7 +1,7 @@
 package a2_matrix;
 
 /*
- * https://www.geeksforgeeks.org/rotate-a-matrix-by-90-degree-in-clockwise-direction-without-using-any-extra-space/
+ * https://leetcode.com/problems/rotate-image/
  * https://www.youtube.com/watch?v=SoxrXQbhCPI
 	Input:
 	1 2 3 
