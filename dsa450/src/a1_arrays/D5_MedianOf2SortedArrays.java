@@ -28,7 +28,7 @@ public class D5_MedianOf2SortedArrays {
 		int n2 = b.length;
 		int low = 0; 
 		int high = n1;
-		while (low <= high) {
+		while (low <= high) { // Note "<=" and high=a.length
 			// Initialize the cuts or partitions
 			int cut1 = low + (high - low) / 2;
 
