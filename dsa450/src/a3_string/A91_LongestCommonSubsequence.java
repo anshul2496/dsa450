@@ -11,11 +11,12 @@ package a3_string;
 					  							   = c1s(r1) * c2s(r2) - 4	
 	lcs(s1,r2) = 1 and 3
 	lcs(r1,s2) = 1 and 2				  							   
- * lcs(s1,s2) = 1+lcs(r1,r2) if c1==c2
- * lcs(s1,s2) = max(lcs(r1,s2), lcs(s1,r2))  if c1!=c2
+ * if c1==c2 then lcs(s1,s2) = 1+lcs(r1,r2) 
+ * if c1!=c2 then lcs(s1,s2) = max(lcs(r1,s2), lcs(s1,r2))
+ * Brute force - 2^n * 2^m = O(2^(n+m))
  * **Bottom up approach for lcs****
  */
-public class A8_LongestCommonSubsequence {
+public class A91_LongestCommonSubsequence {
 	public static void main(String[] args) {
 		String s1 = "abc";
 		String s2 = "ab";

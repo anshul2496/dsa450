@@ -13,7 +13,7 @@ package a3_string;
 	abc
 	(All a,b and c are at different indices)
  */
-public class A9_LongestRepeatingSubs {
+public class A92_LongestRepeatingSubs {
 	public static void main(String[] args) {
 		String s = "abacbc";
 		int[][] dp = new int[s.length() + 1][s.length() + 1];

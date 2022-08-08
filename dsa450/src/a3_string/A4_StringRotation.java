@@ -1,6 +1,7 @@
 package a3_string;
 
 /*
+ * https://practice.geeksforgeeks.org/problems/check-if-strings-are-rotations-of-each-other-or-not-1587115620/1
  * https://www.geeksforgeeks.org/a-program-to-check-if-strings-are-rotations-of-each-other/
  * Given a string s1 and a string s2, write a snippet to say whether s2 is a rotation of s1? 
 	(eg given s1 = ABCD and s2 = CDAB, return true, given s1 = ABCD, and s2 = ACBD , return false)
