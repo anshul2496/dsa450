@@ -15,35 +15,29 @@ import java.util.Stack;
 public class B6_BalancedParanthesis {
 	public static void main(String[] args) {
 		String str = "{([])}";
+		System.out.println(ispar(str));
+	}
+
+	static boolean ispar(String s) {
 		Stack<Character> stack = new Stack<>();
-		boolean flag = true;
-		for (int i = 0; i < str.length(); i++) {
-			Character ch = str.charAt(i);
-			if (ch == '{' || ch == '(' || ch == '[') {
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch == '{' || ch == '(' || ch == '[')
 				stack.push(ch);
-			} else if (ch == ']') {
-				if (!stack.isEmpty() && stack.peek() == '[')
-					stack.pop();
-				else {
-					flag = false;
-					break;
-				}
+			else if (ch == ']') {
+				if (stack.isEmpty() || stack.peek() != '[')
+					return false;
+				stack.pop();
 			} else if (ch == ')') {
-				if (!stack.isEmpty() && stack.peek() == '(')
-					stack.pop();
-				else {
-					flag = false;
-					break;
-				}
+				if (stack.isEmpty() || stack.peek() != '(')
+					return false;
+				stack.pop();
 			} else if (ch == '}') {
-				if (!stack.isEmpty() && stack.peek() == '{')
-					stack.pop();
-				else {
-					flag = false;
-					break;
-				}
+				if (stack.isEmpty() || stack.peek() != '{')
+					return false;
+				stack.pop();
 			}
 		}
-		System.out.println(flag);
+		return !stack.isEmpty() ? false : true;
 	}
 }

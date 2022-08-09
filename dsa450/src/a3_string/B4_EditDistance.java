@@ -1,4 +1,4 @@
- package a3_string;
+package a3_string;
 
 /*
  * https://practice.geeksforgeeks.org/problems/edit-distance3702/1
@@ -20,7 +20,6 @@ public class B4_EditDistance {
 		String str1 = "geek";
 		String str2 = "gesek";
 		int[][] dp = new int[str1.length() + 1][str2.length() + 1];
-
 		for (int i = 0; i < dp.length; i++) {
 			for (int j = 0; j < dp[0].length; j++) {
 				if (i == 0) {
@@ -28,14 +27,13 @@ public class B4_EditDistance {
 				} else if (j == 0) {
 					dp[i][j] = i;
 				} else {
-					if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+					if (str1.charAt(i - 1) == str2.charAt(j - 1)) { // bec. we are starting from blank so "-1" for string character
 						dp[i][j] = dp[i - 1][j - 1];
 					} else {
-						// This block same as max size square sub array
-						int f1 = 1 + dp[i - 1][j - 1]; // replace
-						int f2 = 1 + dp[i][j - 1]; // insert
-						int f3 = 1 + dp[i - 1][j]; // delete
-						dp[i][j] = Math.min(f2, Math.min(f1, f3));
+						int f1 = dp[i - 1][j - 1]; // replace
+						int f2 = dp[i][j - 1]; // insert
+						int f3 = dp[i - 1][j]; // delete
+						dp[i][j] = Math.min(f2, Math.min(f1, f3)) + 1;
 					}
 				}
 			}
