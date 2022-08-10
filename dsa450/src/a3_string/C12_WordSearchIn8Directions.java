@@ -1,7 +1,6 @@
 package a3_string;
 
 /*
- * https://practice.geeksforgeeks.org/problems/find-the-string-in-grid0111/1/
  * Given a 2D grid of characters and a word, find all occurrences of the given word in the grid. 
  * A word can be matched in all 8 directions at any point. Word is said to be found in a direction 
  * if all characters match in this direction (not in zig-zag form).
@@ -16,7 +15,7 @@ package a3_string;
 	        pattern found at 1, 0
 	Explanation: 'GEEKS' can be found as prefix of 1st 2 rows and suffix of first row
  */
-public class C11_WordSearchIn8Directions {
+public class C12_WordSearchIn8Directions {
 	public static void main(String[] args) {
 		char[][] board = { { 'G', 'E', 'E', 'K', 'S', 'F', 'O', 'R', 'G', 'E', 'E', 'K', 'S' },
 						   { 'G', 'E', 'E', 'K', 'S', 'Q', 'U', 'I', 'Z', 'G', 'E', 'E', 'K' },

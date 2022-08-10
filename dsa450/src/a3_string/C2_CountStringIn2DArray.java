@@ -6,11 +6,11 @@ package a3_string;
  */
 public class C2_CountStringIn2DArray {
 	public static void main(String[] args) {
-		char[][] board = { { 'G', 'E', 'E', 'K', 'S', 'F', 'O', 'R', 'G', 'E', 'E', 'K', 'S' },
-						   { 'G', 'E', 'E', 'K', 'S', 'Q', 'U', 'I', 'Z', 'G', 'E', 'E', 'K' },
-						   { 'I', 'D', 'E', 'Q', 'A', 'P', 'R', 'A', 'C', 'T', 'I', 'C', 'E' } };
-		String word = "GEEKS";
-		int count=0;
+		char[][] board = { { 'B', 'B', 'M', 'B', 'B', 'B' }, { 'C', 'B', 'A', 'B', 'B', 'B' },
+				{ 'I', 'B', 'G', 'B', 'B', 'B' }, { 'G', 'B', 'I', 'B', 'B', 'B' }, { 'A', 'B', 'C', 'B', 'B', 'B' },
+				{ 'M', 'C', 'I', 'G', 'A', 'M' } };
+		String word = "MAGIC";
+		int count = 0;
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[0].length; j++) {
 				if (word.charAt(0) == board[i][j] && explore(board, i, j, 0, word)) {
@@ -21,6 +21,7 @@ public class C2_CountStringIn2DArray {
 		}
 		System.out.println(count);
 	}
+
 	private static boolean explore(char[][] board, int i, int j, int charIndex, String word) {
 		if (charIndex == word.length()) {
 			return true;
@@ -33,11 +34,7 @@ public class C2_CountStringIn2DArray {
 		boolean found = explore(board, i + 1, j, charIndex + 1, word) // Vertically Up
 				|| explore(board, i - 1, j, charIndex + 1, word) // Vertically Down
 				|| explore(board, i, j + 1, charIndex + 1, word) // Horizontally right
-				|| explore(board, i, j - 1, charIndex + 1, word) // Horizontally left
-				|| explore(board, i - 1, j + 1, charIndex + 1, word) // Up Diagonal right
-				|| explore(board, i - 1, j - 1, charIndex + 1, word) // Up Diagonal left
-				|| explore(board, i + 1, j + 1, charIndex + 1, word) // Down diagonal right
-				|| explore(board, i + 1, j - 1, charIndex + 1, word); // Down diagonal left
+				|| explore(board, i, j - 1, charIndex + 1, word); // Horizontally left
 		board[i][j] = temp;
 		return found;
 	}

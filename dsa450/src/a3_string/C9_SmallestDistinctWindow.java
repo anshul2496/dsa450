@@ -17,7 +17,7 @@ public class C9_SmallestDistinctWindow {
 			set.add(s.charAt(i));
 		}
 
-		int i = -1;
+		int i = -1; // can also do with i=0 and j=0; done in gfg
 		int j = -1;
 		int len = s.length();
 		HashMap<Character, Integer> map = new HashMap<>();

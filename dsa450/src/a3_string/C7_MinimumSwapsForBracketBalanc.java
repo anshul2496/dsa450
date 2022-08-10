@@ -22,12 +22,12 @@ public class C7_MinimumSwapsForBracketBalanc {
 			if (s.charAt(i) == '[') {
 				open++;
 				if (imbalance > 0) {
-					swap += imbalance;
-					imbalance--;
+					swap += imbalance; //No of swaps required = No of imbalance brackets 
+					imbalance--; // After swapping imbalance should get reduced by one
 				}
 			} else {
 				close++;
-				imbalance = close - open;
+				imbalance = close - open; //Extra close brackets are imbalanced.
 			}
 		}
 		System.out.println(swap);

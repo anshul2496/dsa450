@@ -9,7 +9,7 @@ package a3_string;
 	Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
 	Output: true
  */
-public class C1_WordSearch4Directions {
+public class C11_WordSearch4Directions {
 	public static void main(String[] args) {
 		char[][] board = { { 'A', 'B', 'C', 'E' }, { 'S', 'F', 'C', 'S' }, { 'A', 'D', 'E', 'E' } };
 		String word = "ABCCED";
@@ -17,7 +17,8 @@ public class C1_WordSearch4Directions {
 		for (int i = 0; i < board.length; i++) {
 			for (int j = 0; j < board[0].length; j++) {
 				if (board[i][j] == word.charAt(0) && explore(board, i, j, 0, word)) {
-					// System.out.println("Pattern found at " + i + "," + j); // To find occurrences of the string you can print row,col and don't break;
+					// System.out.println("Pattern found at " + i + "," + j); 
+					// To find occurrences of the string you can print row,col and don't break;
 					flag = true;
 					break;
 				}
