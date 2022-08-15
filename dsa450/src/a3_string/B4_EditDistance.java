@@ -27,6 +27,7 @@ public class B4_EditDistance {
 				} else if (j == 0) {
 					dp[i][j] = i;
 				} else {
+					// Comparing last characters
 					if (str1.charAt(i - 1) == str2.charAt(j - 1)) { // bec. we are starting from blank so "-1" for string character
 						dp[i][j] = dp[i - 1][j - 1];
 					} else {
@@ -34,6 +35,7 @@ public class B4_EditDistance {
 						int f2 = dp[i][j - 1]; // insert
 						int f3 = dp[i - 1][j]; // delete
 						dp[i][j] = Math.min(f2, Math.min(f1, f3)) + 1;
+						// Why "+1"? Bec. we also need to consider the operation which caused either insert or replace or delete.
 					}
 				}
 			}

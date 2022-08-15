@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /*
  * https://practice.geeksforgeeks.org/problems/transform-string5648/1/
- * https://www.youtube.com/watch?v=V4mwu1Gs8Sg&t=42s
+ * https://www.youtube.com/watch?v=V4mwu1Gs8Sg
  */
 public class D8_TransformOneStringToAnother {
 	public static void main(String[] args) {

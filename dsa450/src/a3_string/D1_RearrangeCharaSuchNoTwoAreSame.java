@@ -18,6 +18,7 @@ public class D1_RearrangeCharaSuchNoTwoAreSame {
 			map.put(ch, map.getOrDefault(ch, 0) + 1);
 		}
 		PriorityQueue<Pair> pq = new PriorityQueue<>((x, y) -> (y.f - x.f));
+		// Can also be written as - PriorityQueue<Pair> q=new PriorityQueue<>((a,b)->Integer.compare(b.f,a.f));
 		for (Character c : map.keySet()) {
 			Pair p = new Pair(c, map.get(c));
 			pq.add(p);

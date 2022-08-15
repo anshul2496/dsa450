@@ -18,8 +18,8 @@ import java.util.HashMap;
  */
 public class D7_FunctionNoOfComp {
 	public static void main(String[] args) {
-		int n = 1;
-		String str = "ABCBCA";
+		int n = 3;
+		String str = "GACCBDDBAGEE";
 		System.out.println(runCustomerSimulation(n, str));
 	}
 

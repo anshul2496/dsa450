@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /*
  * https://practice.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string-1587115621/1
- * https://www.youtube.com/watch?v=e1HlptlipB0&t=11s
+ * https://www.youtube.com/watch?v=e1HlptlipB0
  * Input:
 	S = "timetopractice"
 	P = "toc"

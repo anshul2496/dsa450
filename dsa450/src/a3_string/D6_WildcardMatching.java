@@ -2,7 +2,7 @@ package a3_string;
 
 /*
  * https://leetcode.com/problems/wildcard-matching/
- * https://www.youtube.com/watch?v=NbgUZAoIz3g&t=26s
+ * https://www.youtube.com/watch?v=NbgUZAoIz3g
  */
 public class D6_WildcardMatching {
 	public static void main(String[] args) {

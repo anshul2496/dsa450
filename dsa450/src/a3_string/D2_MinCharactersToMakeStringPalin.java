@@ -2,7 +2,7 @@ package a3_string;
 
 /*
  * https://practice.geeksforgeeks.org/problems/form-a-palindrome1455/1/
- * https://www.youtube.com/watch?v=IP4iqrh0mQk&t=225s
+ * https://www.youtube.com/watch?v=IP4iqrh0mQk
  */
 public class D2_MinCharactersToMakeStringPalin {
 	public static void main(String[] args) {
