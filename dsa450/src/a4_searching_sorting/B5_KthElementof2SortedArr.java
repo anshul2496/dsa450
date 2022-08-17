@@ -27,6 +27,7 @@ public class B5_KthElementof2SortedArr {
 
 	// Optimum solution - O(log(min(m,n))) and O(1)
 	private static int getKthElement(int[] a, int[] b, int k) {
+		// Binary search is done on smaller array so that the search space is small
 		if (a.length > b.length)
 			return getKthElement(b, a, k);
 		int n1 = a.length;

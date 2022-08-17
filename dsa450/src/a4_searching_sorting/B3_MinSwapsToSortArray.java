@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/minimum-swaps/1
- * https://www.youtube.com/watch?v=m-8_yQao-lI&t=740s
+ * https://www.youtube.com/watch?v=m-8_yQao-lI
  */
 public class B3_MinSwapsToSortArray {
 	public static void main(String[] args) {

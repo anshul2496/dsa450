@@ -14,12 +14,8 @@ public class B2_SortBySetBitCount {
 			public int compare(Integer a, Integer b) {
 				Integer aa = Integer.bitCount(a);
 				Integer bb = Integer.bitCount(b);
-				if (aa > bb)
-					return -1;
-				else if (aa < bb)
-					return 1;
-				else
-					return 0;
+				// The output demands decreasing order so "bb,aa"
+				return Integer.compare(bb, aa);
 			}
 		});
 		System.out.println(Arrays.toString(a));

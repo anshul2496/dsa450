@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class A4_FindRepeatingAndMissing {
 	public static void main(String[] args) {
-		int[] a = { 1, 3, 3 };
+		int[] a = { 2,2 };
 		int[] ans = new int[2];
 		int origSum = 0;
 		int currSum = 0;
@@ -24,4 +24,19 @@ public class A4_FindRepeatingAndMissing {
 		ans[1] = origSum - (currSum - ans[0]);
 		System.out.println(Arrays.toString(ans));
 	}
+	
+	// With O(n) space
+	int[] findTwoElement(int a[], int n) {
+        int[] temp=new int[n+1];
+        int[] ans=new int[2];
+        for(int i=0;i<n;i++){
+            int num=a[i];
+            if(temp[num]==-1) ans[0]=num;
+            else temp[num]=-1;
+        }
+        for(int i=1;i<=n;i++){
+            if(temp[i]==0) ans[1]=i;
+        }
+        return ans;
+    } 
 }

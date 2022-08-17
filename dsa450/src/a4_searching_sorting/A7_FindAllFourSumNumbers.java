@@ -27,7 +27,7 @@ public class A7_FindAllFourSumNumbers {
 				continue;
 			int val1 = a[i];
 			int target = sum - a[i];
-			ArrayList<ArrayList<Integer>> temp = getThreeSum(a, target, i + 1, n - 1);
+			ArrayList<ArrayList<Integer>> temp = getThreeSum(a, target, i + 1);
 			for (ArrayList<Integer> list : temp) {
 				list.add(val1);
 				Collections.sort(list);
@@ -37,7 +37,7 @@ public class A7_FindAllFourSumNumbers {
 		return ans;
 	}
 
-	private static ArrayList<ArrayList<Integer>> getThreeSum(int[] a, int target, int si, int ei) {
+	private static ArrayList<ArrayList<Integer>> getThreeSum(int[] a, int target, int si) {
 		ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
 		int n = a.length;
 		if (n - si < 3)
@@ -47,7 +47,7 @@ public class A7_FindAllFourSumNumbers {
 				continue;
 			int val1 = a[i];
 			int tar = target - a[i];
-			ArrayList<ArrayList<Integer>> temp = getTwoSum(a, tar, i + 1, n - 1);
+			ArrayList<ArrayList<Integer>> temp = getTwoSum(a, tar, i + 1);
 			for (ArrayList<Integer> list : temp) {
 				list.add(val1);
 				ans.add(list);
@@ -56,10 +56,13 @@ public class A7_FindAllFourSumNumbers {
 		return ans;
 	}
 
-	private static ArrayList<ArrayList<Integer>> getTwoSum(int[] a, int tar, int si, int ei) {
+	private static ArrayList<ArrayList<Integer>> getTwoSum(int[] a, int tar, int si) {
 		ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+		int n = a.length;
+		if ((n - si) < 2)
+			return ans;
 		int left = si;
-		int right = ei;
+		int right = n - 1;
 		while (left < right) {
 			if (left != si && a[left] == a[left - 1]) {
 				left++;

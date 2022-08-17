@@ -10,7 +10,7 @@ public class B4_FindPivotInSortedArray {
 		int[] a = { 30, 40, 50, 10, 20 }; // Expected o/p = 10
 		int low = 0;
 		int high = a.length - 1;
-		while (low < high) {
+		while (low < high) { // No "=" bec. this problem is valid only when atleast two elements are there
 			int mid = (low + high) / 2;
 			if (a[mid] < a[high]) // This is increasing curve. Pivot will lie on the other side.
 				high = mid;

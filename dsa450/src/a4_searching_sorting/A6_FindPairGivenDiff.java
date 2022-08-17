@@ -15,17 +15,23 @@ public class A6_FindPairGivenDiff {
 		System.out.println(isPair);
 	}
 
-	private static boolean checkPairPresent(int[] a, int diff) {
+	private static boolean checkPairPresent(int[] a, int n) {
 		Arrays.sort(a);
 		int i = 0;
 		int j = 1;
-		while (i < a.length && j < a.length) {
-			if (a[j] - a[i] == diff)
-				return true;
-			else if (a[j] - a[i] < diff)
+		int size = a.length;
+		while (i < size && j < size) {
+			if (i != j) {
+				int diff = a[j] - a[i];
+				if (diff == n)
+					return true;
+				else if (diff > n)
+					i++;
+				else
+					j++;
+			} else {
 				j++;
-			else
-				i++;
+			}
 		}
 		return false;
 	}
