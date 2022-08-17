@@ -35,7 +35,7 @@ public class C51_MajorityElementNby2 {
 			if (votes == 0) {
 				candidate = a[i];
 				votes = 1;
-			} else {
+			} else { // Remember this else part - Important
 				if (candidate == a[i])
 					votes++;
 				else
