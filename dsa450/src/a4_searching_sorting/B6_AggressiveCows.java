@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /*
  * https://www.spoj.com/problems/AGGRCOW/
- * https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559 
+ * https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
  * Problem Video - https://www.youtube.com/watch?v=ii0riJELUhA
  * Solution video - https://www.youtube.com/watch?v=XgnEFbraeiY
- * Here we have to find the Largest of Minimum
+ * Here we have to find the Largest of Minimum(Minimum distance between cows should be as large as possible)
  */
 public class B6_AggressiveCows {
 	public static void main(String[] args) {
