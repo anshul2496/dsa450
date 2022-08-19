@@ -36,9 +36,9 @@ public class C1_PaintersPartition {
 	}
 
 	private static boolean canBeAllocated(int[] a, int n, int k, int mid) {
-		int sum = 0;
+		int sum = a[0];
 		int count = 1;
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			sum += a[i];
 			if (sum > mid) {
 				count++;

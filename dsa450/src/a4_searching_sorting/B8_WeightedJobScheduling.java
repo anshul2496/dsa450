@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /*
- * https://www.geeksforgeeks.org/weighted-job-scheduling-log-n-time/
  * https://leetcode.com/problems/maximum-profit-in-job-scheduling/
  * Problem - https://www.youtube.com/watch?v=CgLpOeRA6Co
  * Solution - https://www.youtube.com/watch?v=Iw8XtK1HCCw

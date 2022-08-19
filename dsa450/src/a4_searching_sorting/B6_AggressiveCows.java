@@ -21,7 +21,7 @@ public class B6_AggressiveCows {
 	private static int getLargestMinimumDistance(int[] a, int n, int c) {
 		Arrays.sort(a);
 		int low = 0;
-		int high = a[n - 1] - a[0];
+		int high = a[n - 1]; // Keep the range simple
 		int ans = -1;
 		while (low <= high) {
 			int mid = (low + high) / 2;

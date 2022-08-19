@@ -13,7 +13,7 @@ public class B71_JobScheduling {
 		Arrays.sort(a, new Comparator<Jobs>() {
 			@Override
 			public int compare(Jobs o1, Jobs o2) {
-				return o2.profit - o1.profit;
+				return o2.profit - o1.profit; // return Integer.compare(b.profit,a.profit);
 			}
 		});
 		int max = 0;
@@ -26,7 +26,7 @@ public class B71_JobScheduling {
 		for (int i = 1; i < a.length; i++)
 			result[i] = -1;
 		for (int i = 0; i < a.length; i++) {
-			for (int j = a[i].deadline; j > 0; j--) {
+			for (int j = a[i].deadline; j >= 1; j--) {
 				if (result[j] == -1) {
 					result[j] = a[i].id;
 					count++;

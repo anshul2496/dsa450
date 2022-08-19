@@ -2,7 +2,7 @@ package a4_searching_sorting;
 
 /*
  * https://www.spoj.com/problems/ANARC05B/
- * https://www.youtube.com/watch?v=w-6YHcGmSxM&t=23s
+ * https://www.youtube.com/watch?v=w-6YHcGmSxM
  */
 public class C3_DoubleHelix {
 	public static void main(String[] args) {
