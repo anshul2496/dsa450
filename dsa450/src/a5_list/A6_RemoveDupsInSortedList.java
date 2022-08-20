@@ -1,16 +1,31 @@
 package a5_list;
 
-import java.util.LinkedList;
-
 /*
  * https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1
- * https://www.youtube.com/watch?v=ErSDF5IM1fo - 1st
- * https://www.youtube.com/watch?v=GgLRB2V9R3o - 2nd
+ * https://www.youtube.com/watch?v=GgLRB2V9R3o
  */
 public class A6_RemoveDupsInSortedList {
 	public static void main(String[] args) {
-		// solution1();
 		solution2();
+	}
+
+	// My GfG implementation - easier I think
+	A1Node removeDuplicates(A1Node head) {
+		if (head == null || head.next == null)
+			return head;
+		A1Node dummy = new A1Node((int) 1e8);
+		A1Node itr = dummy;
+		A1Node curr = head;
+		itr.next = curr;
+		itr = curr;
+		while (curr != null) {
+			while (curr.next != null && curr.next.data == curr.data)
+				curr = curr.next;
+			curr = curr.next;
+			itr.next = curr;
+			itr = curr;
+		}
+		return dummy.next;
 	}
 
 	private static void solution2() {
@@ -41,23 +56,5 @@ public class A6_RemoveDupsInSortedList {
 			temp = temp.next;
 		}
 		System.out.println();
-	}
-
-	private static void solution1() {
-		LinkedList<Integer> list = new LinkedList<>();
-		list.add(2);
-		list.add(2);
-		list.add(4);
-		list.add(5);
-		list.add(5);
-		System.out.println(list);
-		LinkedList<Integer> ans = new LinkedList<>();
-		while (list.size() > 0) {
-			int val = list.getFirst();
-			list.removeFirst();
-			if (ans.size() == 0 || ans.getLast() != val)
-				ans.addLast(val);
-		}
-		System.out.println(ans);
 	}
 }
