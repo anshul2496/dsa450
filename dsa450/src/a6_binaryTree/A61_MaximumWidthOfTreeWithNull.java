@@ -3,13 +3,13 @@ package a6_binaryTree;
 import java.util.LinkedList;
 
 /*
- * https://practice.geeksforgeeks.org/problems/maximum-width-of-tree/1/
+ * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/trees/maximum-width-of-binary-tree/ojquestion
+ * https://www.youtube.com/watch?v=R9qiY7OK9JQ
  * Gfg question is different from Pepcoding one. In pepcoding null children are counted in width
  * In gfg null children are not counted.
  * Below code is of pepcoding. Check gfg link for the question and ans
- * https://www.youtube.com/watch?v=R9qiY7OK9JQ
  */
-public class A6_MaximumWidthOfTree {
+public class A61_MaximumWidthOfTreeWithNull {
 	public static void main(String[] args) {
 		TreeNode root = new TreeNode(10);
 		root.right = new TreeNode(30);

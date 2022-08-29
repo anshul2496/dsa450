@@ -44,7 +44,7 @@ public class A4_DiameterOfTree {
 			return 0;
 		// Maximum distance between two nodes on left hand side
 		int ld = diameter1(root.left);
-		// Maximum distance between two nodes on left hand side
+		// Maximum distance between two nodes on right hand side
 		int rd = diameter1(root.right);
 		// Maximum distance between left's deepest and right's deepest
 		int f = height(root.left) + height(root.right) + 1; // in terms of no of nodes

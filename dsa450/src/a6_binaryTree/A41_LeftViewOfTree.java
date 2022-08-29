@@ -33,6 +33,7 @@ public class A41_LeftViewOfTree {
 
 	private static ArrayList<Integer> leftView(TreeNode root) {
 		ArrayList<Integer> ans = new ArrayList<>();
+		if(root==null) return ans;
 		LinkedList<TreeNode> q = new LinkedList<>();
 		q.addLast(root);
 		while (!q.isEmpty()) {
