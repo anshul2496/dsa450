@@ -15,7 +15,7 @@ import java.util.Arrays;
 	[a, b] = [1, 2]
 	Output: 1
 	Explanation: One possible arrangement is: {1, 2, 3, 3, 4}. If you return a valid
-	arrangement, output will be 1.Solution is similar to sort array without any algo
+	arrangement, output will be 1.Solution is same as A4 to sort array without any algo
  */
 public class D2_ThreeWayPartitioning {
 	public static void main(String[] args) {

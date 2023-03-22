@@ -45,6 +45,21 @@ public class D1_SmallestSubarrayWithSumGreater {
 		System.out.println(ans);
 	}
 
+	// My code after studying
+	public static int smallestSubWithSum(int a[], int n, int x) {
+        int ans=Integer.MAX_VALUE;
+        int j=0;
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum+=a[i];
+            while(sum>x){
+                ans=Math.min(ans,i-j+1);
+                sum=sum-a[j++];
+            }
+        }
+        return ans;
+    }
+	
 	private static void solution1() {
 		int[] a = { 1, 4, 45, 6, 0, 19 };
 		int x = 51;

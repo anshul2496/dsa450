@@ -20,20 +20,18 @@ public class B1_MinJumpsToReachArrayEnd {
 	}
 
 	static int minJumps(int[] a) {
-		if (a.length == 1 && a[0] == 0)
+		if (a.length == 1)
 			return 0;
-		else if (a.length > 1 && a[0] == 0)
+		if (a[0] == 0)
 			return -1;
 		int max = 0, jump = 0, halt = 0;
 		for (int i = 0; i < a.length - 1; i++) {
 			max = Math.max(max, i + a[i]);
-			if (max >= a.length - 1) {
-				jump++;
-				return jump;
-			}
 			if (i == halt) {
 				halt = max;
 				jump++;
+				if (halt >= a.length - 1)
+					break;
 			}
 		}
 		if (halt >= a.length - 1)

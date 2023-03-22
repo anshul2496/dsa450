@@ -44,4 +44,22 @@ public class C51_MajorityElementNby2 {
 		}
 		return candidate;
 	}
+	
+	// The above can also be wriiten as - 
+//	static int getPotMajEle(int[] a,int n){
+//        int cand=a[0];
+//        int votes=1;
+//        for(int i=1;i<n;i++){
+//            if(a[i]==cand) votes++;
+//            else{
+//                if(votes==0){
+//                    cand=a[i];
+//                    votes=1;
+//                }else{
+//                    votes--;
+//                }
+//            }
+//        }
+//        return cand;
+//    }
 }

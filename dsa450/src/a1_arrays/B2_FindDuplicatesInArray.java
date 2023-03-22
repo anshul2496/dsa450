@@ -25,7 +25,7 @@ public class B2_FindDuplicatesInArray {
 		do {
 			tortoise = a[tortoise];
 			hare = a[a[hare]];
-		} while (hare != tortoise);
+		} while (hare != tortoise); // Works only in do-while
 
 		// Find the entrance to the cycle(which has the duplicate)
 		tortoise = a[0];

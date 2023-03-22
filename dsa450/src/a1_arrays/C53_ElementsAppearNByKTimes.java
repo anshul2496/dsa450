@@ -1,10 +1,9 @@
 package a1_arrays;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /*
- * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/arrays-and-strings/majority-element-general/ojquestion
+ * https://practice.geeksforgeeks.org/problems/count-element-occurences/1
  * https://www.youtube.com/watch?v=ChK9pQDhIrk
  * Given an array of size n, find all elements in array that appear more than n/k times. 
  * For example, if the input arrays is {3, 1, 2, 2, 1, 2, 3, 3} and k is 4, then the output should be [2, 3]. 
@@ -15,15 +14,20 @@ public class C53_ElementsAppearNByKTimes {
 	public static void main(String[] args) {
 		int[] a = { 3, 1, 2, 2, 1, 2, 3, 3 };
 		int k = 4;
-		int times = a.length / k;
-		Map<Integer, Integer> map = new HashMap<>();
-		for (int i = 0; i < a.length; i++) {
-			if (map.containsKey(a[i])) {
-				map.put(a[i], map.get(a[i]) + 1);
-				if (map.get(a[i]) > times)
-					System.out.println(a[i]);
-			} else
-				map.put(a[i], 1);
+		System.out.println(countOccurence(a, a.length, k));
+	}
+
+	public static int countOccurence(int[] a, int n, int k) {
+		HashMap<Integer, Integer> map = new HashMap<>();
+		int ans = 0;
+		int times = n / k;
+		for (int i = 0; i < n; i++) {
+			map.put(a[i], map.getOrDefault(a[i], 0) + 1);
 		}
+		for (int key : map.keySet()) {
+			if (map.get(key) > times)
+				ans++;
+		}
+		return ans;
 	}
 }

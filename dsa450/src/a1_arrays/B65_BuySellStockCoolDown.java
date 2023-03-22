@@ -8,38 +8,21 @@ package a1_arrays;
  */
 public class B65_BuySellStockCoolDown {
 	public static void main(String[] args) {
-		int[] price = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
-		int oldBuyPrice = -price[0];
-		int oldSellPrice = 0;
-		int oldCoolPrice = 0;
-
-		for (int i = 1; i < price.length; i++) {
-			int newBuyPrice = 0;
-			int newSellPrice = 0;
-			int newCoolPrice = 0;
-
-			if (oldCoolPrice - price[i] > oldBuyPrice) {
-				newBuyPrice = oldCoolPrice - price[i];
-			} else {
-				newBuyPrice = oldBuyPrice;
-			}
-
-			if (oldBuyPrice + price[i] > oldSellPrice) {
-				newSellPrice = oldBuyPrice + price[i];
-			} else {
-				newSellPrice = oldSellPrice;
-			}
-
-			if (oldSellPrice > oldCoolPrice) {
-				newCoolPrice = oldSellPrice;
-			} else {
-				newCoolPrice = oldCoolPrice;
-			}
-
-			oldBuyPrice = newBuyPrice;
-			oldSellPrice = newSellPrice;
-			oldCoolPrice = newCoolPrice;
+		int[] a = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
+		int obsp = -a[0];
+		int ossp = 0;
+		int ocsp = 0;
+		for (int i = 1; i < a.length; i++) {
+			int nbsp = 0;
+			int nssp = 0;
+			int ncsp = 0;
+			nbsp = Math.max(obsp, ocsp - a[i]);
+			nssp = Math.max(ossp, obsp + a[i]);
+			ncsp = Math.max(ocsp, ossp);
+			obsp = nbsp;
+			ossp = nssp;
+			ocsp = ncsp;
 		}
-		System.out.println(oldSellPrice);
+		System.out.println(ossp);
 	}
 }

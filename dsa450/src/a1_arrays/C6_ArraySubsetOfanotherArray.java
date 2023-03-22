@@ -18,6 +18,8 @@ import java.util.Set;
  */
 public class C6_ArraySubsetOfanotherArray {
 	public static void main(String[] args) {
+		// This solution is now not passing on GFG.
+		// The soln which should work is frequency map for both and then compare
 		solution1();
 	}
 

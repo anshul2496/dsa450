@@ -13,20 +13,12 @@ public class B66_BuySellStockKTransactions {
 	private static void solution2() {
 		int[] prices = { 9, 6, 7, 6, 3, 8 };
 		int k = 3; // No of transactions
-
 		int[][] dp = new int[k + 1][prices.length];
-
 		for (int t = 1; t <= k; t++) { // t -> transaction
 			int max = Integer.MIN_VALUE;
 			for (int d = 1; d < prices.length; d++) { // d -> days
-				if (dp[t - 1][d - 1] - prices[d - 1] > max) {
-					max = dp[t - 1][d - 1] - prices[d - 1];
-				}
-				if (max + prices[d] > dp[t][d - 1]) {
-					dp[t][d] = max + prices[d];
-				} else {
-					dp[t][d] = dp[t][d - 1];
-				}
+				max = Math.max(max, dp[t - 1][d - 1] - prices[d - 1]);
+				dp[t][d] = Math.max(dp[t][d - 1], max + prices[d]);
 			}
 		}
 		System.out.println(dp[dp.length - 1][dp[0].length - 1]);

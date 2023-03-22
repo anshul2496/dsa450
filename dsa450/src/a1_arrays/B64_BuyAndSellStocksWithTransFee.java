@@ -9,28 +9,18 @@ package a1_arrays;
  */
 public class B64_BuyAndSellStocksWithTransFee {
 	public static void main(String[] args) {
-		int[] price = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
+		int[] a = { 10, 15, 17, 20, 16, 18, 22, 20, 22, 20, 23, 25 };
 		int fee = 3;
-		int oldBuyPrice = -price[0];
-		int oldSellPrice = 0;
-		for (int i = 1; i < price.length; i++) {
-			int newBuyPrice = 0;
-			int newSellPrice = 0;
-
-			if (oldSellPrice - price[i] > oldBuyPrice) {
-				newBuyPrice = oldSellPrice - price[i];
-			} else {
-				newBuyPrice = oldBuyPrice;
-			}
-
-			if (oldBuyPrice + price[i] - fee > oldSellPrice) {
-				newSellPrice = oldBuyPrice + price[i] - fee;
-			} else {
-				newSellPrice = oldSellPrice;
-			}
-			oldBuyPrice = newBuyPrice;
-			oldSellPrice = newSellPrice;
+		int obsp = -a[0]; // Old bought state profit
+		int ossp = 0; // Old sold state profit
+		for (int i = 1; i < a.length; i++) {
+			int nbsp = 0;
+			int nssp = 0;
+			nbsp = Math.max(obsp, ossp - a[i]);
+			nssp = Math.max(ossp, obsp + a[i] - fee);
+			obsp = nbsp;
+			ossp = nssp;
 		}
-		System.out.println(oldSellPrice);
+		System.out.println(ossp);
 	}
 }

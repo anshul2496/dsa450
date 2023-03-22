@@ -27,7 +27,7 @@ public class B4_MergeIntervals {
 				merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
 			}
 		}
-		//return list.toArray(new int[list.size()][]);
+		//return merged.toArray(new int[merged.size()][]);
 		merged.stream().forEach(x -> System.out.println(Arrays.toString(x)));
 	}
 }

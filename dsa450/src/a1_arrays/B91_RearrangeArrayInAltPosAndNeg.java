@@ -16,7 +16,7 @@ public class B91_RearrangeArrayInAltPosAndNeg {
 	public static void main(String[] args) {
 		int[] a = { 2, 3, -4, -1, 6, -9, -5, 2, 8, 88 };
 		int pi = partition(a, 0, a.length - 1);
-		for (int i = 0, j = pi + 1; i < pi + 1 && j < a.length; i += 2, j++) {
+		for (int i = 1, j = pi + 1; i < a.length && j < a.length; i += 2, j++) {
 			int temp = a[i];
 			a[i] = a[j];
 			a[j] = temp;
