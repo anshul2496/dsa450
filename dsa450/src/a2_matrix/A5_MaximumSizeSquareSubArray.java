@@ -34,10 +34,8 @@ public class A5_MaximumSizeSquareSubArray {
 			for (int j = cols - 1; j >= 0; j--) {
 				if (i == rows - 1) {
 					s[i][j] = a[i][j];
-					ans = Math.max(ans, s[i][j]);
 				} else if (j == cols - 1) {
 					s[i][j] = a[i][j];
-					ans = Math.max(ans, s[i][j]);
 				} else {
 					if (a[i][j] == 0)
 						s[i][j] = a[i][j];
@@ -45,9 +43,9 @@ public class A5_MaximumSizeSquareSubArray {
 						int min = Math.min(s[i + 1][j], s[i][j + 1]);
 						min = Math.min(min, s[i + 1][j + 1]);
 						s[i][j] = min + 1;
-						ans = Math.max(ans, s[i][j]);
 					}
 				}
+				ans = Math.max(ans, s[i][j]);
 			}
 		}
 		for (int i = 0; i < rows; i++) {

@@ -2,7 +2,7 @@ package a2_matrix;
 
 /*
  * https://practice.geeksforgeeks.org/problems/kth-element-in-matrix/1
- * https://www.youtube.com/watch?v=LkrsdWa69_Q
+ * https://www.youtube.com/watch?v=HuOcDlB1uXk
  * Given a N x N matrix, where every row and column is sorted in non-decreasing order. Find the kth smallest element in the matrix.
 	Example 1:
 	Input:
@@ -15,7 +15,7 @@ package a2_matrix;
 	Output: 27
 	Explanation: 27 is the 3rd smallest element.
  */
-public class A8_KthSmallestElement {
+public class B1_KthSmallestElement {
 	public static void main(String[] args) {
 		int[][] a = { { 16, 28, 60, 64 }, { 22, 41, 63, 91 }, { 27, 50, 87, 93 }, { 36, 78, 87, 94 } };
 		int rows = a.length;
@@ -40,7 +40,7 @@ public class A8_KthSmallestElement {
 				}
 				ans = ans + low;
 			}
-			if (ans < k) // Difference from median question, no "=" sign
+			if (ans <= (k-1))
 				startVal = midVal + 1;
 			else
 				endVal = midVal - 1;

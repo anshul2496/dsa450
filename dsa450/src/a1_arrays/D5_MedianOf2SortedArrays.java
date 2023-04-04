@@ -49,7 +49,7 @@ public class D5_MedianOf2SortedArrays {
 			else {
 				// Check for even length
 				if ((n1 + n2) % 2 == 0) {
-					return (double) (Math.max(l1, l2) + Math.min(r1, r2)) / 2;
+					return (double) (Math.max(l1, l2) + Math.min(r1, r2)) / 2.0;
 				} else {
 					return (double) Math.min(r1, r2);
 				}

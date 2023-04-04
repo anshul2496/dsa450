@@ -17,7 +17,7 @@ import java.util.Map;
 	1 8 or 8 1
 	8 and 1 are present in all rows.
  */
-public class A9_CommonElementsInAllRows {
+public class A8_CommonElementsInAllRows {
 	public static void main(String[] args) {
 		int[][] a = { { 1, 2, 1, 4, 8 }, { 3, 7, 8, 5, 1 }, { 8, 7, 7, 3, 1 }, { 8, 1, 2, 7, 9 } };
 		int rows = a.length;

@@ -3,7 +3,7 @@ package a2_matrix;
 /*
  * https://practice.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
  * https://www.codingninjas.com/codestudio/problems/median-of-a-row-wise-sorted-matrix_1115473
- * https://www.youtube.com/watch?v=tFdBRcHLSGQ
+ * https://www.youtube.com/watch?v=W-wLQkLZSWs
  * Given a row wise sorted matrix of size RxC where R and C are always odd, find the median of the matrix.
 	Example 1:
 	Input:
@@ -17,7 +17,7 @@ package a2_matrix;
 	{1,2,3,3,5,6,6,9,9}. Hence, 5 is median. 
 	Complexity - log(range)*(number of rows)*log(column)
  */
-public class B1_MedianInRowSorted {
+public class A9_MedianInRowSorted {
 	public static void main(String[] args) {
 		int[][] a = { { 1, 3, 5 }, { 2, 6, 9 }, { 3, 6, 9 } };
 		int max = Integer.MIN_VALUE;
