@@ -1,8 +1,6 @@
 package a8_greedy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
@@ -12,49 +10,39 @@ public class A1_ActiviySelection {
 	public static void main(String[] args) {
 		int[] start = { 1, 3, 0, 5, 8, 5 };
 		int[] end = { 2, 4, 6, 7, 9, 9 };
-		int ans = getMaxMeetings(start, end);
+		int ans = maxMeetings(start, end, start.length);
 		System.out.println(ans);
 	}
 
-	private static int getMaxMeetings(int[] start, int[] end) {
-		ArrayList<A1Pair> list = new ArrayList<>();
-		for (int i = 0; i < start.length; i++) {
-			list.add(new A1Pair(start[i], end[i], i));
+	public static int maxMeetings(int start[], int end[], int n) {
+		Meet[] meetings = new Meet[n];
+		for (int i = 0; i < n; i++) {
+			Meet m = new Meet(start[i], end[i]);
+			meetings[i] = m;
 		}
-		Collections.sort(list, new Comparator<A1Pair>() {
-			public int compare(A1Pair p1, A1Pair p2) {
-				if (p1.end < p2.end)
-					return -1;
-				else if (p1.end > p2.end)
-					return 1;
-				else {
-					if (p1.idx < p2.idx)
-						return -1;
-					else
-						return 1;
-				}
-			}
-		});
-		int limit = list.get(0).end;
-		int ans = 1; // Counting the 1st one
-		for (int i = 1; i < list.size(); i++) {
-			if (list.get(i).start > limit) {
+		Arrays.sort(meetings);
+		int ans = 1;
+		int lastEnd = meetings[0].end;
+		for (int i = 1; i < n; i++) {
+			if (meetings[i].start > lastEnd) {
 				ans++;
-				limit = list.get(i).end;
+				lastEnd = meetings[i].end;
 			}
 		}
 		return ans;
 	}
 }
 
-class A1Pair {
+class Meet implements Comparable<Meet> {
 	int start;
 	int end;
-	int idx;
-
-	public A1Pair(int start, int end, int idx) {
+	// No need of including the index, it is still passing all test cases
+	public Meet(int start, int end) {
 		this.start = start;
 		this.end = end;
-		this.idx = idx;
+	}
+
+	public int compareTo(Meet other) {
+		return this.end - other.end;
 	}
 }
