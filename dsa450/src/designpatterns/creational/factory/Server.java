@@ -1,12 +1,12 @@
-package designpatterns.factory;
+package designpatterns.creational.factory;
 
-public class PC extends Computer {
+public class Server extends Computer {
 
 	private String cpu;
 	private String ram;
 	private String hdd;
 
-	public PC(String cpu, String ram, String hdd) {
+	public Server(String cpu, String ram, String hdd) {
 		this.cpu = cpu;
 		this.ram = ram;
 		this.hdd = hdd;
@@ -29,6 +29,6 @@ public class PC extends Computer {
 
 	@Override
 	public String toString() {
-		return "PC [cpu=" + cpu + ", ram=" + ram + ", hdd=" + hdd + "]";
+		return "Server [cpu=" + cpu + ", ram=" + ram + ", hdd=" + hdd + "]";
 	}
 }

@@ -1,4 +1,4 @@
-package designpatterns.factory;
+package designpatterns.creational.factory;
 
 public abstract class Computer {
 	public abstract String getCPU();

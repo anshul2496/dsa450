@@ -14,10 +14,15 @@ public class A3_FindDupsInString {
 		/*
 		 * Time Complexity: O(N log N), where N = length of the string passed and it
 		 * generally takes logN time for an element insertion in a map. Space
-		 * Complexity: O(K), where K = size of the map (0<=K<=input_string_length).
+		 * Space Complexity: O(K), where K = size of the map (0<=K<=input_string_length).
 		 * 
 		 * For O(N) time complexity Create an array of size  256 and fill count of
 		 * every character in it int count[] = new int[NO_OF_CHARS];
+		 * static void fillCharCounts(String str,int[] count)
+    		{
+        		for (int i = 0; i < str.length(); i++)
+            		count[str.charAt(i)]++;
+    		}
 		 */
 		String s = "geeksforgeeks";
 		Map<Character, Integer> map = new HashMap<>();

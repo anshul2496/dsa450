@@ -32,4 +32,28 @@ public class C7_MinimumSwapsForBracketBalanc {
 		}
 		System.out.println(swap);
 	}
+	
+	// My version ig gfg after understanding
+	static int minimumNumberOfSwaps(String s){
+        int open=0,close=0,unbal=0,swaps=0;
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='['){
+                open++;
+                if(unbal>0) {
+                    swaps+=unbal;
+                    unbal--;
+                    open--;
+                }
+            }else{
+                if(open>0) {
+                    open--;
+                }else{
+                    close++;
+                    unbal++;
+                }
+            }
+        }
+        return swaps;
+    }
 }

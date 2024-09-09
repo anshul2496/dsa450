@@ -7,6 +7,7 @@ import java.util.Comparator;
 /*
  * https://practice.geeksforgeeks.org/problems/maximum-trains-for-which-stoppage-can-be-provided/1
  * https://www.youtube.com/watch?v=naDecrj9Cyc
+ * Code is correct but all test cases not running in gfg
  */
 public class A5_MaximumTrainsStoppage {
 	public static void main(String[] args) {

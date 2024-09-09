@@ -48,7 +48,12 @@ class Item implements Comparable<Item> {
 		this.ratio = ratio;
 	}
 
-	public int compareTo(Item other) {
-		return (int) (other.ratio - this.ratio);
-	}
+	public int compareTo(Item other){
+        if(other.ratio < this.ratio){
+            return -1;
+        } else if(other.ratio > this.ratio) {
+            return 1;
+        }
+        return 0;
+    }//In double type other.ratio-this.ratio doesnt work for all test cases
 }

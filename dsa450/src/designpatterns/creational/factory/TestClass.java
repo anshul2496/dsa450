@@ -1,4 +1,4 @@
-package designpatterns.factory;
+package designpatterns.creational.factory;
 
 public class TestClass {
 

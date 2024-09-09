@@ -2,7 +2,7 @@ package a3_string;
 
 /*
  * https://practice.geeksforgeeks.org/problems/count-the-reversals0401/1
- * https://www.youtube.com/watch?v=dTBpH9YT2HQ
+ * https://www.youtube.com/watch?v=FB6wSdPjVGw
  * Given a string S consisting of only opening and closing curly brackets '{' and '}', find out the minimum number of reversals 
  * required to convert the string into a balanced expression.
 	A reversal means changing '{' to '}' or vice-versa.

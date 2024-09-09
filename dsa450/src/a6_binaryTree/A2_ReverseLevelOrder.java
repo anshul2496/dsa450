@@ -2,6 +2,7 @@ package a6_binaryTree;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -46,4 +47,23 @@ public class A2_ReverseLevelOrder {
 			ans.add(stack.pop().data);
 		return ans;
 	}
+	
+	// My solution - No need of additional Stack DataStructure 
+	public ArrayList<Integer> reverseLevelOrder(TreeNode node) 
+    {
+        ArrayList<Integer> ans=new ArrayList<>();
+        Queue<TreeNode> q=new ArrayDeque<>();
+        q.add(node);
+        while(q.size()>0){
+            int c=q.size();
+            for(int i=0;i<c;i++){
+            	TreeNode rm=q.remove();
+                if(rm.right!=null) q.add(rm.right);
+                if(rm.left!=null) q.add(rm.left);
+                ans.add(rm.data);
+            }
+        }
+        Collections.reverse(ans);
+        return ans;
+    }
 }

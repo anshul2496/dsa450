@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class C8_RestoreIPAddress {
 	public static void main(String[] args) {
-		String s = "25525511135";
+		String s = "11211";
 		List<String> res = new ArrayList<>();
 		helper(s, 0, 0, "", res);
 		System.out.println(res);
@@ -21,7 +21,7 @@ public class C8_RestoreIPAddress {
 	private static void helper(String s, int i, int par, String ans, List<String> res) {
 		if (i == s.length() || par == 4) {
 			if (i == s.length() && par == 4) {
-				res.add(ans.substring(0, ans.length() - 1));
+				res.add(ans.substring(0, ans.length() - 1)); // To remove the extra dot at end
 			}
 			return;
 		}

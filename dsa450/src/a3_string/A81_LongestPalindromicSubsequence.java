@@ -11,7 +11,7 @@ package a3_string;
 				  				c1s(m)c2 -4
  * && 
  * lps(c1m) -> s(c1m) = _s(m) and c1s(m) [represents max of(1 and 2)]
- * lps(mc2) -> s(mc2) = s(m)_ and s(m)c2 [represents max of(2 and 3)]
+ * lps(mc2) -> s(mc2) = s(m)_ and s(m)c2 [represents max of(1 and 3)]
  * if c1==c2  Answer is in 4 which is = 2+ lps(m)
  * if c1!=c2  Answer is in 1,2,3 which is Max(lps(c1m),lps(mc2))
  * ***** Travel on gap for palindrome type questions*****
