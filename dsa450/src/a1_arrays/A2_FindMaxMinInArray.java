@@ -12,10 +12,10 @@ public class A2_FindMaxMinInArray {
 		int max;
 		int min;
 	}
-	
+
 	public static void main(String[] args) {
-		//solution1_sort();
-		//solution2_linearSearch(); // O(n)
+		// solution1_sort();
+		// solution2_linearSearch(); // O(n) -> This is acceptable
 
 		/*
 		 * METHOD 3 (Tournament Method) Divide the array into two parts and compare the
@@ -71,14 +71,11 @@ public class A2_FindMaxMinInArray {
 
 	private static void solution2_linearSearch() {
 		int[] a = { 5, 6, 4, 1, 3, 2 };
-		int min = a[0];
-		int max = a[0];
-		for (int i = 1; i < a.length; i++) {
-			if (a[i] < min) {
-				min = a[i];
-			} else if (a[i] > max) {
-				max = a[i];
-			}
+		int min = Integer.MAX_VALUE;
+		int max = Integer.MIN_VALUE;
+		for (int i = 0; i < a.length; i++) {
+			min = Math.min(min, a[i]);
+			max = Math.max(max, a[i]);
 		}
 		System.out.println("Min = " + min);
 		System.out.println("Max = " + max);
