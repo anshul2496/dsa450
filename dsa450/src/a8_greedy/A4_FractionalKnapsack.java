@@ -55,5 +55,5 @@ class Item implements Comparable<Item> {
             return 1;
         }
         return 0;
-    }//In double type other.ratio-this.ratio doesnt work for all test cases
+    }
 }

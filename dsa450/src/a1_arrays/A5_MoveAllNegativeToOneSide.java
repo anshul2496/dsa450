@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class A5_MoveAllNegativeToOneSide {
 
 	public static void main(String[] args) {
-		//solution1(); // O(n) - Not in place
+		//solution1(); // O(n) - Pointer approach
 		solution2(); // O(n) - Partition approach of quick sort. O(n) Time and O(1) Space
 	}
 
