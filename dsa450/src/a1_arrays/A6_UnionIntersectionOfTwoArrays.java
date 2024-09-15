@@ -1,9 +1,8 @@
 package a1_arrays;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
+
 /*
  * https://practice.geeksforgeeks.org/problems/union-of-two-arrays3538/1
  * Given two arrays a[] and b[] of size n and n respectively. The task is to find union between these two arrays.
@@ -17,34 +16,20 @@ import java.util.stream.Collectors;
  */
 public class A6_UnionIntersectionOfTwoArrays {
 	public static void main(String[] args) {
-		solution1_set(); //O(m+n)
-		// Other solutions include using a Map or sort the arrays(using O(nlogn) algo) and then use binary search
+		int[] a = { 1, 2, 3, 4, 5 };
+		int n = a.length;
+		int[] b = { 1, 2, 3 };
+		int m = b.length;
+		System.out.println(doUnion(a, n, b, m)); // O(m+n)
 	}
 
-	private static void solution1_set() {
-		System.out.println("Ente r size of two arrays =");
-		Scanner ob = new Scanner(System.in);
-		int n1 = ob.nextInt();
-		int n2 = ob.nextInt();
-		Integer[] a1 = new Integer[n1];
-		Integer[] a2 = new Integer[n2];
-		System.out.println("Enter 1st array of size " + n1);
-		for (int i = 0; i < n1; i++) {
-			a1[i] = ob.nextInt();
-		}
-		System.out.println("Enter 2nd array of size " + n2);
-		for (int i = 0; i < n2; i++) {
-			a2[i] = ob.nextInt();
-		}
-		Set<Integer> set = Arrays.stream(a1).collect(Collectors.toSet());
-		set.addAll(Arrays.stream(a2).collect(Collectors.toSet()));
-		System.out.println("Union set length="+set.size());
-		
-		// Intersection
-		set = Arrays.stream(a1).collect(Collectors.toSet());
-		set.retainAll(Arrays.stream(a2).collect(Collectors.toSet()));
-		System.out.println("Intersection set length="+set.size());
-		
-		ob.close();
+	public static int doUnion(int a[], int n, int b[], int m) {
+		Set<Integer> set = new HashSet<>();
+		for (int i = 0; i < n; i++)
+			set.add(a[i]);
+		for (int i = 0; i < m; i++)
+			set.add(b[i]);
+		return set.size();
 	}
+	// For intersection use retainAll()
 }

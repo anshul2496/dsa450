@@ -22,12 +22,12 @@ public class A6_MinimumPlatforms {
 		while (i < n && j < n) {
 			if (arr[i] <= dep[j]) {
 				count++;
-				ans = Math.max(ans, count);
 				i++;
 			} else {
 				count--;
 				j++;
 			}
+			ans = Math.max(ans, count);
 		}
 		return ans;
 	}

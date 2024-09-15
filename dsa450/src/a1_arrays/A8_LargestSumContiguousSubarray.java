@@ -35,5 +35,4 @@ public class A8_LargestSumContiguousSubarray {
 		}
 		System.out.println("Max contigious sum = " + max_so_far);
 	}
-
 }
