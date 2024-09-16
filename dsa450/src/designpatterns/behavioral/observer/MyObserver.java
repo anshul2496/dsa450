@@ -1,4 +1,4 @@
-package designpatterns.observer;
+package designpatterns.behavioral.observer;
 
 public class MyObserver implements Observer {
 

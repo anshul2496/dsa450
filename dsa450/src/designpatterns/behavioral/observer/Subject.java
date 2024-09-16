@@ -1,4 +1,4 @@
-package designpatterns.observer;
+package designpatterns.behavioral.observer;
 
 public interface Subject {
 	public void register(Observer ob);

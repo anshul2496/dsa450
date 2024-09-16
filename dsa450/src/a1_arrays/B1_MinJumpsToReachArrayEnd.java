@@ -14,7 +14,7 @@ package a1_arrays;
  */
 public class B1_MinJumpsToReachArrayEnd {
 	public static void main(String[] args) {
-		int[] arr = new int[] { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
+		int[] arr = new int[] { 1, 2, 0, 0, 0 };
 		int ans = minJumps(arr);
 		System.out.println(ans);
 	}
