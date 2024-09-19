@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /*
  * https://leetcode.com/problems/next-permutation/ 
+ * LeetCode explanation single pass approach
  * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation
  * of numbers. If such an arrangement is not possible, it must rearrange it as
  * the lowest possible order (i.e., sorted in ascending order). The replacement

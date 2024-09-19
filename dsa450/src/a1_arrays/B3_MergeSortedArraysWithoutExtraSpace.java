@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
- * https://www.youtube.com/watch?v=POTD3tZ2S4s 
+ * https://www.youtube.com/watch?v=POTD3tZ2S4s
  * Given two sorted arrays arr1[] of
  * size N and arr2[] of size M. Each array is sorted in non-decreasing order.
  * Merge the two arrays into one sorted array in non-decreasing order without
