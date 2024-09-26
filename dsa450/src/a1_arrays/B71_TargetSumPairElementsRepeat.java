@@ -1,6 +1,5 @@
 package a1_arrays;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
