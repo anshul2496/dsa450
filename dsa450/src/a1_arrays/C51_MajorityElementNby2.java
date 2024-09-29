@@ -4,6 +4,12 @@ package a1_arrays;
  * https://practice.geeksforgeeks.org/problems/majority-element-1587115620/1
  * https://www.youtube.com/watch?v=-s-qtf9flqg
  * Can also be done by frequency map but will take O(n) space
+ * static int majorityElement(int arr[]) {
+        Map<Integer,Integer> map=new HashMap<>();
+        for(int i=0;i<arr.length;i++) map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+        for(int key:map.keySet()) if(map.get(key)>(arr.length/2)) return key;
+        return -1;
+    }
  */
 public class C51_MajorityElementNby2 {
 	public static void main(String[] args) {

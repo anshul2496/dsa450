@@ -21,29 +21,29 @@ public class D3_MinimumSwapsRequiredKTgether {
 	}
 
 	private static void solution1() {
-		int[] arr = {2, 1, 5, 6, 3};
+		int[] arr = { 2, 1, 5, 6, 3 };
 		int k = 3;
 		int fav = 0;
 		int n = arr.length;
 		for (int i = 0; i < n; i++)
 			if (arr[i] <= k)
 				fav++;
-		
+
 		int nonFav = 0;
 		for (int i = 0; i < fav; i++)
 			if (arr[i] > k)
 				nonFav++;
-		
-		int ans = nonFav;
-		for (int left = 0, right = fav; right < n; left++, right++) {
-			// Decrement count of previous window
-			if (arr[left] > k)
-				nonFav--;
-			// Increment count of current window
-			if (arr[right] > k)
-				nonFav++;
-			// Update ans if count of 'bad' is less in current window
+
+		int ans = Integer.MAX_VALUE;
+		int l = 0, r = fav - 1;
+		while (r < n) {
 			ans = Math.min(ans, nonFav);
+			r++;
+			if (r < n && arr[r] > k)
+				nonFav++;
+			if (l < n && arr[l] > k)
+				nonFav--;
+			l++;
 		}
 		System.out.println(ans);
 	}

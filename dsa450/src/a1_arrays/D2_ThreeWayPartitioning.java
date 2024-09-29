@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /*
  * 	https://practice.geeksforgeeks.org/problems/three-way-partitioning/1
+ * 	Same as Arrays - A4
  * 	Given an array of size n and a range [a, b]. The task is to partition the array around the range such that array is divided into three parts.
 	1) All elements smaller than a come first.
 	2) All elements in range a to b come next.
@@ -41,5 +42,28 @@ public class D2_ThreeWayPartitioning {
 			}
 		}
 		System.out.println(Arrays.toString(a));
+	}
+
+	// Same as Arrays -A4
+	public void threeWayPartition(int arr[], int a, int b) {
+		int low = 0;
+		int mid = 0;
+		int high = arr.length - 1;
+		while (mid <= high) {
+			if (arr[mid] < a) {
+				int temp = arr[low];
+				arr[low] = arr[mid];
+				arr[mid] = temp;
+				low++;
+				mid++;
+			} else if (arr[mid] >= a && arr[mid] <= b) {
+				mid++;
+			} else if (arr[mid] > b) {
+				int temp = arr[mid];
+				arr[mid] = arr[high];
+				arr[high] = temp;
+				high--;
+			}
+		}
 	}
 }

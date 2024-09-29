@@ -1,6 +1,8 @@
 package a1_arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 /*
  * 	https://practice.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1
@@ -33,4 +35,17 @@ public class C9_ChocolateDistribution {
 		}
 		System.out.println(min);
 	}
+	
+	// GFG Soln
+	public long findMinDiff (ArrayList<Integer> a, int n, int m)
+    {
+        long ans=Long.MAX_VALUE;
+        Collections.sort(a);
+        int j=m-1;
+        for(int i=0;i<=n-m;i++){
+            ans=Math.min(ans,a.get(j)-a.get(i));
+            j++;
+        }
+        return ans;
+    }
 }

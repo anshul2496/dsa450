@@ -6,7 +6,8 @@ import java.util.Set;
 
 /*
  * 	https://practice.geeksforgeeks.org/problems/triplet-sum-in-array-1587115621/1
- * 	Given an array arr of size n and an integer X. Find if there's a triplet in the array which sums up to the given integer X.
+ * 	Given an array arr of size n and an integer X. Find if there's a triplet in the array 
+ * which sums up to the given integer X.
 	Input:
 	n = 6, X = 13
 	arr[] = [1 4 45 6 10 8]

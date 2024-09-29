@@ -1,7 +1,9 @@
 package a1_arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /*
@@ -18,24 +20,20 @@ import java.util.Set;
  */
 public class C6_ArraySubsetOfanotherArray {
 	public static void main(String[] args) {
-		// This solution is now not passing on GFG.
-		// The soln which should work is frequency map for both and then compare
-		solution1();
+		long[] a1 = { 11, 7, 1, 13, 21, 3, 7, 3 };
+		long[] a2 = { 11, 3, 7, 1, 7 };
+		System.out.println(isSubset(a1, a2, a1.length, a2.length));
 	}
 
-	private static void solution1() {
-		Integer[] a1 = { 11, 1, 13, 21, 3, 7 };
-		Integer[] a2 = { 11, 3, 7, 1 };
-		Set<Integer> set = new HashSet<>(Arrays.asList(a1));
-		int flag = 0;
-		for (Integer num : a2) {
-			if (!set.contains(num)) {
-				System.out.println("Not subset");
-				flag = 1;
-				break;
-			}
-		}
-		if (flag == 0)
-			System.out.println("It is subset");
+	public static String isSubset(long a1[], long a2[], long n, long m) {
+		List<Long> list = new ArrayList<>();
+		for (long num : a1)
+			list.add(num);
+		for (long num : a2)
+			if (!list.contains(num))
+				return "No";
+			else
+				list.remove(num);
+		return "Yes";
 	}
 }
