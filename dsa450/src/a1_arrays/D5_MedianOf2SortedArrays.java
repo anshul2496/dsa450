@@ -2,7 +2,7 @@ package a1_arrays;
 
 /*
  * https://leetcode.com/problems/median-of-two-sorted-arrays/
- * https://www.youtube.com/watch?v=afwPSXmRsGs
+ * https://www.youtube.com/watch?v=2BOgAlmyTkc
  * There are 2 sorted arrays A and B of size n each. Write an algorithm to find the median of the array obtained 
  * after merging the above 2 arrays(i.e. array of length 2n). 
  * The complexity should be O(log(n)). 
@@ -26,7 +26,7 @@ public class D5_MedianOf2SortedArrays {
 		}
 		int n1 = a.length;
 		int n2 = b.length;
-		int low = 0; 
+		int low = 0;
 		int high = n1;
 		while (low <= high) { // Note "<=" and high=a.length
 			// Initialize the cuts or partitions
@@ -41,18 +41,18 @@ public class D5_MedianOf2SortedArrays {
 			int r1 = (cut1 == n1) ? Integer.MAX_VALUE : a[cut1];
 			int r2 = (cut2 == n2) ? Integer.MAX_VALUE : b[cut2];
 
-			// Shift elements to the left
-			if (l1 > r2)
-				high = cut1 - 1;
-			else if (l2 > r1)
-				low = cut1 + 1;
-			else {
-				// Check for even length
+			if (l1 <= r2 && l2 <= r1) {
 				if ((n1 + n2) % 2 == 0) {
-					return (double) (Math.max(l1, l2) + Math.min(r1, r2)) / 2.0;
+					int left = Math.max(l1, l2);
+					int right = Math.min(r1, r2);
+					return ((left + right) / 2.0);
 				} else {
 					return (double) Math.min(r1, r2);
 				}
+			} else if (l1 > r2) {
+				high = cut1 - 1;
+			} else if (l2 > r1) {
+				low = cut1 + 1;
 			}
 		}
 		return 0.0;
