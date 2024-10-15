@@ -10,7 +10,7 @@ public class A3_NStacksInArray {
 	}
 }
 
-public class NStack {
+class NStack {
 	int[] arr;
 	int[] top;
 	int[] next;
