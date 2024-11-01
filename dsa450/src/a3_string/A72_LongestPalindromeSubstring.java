@@ -39,10 +39,11 @@ public class A72_LongestPalindromeSubstring {
 						maxlen = len;
 						start = i;
 						end = j;
+						//ans=s.substring(i,j+1);
 					}
 				}
 			}
 		}
-		return s.substring(start, end + 1);
+		return s.substring(start, end + 1); // return ans;
 	}
 }

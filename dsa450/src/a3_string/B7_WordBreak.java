@@ -1,5 +1,6 @@
 package a3_string;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -57,6 +58,23 @@ public class B7_WordBreak {
 			if (set.contains(left)) {
 				String right = str.substring(i + 1);
 				wordBreak(set, right, ans + left + " ", map);
+			}
+		}
+	}
+
+	// Mine
+	public static void wordBreak(String s, ArrayList<String> dictionary, String ans, HashMap<String, Integer> map) {
+		if (s.length() == 0) {
+			map.put("ans", 1);
+			return;
+		}
+		String temp = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			temp += ch;
+			if (dictionary.contains(temp)) {
+				String rest = s.substring(i + 1);
+				wordBreak(rest, dictionary, ans + temp + " ", map);
 			}
 		}
 	}

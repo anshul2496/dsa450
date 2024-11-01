@@ -10,7 +10,7 @@ public class A5_ValidShuffle {
 	public static void main(String[] args) {
 		String first = "XY";
 		String second = "12";
-		String result = "1XY2";
+		String result = "Y1X2";
 		int l1 = first.length();
 		int l2 = second.length();
 		int l3 = result.length();

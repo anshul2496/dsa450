@@ -1,5 +1,7 @@
 package a3_string;
 
+import java.util.Stack;
+
 /*
  * https://practice.geeksforgeeks.org/problems/count-the-reversals0401/1
  * https://www.youtube.com/watch?v=FB6wSdPjVGw
@@ -19,23 +21,30 @@ public class B8_MinNoOfBracketReversals {
 		System.out.println(rev);
 	}
 
-	private static int getReverseCounts(String str) {
-		int rev = 0;
-		int open = 0;
-		int close = 0;
-		if ((str.length() % 2) != 0)
+	private static int getReverseCounts(String s) {
+		if ((s.length() % 2) != 0)
 			return -1;
-		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) == '{')
-				open++;
+		Stack<Character> st = new Stack<>();
+		int ob = 0;
+		int cb = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch == '{')
+				st.push(ch);
 			else {
-				if (open == 0)
-					close++;
+				if (!st.isEmpty() && st.peek() == '{')
+					st.pop();
 				else
-					open--;
+					st.push(ch);
 			}
 		}
-		rev = (int) (Math.ceil(open / 2.0) + Math.ceil(close / 2.0));
-		return rev;
+		while (!st.isEmpty()) {
+			char top = st.pop();
+			if (top == '{')
+				ob++;
+			else
+				cb++;
+		}
+		return (int) (Math.ceil(ob / 2.0) + Math.ceil(cb / 2.0));
 	}
 }

@@ -49,4 +49,31 @@ public class A6_CountAndSay {
 		}
 		return s;
 	}
+	
+	//My
+	/*public static String countAndSay(int n) {
+        if(n==1) return "1";
+        if(n==2) return "11";
+        String s="11";
+        String ans="";
+        int k=3;
+        int num=1;
+        while(k<=n){
+            num=1;
+            ans="";
+            for(int i=1;i<s.length();i++){
+                char ch=s.charAt(i);
+                char chM1=s.charAt(i-1);
+                if(ch==chM1) num++;
+                else{
+                    ans+=String.valueOf(num)+chM1;
+                    num=1;
+                }
+            }
+            ans+=String.valueOf(num)+s.charAt(s.length()-1);
+            s=ans;
+            k++;
+        }
+        return s;
+    }*/
 }
