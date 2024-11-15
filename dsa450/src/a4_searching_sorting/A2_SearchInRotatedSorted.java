@@ -2,7 +2,7 @@ package a4_searching_sorting;
 
 /*
  * https://leetcode.com/problems/search-in-rotated-sorted-array/
- * https://www.youtube.com/watch?v=1uu3g_uu8O0&t=656s
+ * https://www.youtube.com/watch?v=1uu3g_uu8O0
  */
 public class A2_SearchInRotatedSorted {
 	public static void main(String[] args) {

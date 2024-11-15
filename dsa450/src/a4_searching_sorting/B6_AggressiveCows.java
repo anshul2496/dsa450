@@ -3,7 +3,6 @@ package a4_searching_sorting;
 import java.util.Arrays;
 
 /*
- * https://www.spoj.com/problems/AGGRCOW/
  * https://www.codingninjas.com/codestudio/problems/aggressive-cows_1082559
  * Problem Video - https://www.youtube.com/watch?v=ii0riJELUhA
  * Solution video - https://www.youtube.com/watch?v=XgnEFbraeiY

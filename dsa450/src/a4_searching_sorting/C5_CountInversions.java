@@ -1,49 +1,47 @@
 package a4_searching_sorting;
 
 /*
- * https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1 - Test case failing due to long issue
- * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/searching-and-sorting/count_inversions/ojquestion
+ * https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1
  * https://www.youtube.com/watch?v=uojx--MK_n0
- * Same as C5_Arrays
+ * Same as C3_Arrays
  */
 public class C5_CountInversions {
 	public static void main(String[] args) {
 		int[] a = { 2, 4, 1, 3, 5 };
-		mergeSort(a, 0, a.length - 1);
-		System.out.println(count);
+		System.out.println(mergeSort(a, 0, a.length - 1));
 	}
 
-	static int count = 0;
-
-	static int[] mergeSort(int[] a, int low, int high) {
-		if (low == high) {
-			int[] ba = new int[1];
-			ba[0] = a[low];
-			return ba;
+	static int mergeSort(int[] arr, int low, int high) {
+		int count = 0;
+		if (low < high) {
+			int mid = (low + high) / 2;
+			count += mergeSort(arr, low, mid);
+			count += mergeSort(arr, mid + 1, high);
+			count += merge(arr, low, mid, high);
 		}
-		int mid = low + (high - low) / 2;
-		int[] left = mergeSort(a, low, mid);
-		int[] right = mergeSort(a, mid + 1, high);
-		return merge(left, right);
+		return count;
 	}
 
-	static int[] merge(int[] left, int[] right) {
-		int i = 0;
-		int j = 0;
-		int k = 0;
-		int[] merged = new int[left.length + right.length];
-		while (i < left.length && j < right.length) {
-			if (left[i] <= right[j]) {
-				merged[k++] = left[i++];
+	static int merge(int[] a, int low, int mid, int high) {
+		int count = 0;
+		int[] b = new int[high + 1];
+		int i = low;
+		int j = mid + 1;
+		int k = low;
+		while (i <= mid && j <= high) {
+			if (a[i] <= a[j]) {
+				b[k++] = a[i++];
 			} else {
-				count += (left.length - i);
-				merged[k++] = right[j++];
+				count += mid - i + 1;
+				b[k++] = a[j++];
 			}
 		}
-		while (i < left.length)
-			merged[k++] = left[i++];
-		while (j < right.length)
-			merged[k++] = right[j++];
-		return merged;
+		while (i <= mid)
+			b[k++] = a[i++];
+		while (j <= high)
+			b[k++] = a[j++];
+		for (i = low; i <= high; i++)
+			a[i] = b[i];
+		return count;
 	}
 }

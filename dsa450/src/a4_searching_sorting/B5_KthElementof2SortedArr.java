@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /*
  * https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
- * https://www.youtube.com/watch?v=nv7F4PiLUzo
- * *****This is same as median of two sorted arrays.***** -> https://www.youtube.com/watch?v=afwPSXmRsGs&t=1s
+ * https://www.youtube.com/watch?v=SB6j8D95eHM
+ * *****This is same as median of two sorted arrays.***** -> https://www.youtube.com/watch?v=2BOgAlmyTkc
  * Input:
 	arr1[] = {2, 3, 6, 7, 9}
 	arr2[] = {1, 4, 8, 10}
