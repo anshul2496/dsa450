@@ -61,4 +61,10 @@ class A1Node {
 	public A1Node(int data) {
 		this.data = data;
 	}
+
+	@Override
+	public String toString() {
+		return "A1Node [data=" + data + ", next=" + next + "]";
+	}
+	
 }

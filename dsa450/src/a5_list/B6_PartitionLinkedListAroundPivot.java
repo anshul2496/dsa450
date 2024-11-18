@@ -8,37 +8,15 @@ package a5_list;
  */
 public class B6_PartitionLinkedListAroundPivot {
 	public static void main(String[] args) {
-		A1Node head1 = new A1Node(7);
-		head1.next = new A1Node(5);
+		A1Node head1 = new A1Node(1);
+		head1.next = new A1Node(4);
 		head1.next.next = new A1Node(3);
 		head1.next.next.next = new A1Node(2);
-		head1.next.next.next.next = new A1Node(6);
+		head1.next.next.next.next = new A1Node(5);
+		head1.next.next.next.next.next = new A1Node(2);
+		head1.next.next.next.next.next.next = new A1Node(3);
 		print(head1);
-
-		int pivotData = 3;
-		A1Node smaller = new A1Node(-1);
-		A1Node sp = smaller;
-		A1Node larger = new A1Node(-1);
-		A1Node lp = larger;
-		A1Node curr = head1;
-		A1Node pivot = null;
-		while (curr != null) {
-			if (curr.data == pivotData) {
-				pivot = curr;
-			} else if (curr.data < pivotData) {
-				sp.next = curr;
-				sp = sp.next;
-			} else {
-				lp.next = curr;
-				lp = lp.next;
-			}
-			curr = curr.next;
-		}
-		sp.next = pivot;
-		pivot.next = larger.next;
-		lp.next = null;
-		A1Node head = smaller.next;
-		print(head);
+		print(partition(head1, 3));
 	}
 
 	// My GFG Impl.- Took 3 pointers

@@ -20,6 +20,38 @@ public class A3_ReverseInKGroups {
 
 	static A1Node th, tt;
 
+	// My impl. - Here you dont need to do len>=k and again do reverse
+//	public static A1Node reverse(A1Node node, int k) {
+//        th=null;
+//        tt=null;
+//        int count=getLength(node);
+//        A1Node oh=null;
+//        A1Node ot=null;
+//        A1Node curr=node;
+//        A1Node next=null;
+//        while(count>0){
+//            int temp=0;
+//            th=null;
+//            tt=null;
+//            while(curr!=null && temp<k){
+//                next=curr.next;
+//                curr.next=null;
+//                addFirst(curr);
+//                curr=next;
+//                temp++;
+//            }
+//            if(oh==null){
+//                oh=th;
+//                ot=tt;
+//            }else{
+//                ot.next=th;
+//                ot=tt;
+//            }
+//            count=count-k;
+//        }
+//        return oh;
+//    }
+	
 	private static A1Node reverse(A1Node head, int k) {
 		if (head == null || head.next == null || k == 0) {
 			return head;

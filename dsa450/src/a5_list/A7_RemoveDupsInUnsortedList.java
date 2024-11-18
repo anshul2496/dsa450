@@ -20,28 +20,29 @@ public class A7_RemoveDupsInUnsortedList {
 	}
 
 	// My GfG implementation - easier I think
-	public static A1Node removeDuplicatesss(A1Node head) 
-    {
-         if(head==null || head.next==null) return head;
-         // Use Set or Frequency Map to store unique
-         Set<Integer> set=new HashSet<>();
-         A1Node dummy=new A1Node((int)1e8);
-         A1Node itr=dummy;
-         A1Node curr=head;
-         while(curr!=null){
-             if(!set.contains(curr.data)){
-                 itr.next=curr;
-                 itr=curr;
-                 set.add(curr.data);
-                 curr=curr.next;
-             }else{
-                 curr=curr.next;
-             }
-         }
-         itr.next=null; // So that the rest of the numbers dont form chain
-         return dummy.next;
-    }
-	
+	public static A1Node removeDuplicatesss(A1Node head) {
+		A1Node curr = head;
+		A1Node next = null;
+		A1Node prev = null;
+		Set<Integer> set = new HashSet<>();
+		while (curr != null) {
+			if (set.contains(curr.data)) {
+				prev.next = curr.next;
+				curr = curr.next;
+				continue;
+			}
+			set.add(curr.data);
+			next = curr.next;
+			while (next != null && curr.data == next.data) {
+				next = next.next;
+			}
+			curr.next = next;
+			prev = curr;
+			curr = next;
+		}
+		return head;
+	}
+
 	public static A1Node removeDuplicates(A1Node head) {
 		if (head == null || head.next == null)
 			return head;

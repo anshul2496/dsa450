@@ -2,7 +2,6 @@ package a5_list;
 
 /*
  * https://practice.geeksforgeeks.org/problems/split-a-circular-linked-list-into-two-halves/1
- * Cannot be done on gfg practice. Parameters not correct. Do in Rev
  * https://www.youtube.com/watch?v=VdGIR91xlaM
  */
 public class B8_SplitCircularListInTwo {
@@ -13,22 +12,75 @@ public class B8_SplitCircularListInTwo {
 		head.next.next.next = new A1Node(2);
 		head.next.next.next.next = new A1Node(6);
 		head.next.next.next.next.next = head;
+	}
 
+	public Pair<A1Node, A1Node> splitList(A1Node head) {
+		if (head == null || head.next == head)
+			return new Pair<A1Node, A1Node>(head, head);
+
+		// Get Intersection
+		A1Node intersection = getIntersection(head);
+
+		// Get starting point
+		A1Node sp = getStartingPoint(head, intersection);
+
+		// Remove loop
+		A1Node curr = sp;
+		while (curr.next != sp) {
+			curr = curr.next;
+		}
+		curr.next = null;
+
+		// Get midle element
+		A1Node mid = getMiddle(head);
+
+		// Divide into two
+		A1Node head2 = mid.next;
+		mid.next = head;
+		curr.next = head2;
+		Pair<A1Node, A1Node> ans = new Pair<A1Node, A1Node>(head, head2);
+		return ans;
+	}
+
+	public A1Node getMiddle(A1Node head) {
 		A1Node slow = head;
-		A1Node fast = head.next;
-		while (fast != head && fast.next != head) {
+		A1Node fast = head;
+		while (fast.next != null && fast.next.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
 		}
-		A1Node head1 = head;
-		A1Node head2 = slow.next;
-		slow.next = head1;
-		A1Node curr = head2;
-		while (curr.next != head) {
-			curr = curr.next;
+		return slow;
+	}
+
+	public A1Node getStartingPoint(A1Node head, A1Node intersection) {
+		A1Node slow = head;
+		A1Node fast = intersection;
+		while (slow != fast) {
+			slow = slow.next;
+			fast = fast.next;
 		}
-		curr.next = head2;
-		
-		// You cant print because the new lists are also cyclic
+		return slow;
+	}
+
+	public A1Node getIntersection(A1Node head) {
+		A1Node slow = head;
+		A1Node fast = head;
+		while (slow != fast) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if (slow == fast)
+				break;
+		}
+		return slow;
+	}
+}
+
+class Pair<F, S> {
+	public F first;
+	public S second;
+
+	public Pair(F first, S second) {
+		this.first = first;
+		this.second = second;
 	}
 }

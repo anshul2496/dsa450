@@ -11,21 +11,17 @@ public class A6_RemoveDupsInSortedList {
 
 	// My GfG implementation - easier I think
 	A1Node removeDuplicates(A1Node head) {
-		if (head == null || head.next == null)
-			return head;
-		A1Node dummy = new A1Node((int) 1e8);
-		A1Node itr = dummy;
-		A1Node curr = head;
-		itr.next = curr;
-		itr = curr;
-		while (curr != null) {
-			while (curr.next != null && curr.next.data == curr.data)
-				curr = curr.next;
-			curr = curr.next;
-			itr.next = curr;
-			itr = curr;
-		}
-		return dummy.next;
+		A1Node curr=head;
+		A1Node next=null;
+        while(curr!=null){
+            next=curr.next;
+            while(next!=null && curr.data==next.data){
+                next=next.next;
+            }
+            curr.next=next;
+            curr=next;
+        }
+        return head;
 	}
 
 	private static void solution2() {
