@@ -1,7 +1,7 @@
 package a6_binaryTree;
 
 /*
- * https://www.geeksforgeeks.org/construct-binary-tree-string-bracket-representation/
+ * https://www.geeksforgeeks.org/problems/construct-binary-tree-from-string-with-bracket-representation/1
  * https://www.youtube.com/watch?v=BH_btihSwVM
  * Input : "4(2(3)(1))(6(5))"
 	Output : 4 2 3 1 6 5

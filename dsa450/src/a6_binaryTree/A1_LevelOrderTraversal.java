@@ -31,14 +31,12 @@ public class A1_LevelOrderTraversal {
 		Queue<TreeNode> q = new ArrayDeque<>(); // Can also be done via LinkedList
 		q.add(root);
 		while (!q.isEmpty()) {
-			for (int i = 0; i < q.size(); i++) {
-				TreeNode rn = q.poll();
-				ans.add(rn.data);
-				if (rn.left != null)
-					q.add(rn.left);
-				if (rn.right != null)
-					q.add(rn.right);
-			}
+			TreeNode rn = q.poll();
+			ans.add(rn.data);
+			if (rn.left != null)
+				q.add(rn.left);
+			if (rn.right != null)
+				q.add(rn.right);
 		}
 		return ans;
 	}

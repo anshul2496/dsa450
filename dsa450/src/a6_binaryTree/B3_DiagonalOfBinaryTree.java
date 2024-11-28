@@ -24,31 +24,23 @@ public class B3_DiagonalOfBinaryTree {
 		root.right.left = new TreeNode(90);
 		root.right.right = new TreeNode(100);
 
-		ArrayList<ArrayList<Integer>> ans = getDiagonalOfBinaryTree(root);
+		ArrayList<Integer> ans = diagonal(root);
 		System.out.println(ans);
 	}
 
-	private static ArrayList<ArrayList<Integer>> getDiagonalOfBinaryTree(TreeNode root) {
-		ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-		if (root == null)
-			return ans;
+	public static ArrayList<Integer> diagonal(TreeNode root) {
+		ArrayList<Integer> ans = new ArrayList<Integer>();
 		LinkedList<TreeNode> q = new LinkedList<>();
 		q.addLast(root);
 		while (!q.isEmpty()) {
-			int size = q.size();
-			ArrayList<Integer> sm = new ArrayList<>();
-			while (size-- > 0) {
-				TreeNode rn = q.removeFirst();
-				while (rn != null) {
-					sm.add(rn.data);
-					if (rn.left != null)
-						q.addLast(rn.left);
-					rn = rn.right;
-				}
+			TreeNode rn = q.removeFirst();
+			while (rn != null) {
+				ans.add(rn.data);
+				if (rn.left != null)
+					q.addLast(rn.left);
+				rn = rn.right;
 			}
-			ans.add(sm);
 		}
 		return ans;
 	}
-
 }

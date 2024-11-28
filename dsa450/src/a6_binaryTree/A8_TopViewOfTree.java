@@ -1,7 +1,9 @@
 package a6_binaryTree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 /*
  * https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
@@ -26,6 +28,36 @@ public class A8_TopViewOfTree {
 
 		ArrayList<Integer> list = getTopView(root);
 		System.out.println(list);
+	}
+
+	// Map approach
+	static ArrayList<Integer> topView(TreeNode root) {
+		ArrayList<Integer> ans = new ArrayList<Integer>();
+		int minhl = 0;
+		int maxhl = 0;
+		LinkedList<A7Pair> q = new LinkedList<>();
+		Map<Integer, ArrayList<Integer>> map = new HashMap<>();
+		q.addLast(new A7Pair(root, 0));
+		while (!q.isEmpty()) {
+			A7Pair rp = q.removeFirst();
+			minhl = Math.min(minhl, rp.hl);
+			maxhl = Math.max(maxhl, rp.hl);
+			if (!map.containsKey(rp.hl)) {
+				ArrayList<Integer> temp = new ArrayList<>();
+				temp.add(rp.node.data);
+				map.put(rp.hl, temp);
+			}
+			if (rp.node.left != null) {
+				q.addLast(new A7Pair(rp.node.left, rp.hl - 1));
+			}
+			if (rp.node.right != null) {
+				q.addLast(new A7Pair(rp.node.right, rp.hl + 1));
+			}
+		}
+		for (int i = minhl; i <= maxhl; i++) {
+			ans.addAll(map.get(i));
+		}
+		return ans;
 	}
 
 	private static ArrayList<Integer> getTopView(TreeNode root) {

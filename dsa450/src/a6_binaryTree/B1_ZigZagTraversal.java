@@ -1,6 +1,7 @@
 package a6_binaryTree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /*
@@ -28,6 +29,32 @@ public class B1_ZigZagTraversal {
 		System.out.println(list);
 	}
 
+	// My impl in gfg
+	ArrayList<Integer> zigZagTraversal(TreeNode root)
+	{
+	    ArrayList<Integer> ans=new ArrayList<Integer>();
+	    Stack<Integer> ms=new Stack<>();
+	    int level=1;
+	    LinkedList<TreeNode> q=new LinkedList<>();
+	    q.addLast(root);
+	    while(!q.isEmpty()){
+	        int size=q.size();
+	        while(size-->0){
+	        	TreeNode rn=q.removeFirst();
+	            if(level%2==0){
+	                ms.push(rn.data);
+	            }else{
+	                ans.add(rn.data);
+	            }
+	            if(rn.left!=null) q.addLast(rn.left);
+	            if(rn.right!=null) q.addLast(rn.right);
+	        }
+	        while(!ms.isEmpty()) ans.add(ms.pop());
+	        level++;
+	    }
+	    return ans;
+	}
+	
 	private static ArrayList<Integer> getZigZagTraversal(TreeNode root) {
 		ArrayList<Integer> ans = new ArrayList<>();
 		if (root == null)

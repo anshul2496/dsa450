@@ -5,9 +5,10 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 /*
- * https://www.geeksforgeeks.org/minimum-swap-required-convert-binary-tree-binary-search-tree/
+ * https://www.geeksforgeeks.org/problems/minimum-swap-required-to-convert-binary-tree-to-binary-search-tree/1
  * https://www.youtube.com/watch?v=SyIzeO39ZPk
  * https://www.youtube.com/watch?v=m-8_yQao-lI - Minimum Swaps required to sort an array
+ * B3 - Searching and Sorting
  */
 public class B9_MinSwapConvertBinaryTreeToBST {
 	public static void main(String[] args) {

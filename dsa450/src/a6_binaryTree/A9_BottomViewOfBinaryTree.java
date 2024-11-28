@@ -1,7 +1,11 @@
 package a6_binaryTree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
+
+import org.w3c.dom.Node;
 
 /*
  * https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
@@ -27,6 +31,31 @@ public class A9_BottomViewOfBinaryTree {
 		System.out.println(ans);
 	}
 
+	// Map Approach
+	public ArrayList<Integer> bottomView(TreeNode root) {
+		ArrayList<Integer> ans = new ArrayList<Integer>();
+		Map<Integer, Integer> map = new HashMap<>();
+		LinkedList<A7Pair> q = new LinkedList<>();
+		q.addLast(new A7Pair(root, 0));
+		int minhl = 0, maxhl = 0;
+		while (!q.isEmpty()) {
+			A7Pair rp = q.removeFirst();
+			minhl = Math.min(minhl, rp.hl);
+			maxhl = Math.max(maxhl, rp.hl);
+			map.put(rp.hl, rp.node.data);
+			if (rp.node.left != null) {
+				q.addLast(new A7Pair(rp.node.left, rp.hl - 1));
+			}
+			if (rp.node.right != null) {
+				q.addLast(new A7Pair(rp.node.right, rp.hl + 1));
+			}
+		}
+		for (int i = minhl; i <= maxhl; i++) {
+			ans.add(map.get(i));
+		}
+		return ans;
+	}
+	
 	private static ArrayList<Integer> getBottomView(TreeNode root) {
 		ArrayList<Integer> ans = new ArrayList<>();
 		if (root == null)
