@@ -26,7 +26,7 @@ public class B2_Merge2BST {
 
 		Node root2 = new Node(40);
 		Node ans = getBalancedBST(root1, root2);
-		inorder(ans);
+		print(ans);
 	}
 
 	private static Node getBalancedBST(Node root1, Node root2) {
@@ -74,11 +74,11 @@ public class B2_Merge2BST {
 		}
 	}
 
-	private static void inorder(Node root) {
+	private static void print(Node root) {
 		if (root != null) {
-			inorder(root.left);
+			print(root.left);
 			System.out.print(root.data + " ");
-			inorder(root.right);
+			print(root.right);
 		}
 	}
 }

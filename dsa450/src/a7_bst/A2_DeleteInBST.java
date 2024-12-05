@@ -2,6 +2,8 @@ package a7_bst;
 
 /*
  * https://leetcode.com/problems/delete-node-in-a-bst/
+ * https://www.youtube.com/watch?v=5_AZcOOc-kM
+ * 
  *  			5
  * 			  /   \
  * 			 3     6

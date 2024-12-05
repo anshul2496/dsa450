@@ -17,9 +17,9 @@ public class A4_PredAndSucc {
 		root.left.left = new Node(2);
 		root.left.right = new Node(4);
 		root.right.right = new Node(7);
-		Node pre = getPre(root, 6);
+		Node pre = getPre(root, 5);
 		System.out.println(pre.data);
-		Node succ = getSucc(root, 6);
+		Node succ = getSucc(root, 5);
 		System.out.println(succ.data);
 	}
 

@@ -19,7 +19,7 @@ public class A9_BinaryTreeToBST {
 		root.right = new Node(3);
 		root.left.left = new Node(4);
 		convertToBST(root);
-		inorder(root);
+		print(root);
 	}
 
 	private static void convertToBST(Node root) {
@@ -47,11 +47,11 @@ public class A9_BinaryTreeToBST {
 		}
 	}
 
-	private static void inorder(Node root) {
+	private static void print(Node root) {
 		if (root != null) {
-			inorder(root.left);
+			print(root.left);
 			System.out.print(root.data + " ");
-			inorder(root.right);
+			print(root.right);
 		}
 	}
 }

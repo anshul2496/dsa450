@@ -20,10 +20,10 @@ public class B9_MinSwapConvertBinaryTreeToBST {
 	private static int getMinimumSwaps(int[] a) {
 		ArrayList<Integer> list = new ArrayList<>();
 		inOrder(a, list, a.length, 0);
-		return minimumSwaps(a, list);
+		return minimumSwaps(list);
 	}
 
-	private static int minimumSwaps(int[] a, ArrayList<Integer> list) {
+	private static int minimumSwaps(ArrayList<Integer> list) {
 		int ans = 0;
 		Pairr[] arr = new Pairr[list.size()];
 		for (int i = 0; i < list.size(); i++)

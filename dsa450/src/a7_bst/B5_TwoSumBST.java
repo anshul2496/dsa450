@@ -25,8 +25,8 @@ public class B5_TwoSumBST {
 		root.right.right = new Node(7);
 		int k = 9;
 		// twoSum1(root, root, k);
-		// twoSum2(root, k); // Inorder and 2 pointer approach
-		twoSum3(root, k); // Inorder and Reverse Inorder - Iterative approach
+		twoSum2(root, k); // Inorder and 2 pointer approach - This is my approach and best
+		//twoSum3(root, k); // Inorder and Reverse Inorder - Iterative approach
 		System.out.println(ans);
 	}
 

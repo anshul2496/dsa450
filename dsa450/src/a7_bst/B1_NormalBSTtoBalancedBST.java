@@ -22,7 +22,7 @@ public class B1_NormalBSTtoBalancedBST {
 		root.left = new Node(20);
 		root.left.left = new Node(10);
 		Node ans = balancedBST(root);
-		preorder(ans);
+		print(ans);
 	}
 
 	private static Node balancedBST(Node root) {
@@ -51,11 +51,11 @@ public class B1_NormalBSTtoBalancedBST {
 		}
 	}
 
-	private static void preorder(Node root) {
+	private static void print(Node root) {
 		if (root != null) {
 			System.out.print(root.data + " ");
-			preorder(root.left);
-			preorder(root.right);
+			print(root.left);
+			print(root.right);
 		}
 	}
 }
