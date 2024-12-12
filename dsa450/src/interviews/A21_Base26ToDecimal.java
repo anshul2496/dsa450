@@ -5,7 +5,7 @@ package interviews;
  */
 public class A21_Base26ToDecimal {
 	public static void main(String[] args) {
-		String columnTitle = "AAA";
+		String columnTitle = "ZY";
 		int columnNumber = 0;
 		for (int i = 0; i < columnTitle.length(); i++) {
 			int currentColumn = columnTitle.charAt(i) - 'A' + 1;

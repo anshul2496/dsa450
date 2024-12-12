@@ -39,7 +39,7 @@ public class A4_NutAndBoltProblemPartition {
 			// Choose last character of bolts array for nuts partition.
 			int pivot = partition(nuts, low, high, bolts[high]);
 
-			// Now using the partition of nuts choose that for bolts partition.
+			// Now using the pivot of nuts choose that for bolts partition.
 			partition(bolts, low, high, nuts[pivot]);
 
 			// Recur for [low...pivot-1] & [pivot+1...high] for nuts and bolts array.

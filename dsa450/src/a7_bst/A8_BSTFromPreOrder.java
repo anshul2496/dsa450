@@ -8,7 +8,7 @@ public class A8_BSTFromPreOrder {
 	public static void main(String[] args) {
 		int[] a = { 8, 5, 1, 7, 10, 12 };
 		Node root = getBST(a, Integer.MIN_VALUE, Integer.MAX_VALUE);
-		preorder(root);
+		print(root);
 	}
 
 	private static int idx = 0;
@@ -22,11 +22,11 @@ public class A8_BSTFromPreOrder {
 		return root;
 	}
 
-	private static void preorder(Node root) {
+	private static void print(Node root) {
 		if (root != null) {
 			System.out.print(root.data + " ");
-			preorder(root.left);
-			preorder(root.right);
+			print(root.left);
+			print(root.right);
 		}
 	}
 }

@@ -6,7 +6,8 @@ import java.util.LinkedList;
 /*
  * https://practice.geeksforgeeks.org/problems/right-view-of-binary-tree/1/
  * https://www.youtube.com/watch?v=fcmxvpwFHgk
- * Given a Binary Tree, print Right view of it. Right view of a Binary Tree is set of nodes visible when tree is visited from Right side. 
+ * Given a Binary Tree, print Right view of it. 
+ * Right view of a Binary Tree is set of nodes visible when tree is visited from Right side. 
 	Right view of following tree is 1 3 7 8
 
           1

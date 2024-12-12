@@ -6,6 +6,7 @@ package interviews;
  * 	Input  : arr[] = {5, 6, 7, 8, 9, 10, 1, 2, 3};
     key = 3
 	Output : Found at index 8
+	Searching Sorting - A2
  */
 public class A5_SearchInRotatedSortedArray {
 	public static void main(String[] args) {
