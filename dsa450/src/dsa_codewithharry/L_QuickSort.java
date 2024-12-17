@@ -29,18 +29,14 @@ public class L_QuickSort {
 			if (a[i] > pivot)
 				i++;
 			else {
-				swap(a, i, j);
+				int temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
 				i++;
 				j++;
 			}
 		}
 		return j - 1;
-	}
-
-	private static void swap(int[] a, int i, int j) {
-		int temp = a[i];
-		a[i] = a[j];
-		a[j] = temp;
 	}
 
 	private static void print(int[] a) {

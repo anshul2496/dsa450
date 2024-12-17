@@ -1,6 +1,6 @@
 package interviews;
 
-/*
+/* Left this
  * https://www.geeksforgeeks.org/nuts-bolts-problem-lock-key-problem/
  * Given a set of n nuts of different sizes and n bolts of different sizes. There is a one-one mapping between nuts and bolts. Match nuts and bolts efficiently. 
 	Constraint: Comparison of a nut to another nut or a bolt to another bolt is not allowed. 
