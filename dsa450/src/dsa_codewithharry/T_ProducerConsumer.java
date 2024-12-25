@@ -3,15 +3,16 @@ package dsa_codewithharry;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+// https://javarevisited.blogspot.com/2012/02/producer-consumer-design-pattern-with.html#google_vignette
 public class T_ProducerConsumer {
 	public static void main(String[] args) {
 		BlockingQueue<Integer> queue = new LinkedBlockingQueue<>();
 
-		Thread t1 = new Thread(new Producer(queue));
-		Thread t2 = new Thread(new Consumer(queue));
+		Thread producer = new Thread(new Producer(queue));
+		Thread consumer = new Thread(new Consumer(queue));
 
-		t1.start();
-		t2.start();
+		producer.start();
+		consumer.start();
 	}
 }
 
