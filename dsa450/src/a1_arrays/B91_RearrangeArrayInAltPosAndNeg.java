@@ -3,7 +3,7 @@ package a1_arrays;
 import java.util.Arrays;
 
 /*
- * https://www.geeksforgeeks.org/rearrange-array-alternating-positive-negative-items-o1-extra-space/
+ * https://www.geeksforgeeks.org/problems/array-of-alternate-ve-and-ve-nos1401/1
  * Given an array of positive and negative numbers, arrange them in an alternate
  * fashion such that every positive number is followed by negative and
  * vice-versa maintaining the order of appearance. Number of positive and

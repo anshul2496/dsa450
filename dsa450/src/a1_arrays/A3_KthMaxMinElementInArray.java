@@ -51,7 +51,7 @@ public class A3_KthMaxMinElementInArray {
 		int i = low;
 		int j = low;
 		while (i <= high) {
-			if (a[i] < pivot)
+			if (a[i] > pivot)
 				i++;
 			else {
 				int temp = a[i];

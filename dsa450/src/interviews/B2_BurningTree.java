@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /*
  * https://practice.geeksforgeeks.org/problems/burning-tree/1
  * https://www.youtube.com/watch?v=dtBj2A_7JOk - Not this method
- * The below solved method is derived from prev problem
+ * The below solved method is derived from prev problem(It is wrong)
  *  		12
            /  \
           13  10
@@ -29,6 +29,7 @@ public class B2_BurningTree {
 		left.right = new B1_Node(24);
 		right.left = new B1_Node(22);
 		right.right = new B1_Node(23);
+		right.right.right = new B1_Node(27);
 
 		B1_Node fireNode = new B1_Node(10);
 		burningTree(root, fireNode);

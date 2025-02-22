@@ -13,7 +13,7 @@ package a1_arrays;
  */
 public class C51_MajorityElementNby2 {
 	public static void main(String[] args) {
-		int[] a = { 3, 1, 3, 3, 2 };
+		int[] a = { 3, 1, 2, 3, 3 };
 		// Boyer-Moore Voting Algorithm
 		int val = getPotentialMajorityElement(a, a.length);
 		boolean isMaj = isValMajorityElement(a, val);

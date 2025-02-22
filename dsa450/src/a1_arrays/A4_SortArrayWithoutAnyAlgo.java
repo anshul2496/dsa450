@@ -17,6 +17,7 @@ public class A4_SortArrayWithoutAnyAlgo {
 	public static void main(String[] args) {
 		//solution1_mybrute(); // O(n2)
 		solution2_comparisonSeggregation(); // Time : O(n). Check GFG link also for count approach
+		//Partition can also be applied over here, keeping the pivot element as 0.
 	}
 
 	private static void solution2_comparisonSeggregation() {
@@ -53,14 +54,12 @@ public class A4_SortArrayWithoutAnyAlgo {
 
 	private static void solution1_mybrute() {
 		int[] arr = { 1, 1, 1, 2, 2, 0, 0 };
-		int k;
 		int temp;
 		for (int i = 0; i < arr.length; i++) {
-			k = i;
 			for (int j = i + 1; j < arr.length; j++) {
-				if (arr[k] > arr[j]) {
-					temp = arr[k];
-					arr[k] = arr[j];
+				if (arr[i] > arr[j]) {
+					temp = arr[i];
+					arr[i] = arr[j];
 					arr[j] = temp;
 				}
 			}

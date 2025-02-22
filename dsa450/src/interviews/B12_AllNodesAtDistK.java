@@ -6,7 +6,8 @@ import java.util.ArrayList;
  * https://practice.geeksforgeeks.org/problems/nodes-at-given-distance-in-binary-tree/1/
  * https://www.youtube.com/watch?v=B89In5BctFA // This one
  * https://www.youtube.com/watch?v=s22QClql9LU
- * Given a binary tree, a target node in the binary tree, and an integer value k, print all the nodes that are at distance k from the given target node.
+ * Given a binary tree, a target node in the binary tree, and an integer value k, 
+ * print all the nodes that are at distance k from the given target node.
  *      20
  *    8   22
  *  4  12
@@ -80,4 +81,10 @@ class B1_Node {
 	public B1_Node(int data) {
 		this.data = data;
 	}
+
+	@Override
+	public String toString() {
+		return "B1_Node [data=" + data + ", left=" + left.data + ", right=" + right.data + "]";
+	}
+	
 }

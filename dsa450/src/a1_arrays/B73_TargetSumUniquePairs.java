@@ -6,6 +6,7 @@ import java.util.Arrays;
  * https://classroom.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/arrays-and-strings/2-sum-target-sum-unique-pairs/ojquestion#!
  * https://www.youtube.com/watch?v=l5Ruk_Ub8B4
  * Target sum unique pair, when the input elements can repeat
+ * Same as B71
  */
 public class B73_TargetSumUniquePairs {
 	public static void main(String[] args) {
