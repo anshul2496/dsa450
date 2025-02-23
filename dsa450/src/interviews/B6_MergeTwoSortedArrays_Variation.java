@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Asked in Millenium
  * https://algo.monster/liteproblems/88
  */
-public class B7_MergeTwoSortedArrays_Variation {
+public class B6_MergeTwoSortedArrays_Variation {
 	public static void main(String[] args) {
 		int[] nums1 = { 1, 2, 3, 0, 0, 0 };
 		int[] nums2 = { 2, 5, 6 };
