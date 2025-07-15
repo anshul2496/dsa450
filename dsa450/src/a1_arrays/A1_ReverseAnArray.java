@@ -26,5 +26,8 @@ public class A1_ReverseAnArray {
 			j--;
 		}
 		Arrays.stream(arr).forEach(System.out::println);
+		
+		// Using streams 
+		// int[] reversed = IntStream.range(0, input.length).map(i -> input[input.length - 1 - i]).toArray();
 	}
 }

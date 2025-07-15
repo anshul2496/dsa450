@@ -13,6 +13,7 @@ import java.util.Arrays;
  * Input: arr[] = {1, 2, 3, -4, -1, 4} Output: arr[] = {-4, 1, -1, 2, 3, 4}
  */
 public class B91_RearrangeArrayInAltPosAndNeg {
+	// When using partition approach, relative order of the elements is not maintained
 	public static void main(String[] args) {
 		int[] a = { 2, 3, -4, -1, 6, -9, -5, 2, 8, 88 };
 		int pi = partition(a, 0, a.length - 1);

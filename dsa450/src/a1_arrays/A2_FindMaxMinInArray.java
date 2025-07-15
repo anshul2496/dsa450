@@ -15,14 +15,14 @@ public class A2_FindMaxMinInArray {
 
 	public static void main(String[] args) {
 		// solution1_sort();
-		// solution2_linearSearch(); // O(n) -> This is acceptable
+		solution2_linearSearch(); // O(n) -> This is acceptable
 
 		/*
 		 * METHOD 3 (Tournament Method) Divide the array into two parts and compare the
 		 * maximums and minimums of the two parts to get the maximum and the minimum of
 		 * the whole array. Time Complexity is still O(n)
 		 */
-		solution3_tournamentMethod(); // Time: O(log n)
+		//solution3_tournamentMethod(); // Time: O(log n)
 	}
 
 	private static void solution3_tournamentMethod() {
@@ -79,6 +79,10 @@ public class A2_FindMaxMinInArray {
 		}
 		System.out.println("Min = " + min);
 		System.out.println("Max = " + max);
+		
+		// Using Streams
+		Arrays.stream(a).min().ifPresent(System.out::println);
+		// Arrays.stream(a).min().ifPresent(min -> System.out.println("Min: " + min));
 	}
 
 	private static void solution1_sort() {

@@ -36,10 +36,10 @@ public class B3_MergeSortedArraysWithoutExtraSpace {
 				j++;
 			}
 		}
-		Arrays.sort(arr1);
-		Arrays.sort(arr2);
-		Arrays.stream(arr1).forEach(a -> System.out.print(a + " "));
-		Arrays.stream(arr2).forEach(a -> System.out.print(a + " "));
+		//Arrays.sort(arr1);
+		//Arrays.sort(arr2);
+		Arrays.stream(arr1).sorted().forEach(a -> System.out.print(a + " "));
+		Arrays.stream(arr2).sorted().forEach(a -> System.out.print(a + " "));
 	}
 
 	private static void solution1() {

@@ -11,8 +11,8 @@ import java.util.List;
 public class B92_RearrangePosNegWithOrder {
 	public static void main(String[] args) {
 		int[] a = { 9, 4, -2, -1, 5, 0, -5, -3, 2 };
-		rearrange(a, a.length); // Array solution
-		//rearrange((ArrayList<Integer>) Arrays.asList(9, 4, -2, -1, 5, 0, -5, -3, 2)); // Linked List soln
+		//rearrange(a, a.length); // Array solution
+		rearrange((ArrayList<Integer>) Arrays.asList(9, 4, -2, -1, 5, 0, -5, -3, 2)); // Linked List soln
 		System.out.println(Arrays.toString(a));
 	}
 

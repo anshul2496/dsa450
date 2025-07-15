@@ -1,7 +1,9 @@
 package a1_arrays;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /*
  * https://practice.geeksforgeeks.org/problems/union-of-two-arrays3538/1
@@ -30,6 +32,15 @@ public class A6_UnionIntersectionOfTwoArrays {
 		for (int i = 0; i < m; i++)
 			set.add(b[i]);
 		return set.size();
+		
+		//Set<Integer> set = new HashSet<>(Arrays.asList(a)); // Doesn't work
+		//because you're trying to use Arrays.asList(int[]), 
+		// but Java treats primitive arrays (int[]) as a single object, not a list of elements.
+		/* Correct using streams -
+		 * Set<Integer> set = Arrays.stream(a)          // IntStream
+                         .boxed()            // Stream<Integer>
+                         .collect(Collectors.toSet());
+		 */
 	}
 	// For intersection use retainAll()
 }

@@ -13,10 +13,9 @@ import java.util.HashMap;
  */
 public class B71_TargetSumPairElementsRepeat {
 	public static void main(String[] args) {
-		// Frequency Map - O(n), O(n)
-		solution1(); // This is for a different(similar problem). Check below method for current problem soln
-		// When the elements repeat and you have to give count of repeating elements, it
-		// cannot be done via sorting the array. You have to use frequency map
+		//solution1(); // You can use this approach in Two_Sum problem, where you have to return the indices
+		// of the elements and therefore, you cannot sort the array.B74
+		getPairs(new int[]{ 1, 5, 7, 1 }); // Actual Solution
 	}
 
 	public static ArrayList<ArrayList<Integer>> getPairs(int[] arr) {

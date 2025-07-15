@@ -1,6 +1,7 @@
 package a1_arrays;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /*
  * https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one2614/1
@@ -23,5 +24,8 @@ public class A7_CyclicallyRotateAnArray {
 		}
 		a[0] = lastNum;
 		Arrays.stream(a).forEach(System.out::println);
+		// In Java, although Streams are not naturally suited for in-place array modifications 
+		// or rotations, we can still solve this using Stream-based logic by re-creating a new array.
+		// int[] rotated = IntStream.concat(IntStream.of(lastNum), Arrays.stream(A, 0, N - 1)).toArray();
 	}
 }

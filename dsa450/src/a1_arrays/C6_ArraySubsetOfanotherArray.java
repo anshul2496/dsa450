@@ -1,10 +1,7 @@
 package a1_arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /*
  * 	https://practice.geeksforgeeks.org/problems/array-subset-of-another-array2317/1

@@ -3,7 +3,8 @@ package a2_matrix;
 /*
  * https://practice.geeksforgeeks.org/problems/row-with-max-1s0023/1
  * https://www.youtube.com/watch?v=cWKLH1BDsIg
- * Given a boolean 2D array of n x m dimensions where each row is sorted. Find the 0-based index of the first row that has the maximum number of 1's.
+ * Given a boolean 2D array of n x m dimensions where each row is sorted. 
+ * Find the 0-based index of the first row that has the maximum number of 1's.
 	Example 1:
 	Input: 
 	N = 4 , M = 4
