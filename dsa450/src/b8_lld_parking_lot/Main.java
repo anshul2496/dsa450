@@ -10,6 +10,9 @@ import b8_lld_parking_lot.vehicle.Bike;
 import b8_lld_parking_lot.vehicle.Car;
 import b8_lld_parking_lot.vehicle.Vehicle;
 
+/*
+ * https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/parking-lot.md
+ */
 public class Main {
 	public static void main(String[] args) {
 		ParkingLot parkingLot = ParkingLot.getInstance();
