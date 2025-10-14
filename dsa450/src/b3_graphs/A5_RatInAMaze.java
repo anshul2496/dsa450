@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /*
  * https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
  * https://www.youtube.com/watch?v=wjqSZy4pMT4
+ * Same as BackTracking A1
  */
 public class A5_RatInAMaze {
 	public static void main(String[] args) {

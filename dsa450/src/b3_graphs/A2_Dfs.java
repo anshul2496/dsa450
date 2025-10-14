@@ -7,6 +7,8 @@ import java.util.Stack;
 /*
  * https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
  * https://www.youtube.com/watch?v=iUtmQ66IC_0
+ * remove mark* work add*
+ * Same as BFS, just use stack instead of Queue
  */
 public class A2_Dfs {
 	public static void main(String[] args) {
@@ -18,17 +20,17 @@ public class A2_Dfs {
 		ArrayList<Integer> ans = new ArrayList<>();
 		Stack<Integer> st = new Stack<>();
 		int n = adj.size();
-		boolean[] checked = new boolean[n];
+		boolean[] visited = new boolean[n];
 		st.push(0);
 		while (!st.isEmpty()) {
 			int top = st.pop();
-			if (checked[top] == true)
+			if (visited[top] == true)
 				continue;
-			checked[top] = true;
+			visited[top] = true;
 			ans.add(top);
 			ArrayList<Integer> edges = adj.get(top);
 			for (int e : edges) {
-				if (checked[e] == false)
+				if (visited[e] == false)
 					st.push(e);
 			}
 		}

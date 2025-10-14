@@ -8,10 +8,20 @@ import java.util.ArrayList;
  */
 public class A4_CycleDirectedGraph {
 	public static void main(String[] args) {
-
+		int v = 4;
+		int[][] edges = { { 0, 1 }, { 1, 2 }, { 2, 3 }, { 3, 3 } };
+		ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+		for (int i = 0; i <= v; i++) {
+			adj.add(new ArrayList<>());
+		}
+		for (int i = 0; i < v; i++) {
+			adj.get(edges[i][0]).add(edges[i][1]);
+		}
+		System.out.println(adj);
+		System.out.println(isCyclic(v, adj));
 	}
 
-	public boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
+	public static boolean isCyclic(int v, ArrayList<ArrayList<Integer>> adj) {
 		boolean[] visited = new boolean[v];
 		boolean[] dfsVisited = new boolean[v];
 		for (int i = 0; i < v; i++) {
@@ -23,7 +33,7 @@ public class A4_CycleDirectedGraph {
 		return false;
 	}
 
-	public boolean isCyclicDFS(int src, boolean[] visited, boolean[] dfsVisited, ArrayList<ArrayList<Integer>> adj) {
+	public static boolean isCyclicDFS(int src, boolean[] visited, boolean[] dfsVisited, ArrayList<ArrayList<Integer>> adj) {
 		visited[src] = true;
 		dfsVisited[src] = true;
 		ArrayList<Integer> edges = adj.get(src);

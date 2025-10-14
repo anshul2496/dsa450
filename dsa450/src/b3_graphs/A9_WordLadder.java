@@ -1,15 +1,25 @@
 package b3_graphs;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /*
  * https://leetcode.com/problems/word-ladder/
- * https://www.youtube.com/watch?v=zjR2WGbBA2k
+ * https://www.youtube.com/watch?v=tRPda0rcf8E
  */
+class Pair2 {
+	String first;
+	int second;
+
+	Pair2(String first, int second) {
+		this.first = first;
+		this.second = second;
+	}
+}
+
 public class A9_WordLadder {
 	public static void main(String[] args) {
 		String beginWord = "hit";
@@ -20,45 +30,33 @@ public class A9_WordLadder {
 	}
 
 	public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
+		// Time - arr.length*word.length*26
+		// Space - O(arr.length)
+		Queue<Pair2> q = new LinkedList<>();
+		q.add(new Pair2(beginWord, 1));
 		HashSet<String> set = new HashSet<>(wordList);
 		if (!set.contains(endWord))
 			return 0;
-		ArrayDeque<String> q = new ArrayDeque<>();
-		q.add(beginWord);
 		if (set.contains(beginWord))
 			set.remove(beginWord);
-		int level = 0;
 		while (!q.isEmpty()) {
-			for (int i = 0; i < q.size(); i++) {
-				String top = q.removeFirst();
-				if (top.equals(endWord))
-					return level + 1;
-				List<String> neighbors = getNeighbors(top, set);
-				System.out.println("level=" + level + " Word in queue=" + top + " " + neighbors);
-				for (String neighbor : neighbors) {
-					if (set.contains(neighbor)) {
-						q.add(neighbor);
-						set.remove(neighbor);
+			String word = q.peek().first;
+			int steps = q.peek().second;
+			q.remove();
+			if (word.equals(endWord))
+				return steps;
+			for (int i = 0; i < word.length(); i++) {
+				for (char ch = 'a'; ch <= 'z'; ch++) {
+					char[] replacedCharArr = word.toCharArray();
+					replacedCharArr[i] = ch;
+					String replacedWord = new String(replacedCharArr);
+					if (set.contains(replacedWord)) {
+						set.remove(replacedWord);
+						q.add(new Pair2(replacedWord, steps + 1));
 					}
 				}
 			}
-			level++;
 		}
 		return 0;
-	}
-
-	public static List<String> getNeighbors(String word, HashSet<String> set) {
-		List<String> neighbors = new ArrayList<>();
-		int n = word.length();
-		for (int i = 0; i < n; i++) {
-			for (char ch = 'a'; ch <= 'z'; ch++) {
-				if (ch == word.charAt(i))
-					continue;
-				String newWord = word.substring(0, i) + ch + word.substring(i + 1, n);
-				if (set.contains(newWord))
-					neighbors.add(newWord);
-			}
-		}
-		return neighbors;
 	}
 }

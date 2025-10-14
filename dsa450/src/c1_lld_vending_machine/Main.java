@@ -1,5 +1,8 @@
 package c1_lld_vending_machine;
 
+/*
+ * https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/vending-machine.md
+ */
 public class Main {
 	public static void main(String[] args) {
 		VendingMachine vendingMachine = VendingMachine.getInstance();

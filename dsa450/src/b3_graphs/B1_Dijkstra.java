@@ -11,6 +11,7 @@ public class B1_Dijkstra {
 
 }
 
+// Tc - ELogV
 class Solution {
 	// Function to find the shortest distance of all the vertices
 	// from the source vertex src.

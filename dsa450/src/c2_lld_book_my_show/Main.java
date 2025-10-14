@@ -12,6 +12,9 @@ import c2_lld_book_my_show.seat.Seat;
 import c2_lld_book_my_show.seat.SeatStatus;
 import c2_lld_book_my_show.seat.SeatType;
 
+/*
+ * https://github.com/ashishps1/awesome-low-level-design/blob/main/problems/movie-ticket-booking-system.md
+ */
 public class Main {
 	public static void main(String[] args) {
 

@@ -10,3 +10,7 @@
 [1754078081454] [WARN] [main]: This is a warning message
 [1754078081454] [ERROR] [main]: This is an error message
 [1754078081454] [WARN] [main]: This is a warning message
+[1754248931001] [INFO] [main]: This is an information message
+[1754248931022] [WARN] [main]: This is a warning message
+[1754248931022] [ERROR] [main]: This is an error message
+[1754248931022] [WARN] [main]: This is a warning message
