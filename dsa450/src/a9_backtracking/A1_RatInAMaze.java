@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /*
  * https://www.geeksforgeeks.org/problems/rat-in-a-maze-problem/1
  * https://takeuforward.org/data-structure/rat-in-a-maze/
+ * Same as Graph A5
  */
 public class A1_RatInAMaze {
 	public static void main(String[] args) {

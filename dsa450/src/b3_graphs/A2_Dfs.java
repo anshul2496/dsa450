@@ -6,6 +6,7 @@ import java.util.Stack;
 
 /*
  * https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
+ * Recursive - https://www.youtube.com/watch?v=Qzf1a--rhp8
  * https://www.youtube.com/watch?v=iUtmQ66IC_0
  * remove mark* work add*
  * Same as BFS, just use stack instead of Queue
@@ -39,14 +40,8 @@ public class A2_Dfs {
 
 	// Recursive function for DFS traversal
 	static void DFSRec(List<List<Integer>> adj, boolean[] visited, int s) {
-		// Mark the current vertex as visited
 		visited[s] = true;
-
-		// Print the current vertex
 		System.out.print(s + " ");
-
-		// Recursively visit all adjacent vertices that are
-		// not visited yet
 		for (int i : adj.get(s)) {
 			if (!visited[i]) {
 				DFSRec(adj, visited, i);
@@ -57,7 +52,6 @@ public class A2_Dfs {
 	// Main DFS function that initializes the visited array
 	static void DFS(List<List<Integer>> adj, int s) {
 		boolean[] visited = new boolean[adj.size()];
-		// Call the recursive DFS function
 		DFSRec(adj, visited, s);
 	}
 }

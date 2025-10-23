@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
  * https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
- * https://www.youtube.com/watch?v=Tl5qbEmEQyY
+ * https://www.youtube.com/watch?v=9twcmtQj4DU
  */
 public class A4_CycleDirectedGraph {
 	public static void main(String[] args) {
