@@ -26,7 +26,6 @@ public class BookingService {
 		String bookingId = UUID.randomUUID().toString();
 		Booking booking = new Booking(bookingId, guest, room, startDate, endDate);
 
-		// Use the State pattern to book the room
 		room.book();
 
 		bookings.add(booking);
